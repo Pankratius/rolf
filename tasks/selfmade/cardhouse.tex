@@ -1,0 +1,111 @@
+\begin{Exercise}[label = cards, title = Kartenhäuser, difficulty = 4]
+		Ein Kartenhaus besteht im Grunde aus Zellen, die alle die Form haben, wie sie in Abb. \ref{fig:cells} gezeigt ist.
+	\begin{itemize}
+		\item[a)] Zeige, dass die Anzahl $A$ der Karten, die für ein solches Kartenhaus mit $n$ Ebenen benötigt wird,
+		\begin{equation}\label{number}
+		\frac{1}{2}n\left(3n+1\right)
+		\end{equation}
+		beträgt.
+		
+		\item[b)] 
+		Betrachte nun zuerst zwei Karten, auf die eine Kraft $\vec{F}$ von oben wirkt. Bestimme den Reibungskoeffizienten $\mu$ zwischen Karte und Boden, wenn der Anstellwinkel der Karten $\theta = 60^\circ$ beträgt und die Masse einer Karte $m$ ist.
+		
+		\item[c)] Wenn man mehr als eine Kartenebene hat, muss man auch die Reibung zwischen den Kartenspitzen und der daraufliegenden Deckkarte $\nu$ betrachten. Wie groß muss $\nu$ mindestens sein, damit man einen Kartenturm beliebiger Höhe bauen kann?
+		\item[d)] Wir nehmen an, dass $\nu$ und $\mu$ so gewählt sind, dass man den Turm beliebig hoch bauen kann. Trotzdem zeigt die Erfahrung, dass es eine gewisse Grenze gibt, ab der der Turm instabill wird. Das liegt daran, dass die Karten ab einer bestimmten Kraft anfangen, sich zu biegen. Diese kritische Kraft ist gegeben durch
+		\begin{equation}
+		F_k = \frac{\pi^2 b d^3E }{12\ell^2},
+		\end{equation}
+		wobei $b$ die Breite, $\ell$ die Länge, $d$ die Dicke und $E$ das sog. Elastizitätsmodul, also eine Werkstoffkonstante, der Karte ist, siehe Abb. \ref{fig:buck}.\\
+		Für Spielkarten gelten ungefähr folgende Größen: $\ell = 90~\mathrm{mm}$, $b=60~\mathrm{mm}$, $d = 0.3~\mathrm{mm}$, $E = 200~\mathrm{N\cdot mm^2}$. 
+		Schätze mit diesen Angaben die maximale Anzahl der Stockwerke ab.
+		
+	\end{itemize}
+	\begin{figure}[H]
+		\centering
+		
+		\begin{subfigure}[b]{0.3\textwidth}
+			\centering
+			\includegraphics[scale = 0.1]{/Users/aaron/Desktop/problemset/ROLF-KoZi/kh.jpg}
+			\caption{Ein Kartenhaus, \footnotesize (JMP, CC BY-SA 2.0 de)}
+			\label{fig:kh}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.2\textwidth}
+			\centering
+			\begin{tikzpicture}		
+			\draw[dashed] (0,0)--(0.5,1)--(0.5,1)--(1,0);
+			\draw[dashed] (1.1,0)--(1.6,1)-- (1.6,1)--(2.1,0);
+			\draw[dashed] (0.5,1)--(1.6,1);
+			\draw[dashed] (0.525,1)--(1.025,2)--(1.525,1);
+			\draw[thick] (-0.5,0)--(2.6,0);
+			\fill[pattern = north east lines] (-0.5,0) rectangle (2.6,-0.1);
+			
+			\end{tikzpicture}
+			\caption{Grundzellen}
+			\label{fig:cells}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.2\textwidth}
+			\centering
+			\begin{tikzpicture}
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(0.5,1){B}
+			\tkzDefPoint(1,0){C};
+			\tkzMarkAngle[scale = 0.7](C,A,B)
+			\node at (0.24,0.17) {$\theta$};
+			\draw[dashed] (0,0)--(0.5,1)--(1,0);
+			\draw[thick] (-0.2,0)--(1.2,0);
+			\fill[pattern = north east lines] (-0.2,0) rectangle (1.2,-0.1);
+			\draw[->] (0.5,1.5)--(0.5,1);
+			\node at (0.7,1.3) {$\vec{F}$};
+			
+			\end{tikzpicture}
+			\caption{Eine Zelle}
+			\label{fig:ocell}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.2\textwidth}
+			\centering
+			\begin{tikzpicture}
+			\draw[<->] (0,-1)--(0,1);
+			\draw (1.2,-0.9)--(1.2,1.1);
+			\draw[thick] (1.2,1.1)--(0.5,1);
+			\draw[thick] (1.2,-0.9)--(0.5,-1);
+			%\draw (0.5,1)--(0.5,-1);
+			\tkzDefPoint(1.2,1.1){A}
+			\tkzDefPoint(0.5,1){B}
+			\tkzDefMidPoint(A,B)\tkzGetPoint{C}
+			\tkzDefShiftPoint[C](0,0.4){D}
+			\tkzDrawSegment[<-](C,D)
+			\tkzDefPoint(1.2,-0.9){E}
+			\tkzDefPoint(0.5,-1){F}
+			\tkzDefMidPoint(E,F) \tkzGetPoint{G}
+			\tkzDefShiftPoint[G](0,-0.4){H}
+			\tkzDrawSegment[->](H,G)
+			\tkzDefPoint (0.5,-1){X}
+			\tkzDefPoint(1.2,-0.9){Y}
+			\draw[<->] (0.5,-1.5)--(1.2,-1.4);
+			\tkzDefMidPoint(X,Y)\tkzGetPoint{Z}
+			\tkzDefShiftPoint[Z](0,-0.5){d}
+			\tkzLabelPoint[below](d){$b$}
+			\tkzDefMidPoint(C,D)\tkzGetPoint{f}
+			\tkzLabelPoint[above right](f){$\vec{F}$}
+			
+			
+			\draw[thick] plot[smooth,tension = 2] coordinates {(1.2,1.1) (1.1,0) (1.2,-0.9)} ;
+			\draw[thick] plot[smooth, tension = 2] coordinates{(0.5,-1) (0.4,0) (0.5,1)};
+			\node at (-0.25,0) {$\ell$};
+			
+			
+			\end{tikzpicture}
+			\caption{gebogene Karte}
+			\label{fig:buck}
+		\end{subfigure}
+	\end{figure}
+\end{Exercise}
+
+
+
+
+
+

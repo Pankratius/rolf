@@ -1,0 +1,41 @@
+	\begin{Exercise}[label=ipho201741, title = Eisenbahnwaggon,difficulty={1},origin = 4. Runde IPhO 2017]
+ Ein Eisenbahnwaggon der Masse $m_1 = 37~\mathrm{t}$ rollt reibungsfrei auf einem Bahngleis und stößt mit einem anderen Waggon zusammen. Beide verkuppeln sich und rollen zusammen weiter. Dabei geben sie 35\% der anfangs vorhandenen kinetischen Energie als Wärme ab. Wie groß ist die Masse $m_2$ des zweiten Waggons?
+	\end{Exercise}
+\begin{Answer}[ref = ipho201741]
+	Da keine äußeren Kräfte wirken, bleibt der Impuls erhalten.\\ Gleichzeitig bleibt die Gesamtenergie erhalten,
+	\begin{equation}\label{energycons}
+		E_{kin,v} = E_{kin,n}+E_{w}.
+	\end{equation}
+	Hierbei ist $E_{kin,v}$ die kinetische Energie vor dem Stoß, $E_{kin,n}$ die kinetische Energie nach dem Stoß, und $E_{w}$ die abgegebene Wärmeenergie. Es ist gegeben, dass $E_{w} = \eta \cdot E_{kin,v}$ gilt, wobei $\eta = 0.35$ gilt. Um die Impulserhaltung zu benutzten kann man entweder die kinetische Energie durch die Impulse oder aber durch die Geschwindigkeiten ausdrücken.\\
+	Drückt man die kinetische Energie durch die Impulse aus, so ist im Allgemeinen $E_{kin} = \frac{p^2}{2m}$. Da der Impulserhalten bleibt, gilt $p:=p_v = p_n = \mathrm{konst.}$. Damit lässt sich die Energieerhaltung schreiben als
+	\begin{equation}\label{penenergycons}
+		\frac{p^2}{2m_1}= \frac{p^2}{2\left(m_1+m_2\right)} + \eta\cdot \frac{p^2}{2m_1},
+	\end{equation}
+	da nach dem Stoß nur noch ein \glqq Waggon\grqq{} der Masse $m_1+m_2$ da ist.
+	Division durch $p^2$ auf beiden Seiten führt auf
+	\begin{equation}\label{masscond}
+		\frac{1}{2m_1}= \frac{1}{2\left(m_1+m_2\right)}+\frac{\eta}{2m_1}.
+	\end{equation}
+	Diese Gleichung erhält nur noch die bekannten Größen $m_1$ und $\eta$, sowie die unbekannte Größe $m_2$. Subtrahieren von $\frac{\eta}{2m_1}$, multiplizieren mit 2 und anschließendes Bilden des Reziproken führt auf
+	\begin{equation*}\label{solp}
+	\boxed{
+		\frac{1}{m_1}\left(1-\eta\right) = \frac{1}{m_1+m_2} \Rightarrow m_2 = m_1\left(\frac{1}{1-\eta}-1\right)\approx 20~\mathrm{t}.}
+	\end{equation*}
+	Das gleiche kann man auch mit den Geschwindigkeiten machen. Hier hat die Energieerhaltung die Form
+	\begin{equation}\label{venergycons}
+		m_1 \frac{v_v^2}{2} = \left(m_1+m_2\right)\frac{v_n^2}{2} + m_1\eta  \cdot \frac{v_v^2}{2}.
+	\end{equation}
+	Expliziet ausgeschrieben besagt die Impulserhaltung, dass 
+	\begin{equation}\label{secondvel}
+		m_1 v_v = \left(m_1+m_2\right)v_n \Rightarrow v_n = \frac{m_1}{m_1+m_2}v_v
+	\end{equation}
+	gilt. Einsetzen von \eqref{secondvel} in \eqref{venergycons} führt auf
+	\begin{equation*}
+	m_1\frac{v_v^2}{2} = \left(m_1+m_2\right)\frac{v_v^2 m_1^2}{2\left(m_1+m_2\right)^2} + m_1\eta \cdot \frac{v_v^2}{2}.
+	\end{equation*}
+	Dividieren durch $m_1^2v_v^2$ führt auf 
+	\begin{equation}\label{vmasscond}
+		\frac{1}{2m_1} = \frac{1}{2\left(m_1+m_2\right)} + \frac{\eta}{2m_1}.
+	\end{equation}
+	Die Bedingung, die die Massen erfüllen müssen, wenn wir Geschwindigkeiten betrachten (Gleichung \eqref{vmasscond}) entspricht also genau der, die erfüllt sein muss, wenn wir Impulse betrachten (Gleichung \eqref{masscond}). Das sollte auch so sein.
+\end{Answer}
