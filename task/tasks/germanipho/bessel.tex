@@ -1,0 +1,56 @@
+\begin{Exercise}[label = ipho20170402, title = Zwei Linsenpositionen , difficulty = 3, origin = 4. Runde IPhO 2017 ]
+Versucht man, einen Gegenstand mit einer Sammellinse auf eine im festen Abstand $a$ positionierte Fläche scharf abzubilden, stellt man fest, dass das für zwei unterschiedliche Linsenpositionen möglich ist.\\
+Betrachte einen Aufbau, bei dem $a= 120~\mathrm{m}$ gilt. Das Verhältnis der Bildgrößen beträgt $\frac{1}{9}$. Wie groß ist die Brennweite der verwendeten Linse? 
+\end{Exercise}	
+\begin{Answer}[ref = ipho20170402]
+	Es entsteht einmal ein kleines Bild, und einmal ein großes Bild. Alle Variabeln, die sich auf das kleine Bild beziehen, haben einen Index 1, und alle, die sich auf das große Bild beziehen, einen Index 2.\\
+	Das in der Aufgabenstellung definierte Verhältnis definieren wir als $\varepsilon^2$. Dann gilt
+	\begin{equation}\label{bessel:epsdef}
+		\varepsilon^2=\frac{B_1}{B_2} = \frac{1}{9},
+	\end{equation}
+	wobei $B$ jeweils die Bildgröße bezeichnet. Aus der Strahlenoptik wissen wir, dass für die Gegenstandsgröße $G$, die Bildgröße $B$, die Gegenstandsweite $g$ und die Bildweite $b$ im Allgemeinen gilt
+	\begin{equation*}
+		\frac{B}{G} = \frac{b}{g} \Rightarrow B = \frac{b}{g}\cdot G \Rightarrow B_1 = \frac{b_1}{g_1}\cdot G~\mathrm{und} B_2 ~= \frac{b_2}{g_2}\cdot G.
+	\end{equation*}
+	Diese Ausdrücke für $B_1$ und $B_2$ kann man jetzt in \eqref{bessel:epsdef} einsetzen. Da die Gegenstandsgröße für beide Bilder gleich groß ist (es wird ja immer noch der  gleiche Gegenstand abgebildet), kürzt sich $G$, sodass wir auf
+	\begin{equation}\label{bessel:masss}
+		\varepsilon^2 = \frac{b_1}{g_1}\cdot G \cdot \frac{g_2}{b_2}\cdot \frac{1}{G} = \frac{b_1 g_2}{b_2 g_1} 
+	\end{equation}	
+	kommen.\\
+	Diese Gleichung kann einfacherer werden, wenn man sich überlegt, wie $b_1$ und $g_2$ bzw. $b_2$ und $g_1$ im Zusammenhang stehen. Dafür kann man sich vorstellen, dass man geraden den Aufbau hat, der die scharfe Abbildung des großen Bildes liefert. Tauscht man jetzt Linse und Schirm aus, muss (weil der Strahlengang umkehrbar ist) wieder ein scharfes Bild entstehen. Das ist jetzt also das Kleine. Was man aber nur gemacht hat, ist Bildweite und Gegenstandsweite zu tauschen. Also ist $b_1 = g_2$ und $b_2 = g_1$. \\
+	Setzten wir diese beiden Ausdrücke in \eqref{bessel:masss} ein, so kommen wir 
+	\begin{equation}\label{bessel:simple}
+		\varepsilon^2= \frac{b_1^2}{g_1^2} \Rightarrow b_1 = \varepsilon g_1.
+	\end{equation}
+	Es gibt jetzt mehrere Möglichkeiten, wie man mit diesem Ergebnis weiter rechnet.\\
+	Eine davon ist, die sog. Besselgleichung zu nehmen. Diese führt neben dem Abstand von Gegenstand und Bild $a$ auch noch den Abstand $e$ zwischen den beiden Linsenpositionenen, bei denen die Abbildung scharf ist, ein. In unserem Fall ist das also $e = g_1 - g_2$\footnote{Das Vorzeichen von $e$ ist nicht wichtig, weil nur $e^2$ in \eqref{bessel:bessel} eingeht.}. Damit kann man die Brennweite $f$ mit der Gleichung
+	\begin{equation}\label{bessel:bessel}
+		f = \frac{a^2-e^2}{4a}
+	\end{equation}
+	ausrechnen. \\
+	Da die Linse dünn ist, muss $a = b_1 + g_1$ sein. Also lässt sich die Gegenstandsweite $g_1$ schreiben als \eqref{bessel:simple}
+	\begin{equation}\label{bessel:gw}
+		a = g_1 + b_1 = g_1 + \varepsilon g_1 = g_1\left(1+\epsilon\right) \Rightarrow g_1 = \frac{a}{1+\varepsilon}.
+	\end{equation} 
+	Wir können nun \eqref{bessel:simple} und \eqref{bessel:bessel} nutzten, um $e$ nur durch $a$ und $\varepsilon$ auszudrücken. Zuerst ist $g_2 = b_1$, also $e = g_1 - b_1$. Einfach einsetzen ergibt
+	\begin{equation}
+		e = g_1 - b_1 = \overset{\eqref{bessel:simple}}{=} g_1 - \varepsilon g_1 = g_1\left(1-\varepsilon\right) \overset{\eqref{bessel:gw}}{=} a \frac{1-\varepsilon}{1+\varepsilon}.
+	\end{equation}
+	Diesen Ausdruck können wir nun in \eqref{bessel:bessel} einsetzten
+	\begin{equation}\label{bessel:fbessel}
+	\boxed{
+		f = \frac{a^2-e^2}{4a} = a\cdot \frac{1-\left(\nicefrac{e}{a}\right)^2}{4} = a\cdot \frac{1-\left(\frac{1-\varepsilon}{1+\varepsilon}\right)^2}{4} =a\cdot  \frac{\varepsilon}{\left(1+\varepsilon\right)^2}.}
+	\end{equation}
+	Mit $\varepsilon =\sqrt{\nicefrac{1}{9}} =  \nicefrac{1}{3}$ ist $f = 22.5~\mathrm{m}$.\\
+	Das gleiche Ergebnis kann man auch mit der Abbildungsgleichung finden. Wir wissen, dass 
+	\begin{equation}\
+		\frac{1}{f} = \frac{1}{g_1} + \frac{1}{b_1} \Rightarrow f = \frac{g_1b_1}{g_1+b_1}
+	\end{equation}
+	gilt. Wir können jetzt wieder die Ausdrücke für $b_1$ und $g_1$ aus \eqref{bessel:simple}  und \eqref{bessel:gw} einsetzen
+	\begin{equation}\boxed{
+		f = \frac{g_1 b_1}{g_1+b_1} \overset{\eqref{bessel:simple}}{=}  \frac{g_1^2\varepsilon}{g_1+\varepsilon g_1} \overset{\eqref{bessel:gw}}{=} a^2\cdot \frac{\varepsilon\frac{1}{\left(1+\varepsilon\right)^2}}{\frac{a}{1+\varepsilon}+\varepsilon \cdot \frac{a}{1+\varepsilon}} = a\cdot \frac{\varepsilon}{\left(1+\varepsilon\right)^2}.}
+	\end{equation}
+	Es kommt also mit beiden Methoden genau das gleiche raus. Ach was!
+	
+
+\end{Answer}
