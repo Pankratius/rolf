@@ -1,0 +1,41 @@
+\ProvidesPackage{preamble}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{nicefrac}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{import}
+\usepackage{hyperref}
+\usepackage[european]{circuitikz}
+
+\usepackage{framed}
+\usepackage{setspace} %Für \setstretch{}, welches Zeilenabstände reguliert.
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\usepackage[left=2cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
+
+\usepackage{titlesec}
+\numberwithin{equation}{Exercise}
+
+
+\renewcommand{\ExerciseHeader}{\flushleft\textsf{\textbf{
+			Aufgabe \ExerciseHeaderNB} (\ExerciseHeaderTitle)\smallskip\newline
+	}}
+	%\ExerciseHeaderDifficulty
+	\renewcommand{\AnswerHeader}{\flushright \textbf{\textsf{Lösung
+				\ExerciseHeaderNB} }\ExerciseHeaderOrigin\smallskip\newline}
+	
+	\renewcommand{\ExerciseHeaderTitle}{\ExerciseTitle}
+	\setlength{\ExerciseSkipBefore}{0\baselineskip}

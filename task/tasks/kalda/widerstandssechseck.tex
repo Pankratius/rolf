@@ -1,0 +1,44 @@
+\flushleft
+\begin{minipage}{.7\textwidth}
+\begin{Exercise}[label = wdsss, title = Widerstandssechsecks, difficulty = 4, origin = Jaan Kalda ]
+		Die nebenstehende Abbildung zeigt ein regelmäßiges Sechseck. Jede Seite des Sechseck hat den Widerstand $R= 1~\Omega$. Zudem ist jeder Eckpunkt des Sechsecks mit dem Mittelpunkt des $O$ verbunden, wobei jedes Verbindungsstück ebenfalls den Widerstand $R = 1 ~\Omega$.\\
+		Berechne den Widerstand zwischen den Punkten $A$ und $O$.
+	\end{Exercise}
+\end{minipage}
+	\definecolor{ttqqqq}{rgb}{0.2,0.,0.}
+	\definecolor{sqsqsq}{rgb}{0.12549019607843137,0.12549019607843137,0.12549019607843137}
+	\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\hfill
+	\begin{minipage}{.25\textwidth}
+		\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\clip(-0.978433710067438,-0.362269667894218) rectangle (2.184310516415405,2.2170027788754108);
+ (0.,0.) -- (1.,0.) -- (1.5,0.8660254037844387) -- (1.,1.7320508075688776) -- (0.,1.7320508075688779) -- (-0.5,0.8660254037844395) -- cycle;
+	\draw [color=ttqqqq] (0.,0.)-- (1.,0.);
+	\draw [color=ttqqqq] (1.,0.)-- (1.5,0.8660254037844387);
+	\draw [color=ttqqqq] (1.5,0.8660254037844387)-- (1.,1.7320508075688776);
+	\draw [color=ttqqqq] (1.,1.7320508075688776)-- (0.,1.7320508075688779);
+	\draw [color=ttqqqq] (0.,1.7320508075688779)-- (-0.5,0.8660254037844395);
+	\draw [color=ttqqqq] (-0.5,0.8660254037844395)-- (0.,0.);
+	\draw (0.,0.)-- (1.,1.7320508075688776);
+	\draw (0.,1.7320508075688779)-- (1.,0.);
+	\draw (-0.5,0.8660254037844395)-- (1.5,0.8660254037844387);
+	\begin{scriptsize}
+	\draw [fill=uuuuuu] (0.,0.) circle (1.5pt);
+	\draw[color=uuuuuu] (-0.05142247127074252,-0.19636223384815558) node {$A$};
+	\draw [fill=sqsqsq] (1.,0.) circle (1.5pt);
+	\draw[color=sqsqsq] (1.1046150735816072,-0.1418321609777617) node {$B$};
+	\draw [fill=uuuuuu] (1.5,0.8660254037844387) circle (1.5pt);
+	\draw[color=uuuuuu] (1.6790267075540336,0.9355460664211556) node {$C$};
+	\draw [fill=uuuuuu] (1.,1.7320508075688776) circle (1.5pt);
+	\draw[color=uuuuuu] (1.1664440225723315,1.8534802396344964) node {$D$};
+	\draw [fill=uuuuuu] (0.,1.7320508075688779) circle (1.5pt);
+	\draw[color=uuuuuu] (0.030372638034848243,1.9298392614956145) node {$E$};
+	\draw [fill=uuuuuu] (-0.5,0.8660254037844395) circle (1.5pt);
+	\draw[color=uuuuuu] (-0.625834105243169,0.9573580955693131) node {$F$};
+	\draw [fill=uuuuuu] (0.5,0.866025403784439) circle (1.5pt);
+	\draw[color=uuuuuu] (0.7192974250351018,0.979990737081949) node {$O$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{minipage}
+
