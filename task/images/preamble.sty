@@ -28,14 +28,29 @@
 
 \usepackage{titlesec}
 \numberwithin{equation}{Exercise}
+\numberwithin{figure}{Exercise}
 
 
-\renewcommand{\ExerciseHeader}{\flushleft\textsf{\textbf{
-			Aufgabe \ExerciseHeaderNB} (\ExerciseHeaderTitle)\smallskip\newline
-	}}
-	%\ExerciseHeaderDifficulty
-	\renewcommand{\AnswerHeader}{\flushright \textbf{\textsf{Lösung
-				\ExerciseHeaderNB} }\ExerciseHeaderOrigin\smallskip\newline}
-	
-	\renewcommand{\ExerciseHeaderTitle}{\ExerciseTitle}
-	\setlength{\ExerciseSkipBefore}{0\baselineskip}
+%\renewcommand{\ExerciseHeader}{\par\noindent\textsf{\textbf{
+%			Aufgabe \ExerciseHeaderNB} (\ExerciseHeaderTitle)
+%	}\smallskip\newline}
+%	%\ExerciseHeaderDifficulty
+%	\renewcommand{\AnswerHeader}{\flushright \textbf{\textsf{Lösung
+%				\ExerciseHeaderNB} }\ExerciseHeaderOrigin\smallskip\newline}
+%	
+%	\renewcommand{\ExerciseHeaderTitle}{\ExerciseTitle}
+%	\setlength{\ExerciseSkipBefore}{0\baselineskip}
+
+
+\setlength\parindent{0pt}
+
+%\renewcommand{\DifficultyMarker}{}
+\renewcommand{\ExerciseName}{Aufgabe}
+\renewcommand{\AnswerName}{L\"osung}
+
+\renewcommand{\ExerciseHeader}{\textsf{\textbf{\ExerciseName~\ExerciseHeaderNB} (\ExerciseTitle)}\smallskip\newline}
+\renewcommand{\AtBeginExercise}{\hspace{-0.66em}}
+
+\renewcommand{\AnswerHeader}{\ExerciseHeaderDifficulty\textsf{\textbf{\AnswerName~\ExerciseHeaderNB}\ExerciseHeaderOrigin}\smallskip\newline}
+
+\setlength\AnswerSkipBefore{1em}

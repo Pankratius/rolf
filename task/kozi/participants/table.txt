@@ -1,0 +1,34 @@
+\subsection*{\textbf{Aufgabe~taskid}~(taskname)}
+\vspace{-0.5cm}
+\begin{figure}[h!]
+\begin{tabular}{crcrcr}
+\textsc{erreichbare Punkte:} &posspoints& & \textsc{erreichte Punkte:} &donepoints
+\end{tabular}
+\end{figure}
+\vspace{-0.1cm}
+\begin{minipage}[t]{0.6\textwidth}
+\flushleft
+\begin{tabular}{l|lccc}
+Ansatz:& &angen\%&/&40\%\\\hline
+&nachvollziehbar:&annach\%&/&20\%\\
+&zielf{\"u}hrend:&anz\%&/&40\%\\
+&math.~Formulierung:& anmath\%&/&40\%\\\hline\hline
+Argumentation:& &arggen\%&/&60\%\\\hline
+&nachvollziehbar:&argnach\%&/&40\%\\
+&richtig:&argri\%&/&60\%\\\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+	\vspace{-1.75cm}
+	Bemerkungen:\\\vspace*{0.2cm}
+	\underline{\hspace{0.75\textwidth}}\\\vspace*{0.2cm}
+	\underline{\hspace{0.75\textwidth}}
+	\\\vspace*{0.2cm}
+	\underline{\hspace{0.75\textwidth}}
+	\\\vspace*{0.2cm}
+	\underline{\hspace{0.75\textwidth}}
+	\\\vspace*{0.2cm}
+	\underline{\hspace{0.75\textwidth}}
+\end{minipage}
+	\vspace{0.5cm}

@@ -1,4 +1,4 @@
-\begin{Exercise}[label = ampel, title = Gute Ampel, difficulty = 2, origin = Alte IPhO-Aufgabe ]
+\begin{Exercise}[label = ampel, title = Gute Ampel, difficulty = 3, origin = Alte IPhO-Aufgabe ]
 	Ein Auto nähert sich auf einer Straße einer Ampel mit der Geschwindigkeit $v_0$.  Der Gleitreibungskoeffizient zwischen Straße und Auto beträgt $\mu$.\\ Die Ampel springt von Grün auf Gelb, wenn der Abstand Auto-Ampel gerade $s_0$ beträgt. Wie lang muss die Ampel gelb sein, damit der Autofahrer, unabhängig von $v_0$, entweder vor der Ampel zum Stehen kommt, oder aber mit konstanter Geschwindigkeit die Ampel kreuzt?
 \end{Exercise}	
 \begin{Answer}[ref = ampel]
@@ -25,5 +25,18 @@
 	\boxed{
 	\sqrt{2s_0g\mu} \leq \frac{s_0}{t_g} \Rightarrow t_g \geq  \sqrt{\frac{s_0}{2g\mu}}}
 	\end{equation}
-	gilt.
+	gilt.\\
+	Man kann die Aufgabe auch ohne Energieerhaltung nutzen. Dann muss man drei Bedingungen betrachten. Die erste Bedingung sagt, dass das Auto zum stehen gekommen ist, bevor die Ampel umschaltet, seine Geschwindigkeit also kleiner gleich null ist
+	\begin{equation}\label{traff:cond1}
+		v\left(t_g\right)\leq 0 \Rightarrow v_0 - g\mu t_g \leq 0 \Rightarrow v_0 \leq g \mu t_g.
+	\end{equation}
+	Gleichzeitig muss die Strecke, die das Auto in der Zeit $t_g$ bremsend zurücklegt, kleiner sein, als der Abstand vom der Ampel. Weil es sich um eine gleichmäßig beschleunigte Bewegung mit der Anfangsgeschwindigkeit $v_0$ handelt, muss also gelten
+	\begin{equation}\label{traff:cond2}
+	s\left(t_g\right) \leq s_0 \Rightarrow	-\frac{g\mu}{2}t_g^2+v_0t_g \leq s_0 \Rightarrow v_0 \leq \frac{s_0+\frac{g\mu}{2}t_g^2}{t_g}.
+	\end{equation}
+	Für den Fall, dass das Auto nicht bremst, sondern mit konstanter Geschwindigkeit weiterfährt, muss wieder gelten
+	\begin{equation}\label{traff:cond3}
+		v_0 \geq \frac{s_0}{t_g}.
+	\end{equation}
+	Wir können jetzt zuerst 
 \end{Answer}

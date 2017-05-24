@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+
+\filldraw[thick, draw = black, fill = red!20!white] (-3,-0.25)rectangle (3,.25);
+\filldraw[thick, draw = black, fill= black!30!white] (-3,-0.5)rectangle (3,-.25);
+\filldraw[thick,draw= black, fill=blue!20!white] (-3,-1)rectangle(3,-.5);
+
+\draw[|-|] (3.2,-.25)--(3.2,-.5) node [midway, right] {$d$};
+
+\draw[->,thick] (-1,-.65) -- (1,-.65) node[midway, below] {$v$};
+\draw[<-,thick] (-1,-.1)--(1,-.1) node[midway, above]{$v$};
+\draw[->,decorate,decoration={snake, amplitude = 0.5mm, segment length = 1.9mm}] (-2.5,-0.1) -- (-2.5,-.95);
+\draw[->,decorate,decoration={snake, amplitude = 0.5mm, segment length = 1.9mm}] (-2.7,-0.1) -- (-2.7,-.95);
+\draw[->,decorate,decoration={snake, amplitude = 0.5mm, segment length = 1.9mm}] (-2.3,-0.1) -- (-2.3,-.95);
+\node at (-2.5,0.05) {\small $P$};
+\draw[|-|] (-3.2,.25)--(-3.2,-.25) node[midway, left]{$h$};
+\draw[<->] (-3.05,-1.4) -- (3.05,-1.4) node[midway, fill = white] {$\ell$};
+\end{tikzpicture}
