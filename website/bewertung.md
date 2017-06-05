@@ -7,15 +7,4 @@ Bei der Bewertung des Ansatzs schauen wir, ob ihr physikalisch verstanden habt, 
 In der Argumentation geht es dann darum, dass ihr aus dem Verständnis für die Aufgabe in der Lage seid, tatsächlich eine Lösung zu finden.
 
 Die einzelnen Kriterien sind dabei prozentual gewichtet:
-
-Ansatz |  40%
--------|--------
-|nachvollziehbar| 20%
-|zielführend|40%
-|math. Formulierung|20%
--------|----------
-Argumentation| 60%
------------------
-|nachvollziehbar|40%
-|richtig|60%
--------|---------
+(/website/bewertung.png)
