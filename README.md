@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+## Rolf-Aufgabenwettbewerb
 
-You can use the [editor on GitHub](https://github.com/Pankratius/rolf/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Willkommen beim **Rolf-Aufgabenwettbewerb**! Hier findet ihr die aktuellen Aufgaben, sowie die Lösungen der vergangenen Aufgabenserien.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
