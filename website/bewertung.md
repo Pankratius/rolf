@@ -7,4 +7,4 @@ Bei der Bewertung des Ansatzs schauen wir, ob ihr physikalisch verstanden habt, 
 In der Argumentation geht es dann darum, dass ihr aus dem Verständnis für die Aufgabe in der Lage seid, tatsächlich eine Lösung zu finden.
 
 Die einzelnen Kriterien sind dabei prozentual gewichtet:
-![Bewertungskriterien](bewertung.png)
+![Bewertungskriterien](/website/bewertung.png)
