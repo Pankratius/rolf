@@ -1,4 +1,5 @@
-theme: jekyll-theme-minimal
-title: [ROLF-Aufgabenwettbewerb]
-description: []
-baseurl: [/rolf]
+title: ROLF-Aufgabenwettbewerb
+description:
+show_downloads: false
+google_analytics:
+theme:
