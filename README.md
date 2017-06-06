@@ -17,12 +17,12 @@ Wenn ihr an eurer Schule bereits Mitglieder des ROLF-Netzwerks habt, könnt ihr 
 ### Skripte und andere Sachen
 Zusätzlich gibt es vom ROLF-Netzwerk auch Skripte zu ausgewählten Themen.
 
-[Bewegegungen](/handouts/motion.pdf)
+[Bewegegungen](rolf/handouts/motion.pdf)
 
-[Ableitungen](/handouts/der.pdf)
+[Ableitungen](rolf/handouts/der.pdf)
 
-[Stöße](/handouts/coll.pdf)
+[Stöße](rolf/handouts/coll.pdf)
 
-[Harmonische Schwingungen](/handouts/hamos.pdf)
+[Harmonische Schwingungen](rolf/handouts/hamos.pdf)
 
 [Kuchenrezept](/website/oldsol.md)
