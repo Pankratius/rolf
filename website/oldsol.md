@@ -3,4 +3,4 @@ Hier findet ihr Lösungen für alte Aufgaben, die wir in den Seminaren regulär 
 [Widerstände und Bewegungen](/tasks/tasksheets/widerstundbew.pdf)
 
 
-[zurück](pankratius.github.io/rolf)
+[zurück](www.pankratius.github.io/rolf)
