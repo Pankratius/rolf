@@ -24,3 +24,5 @@ Zusätzlich gibt es vom ROLF-Netzwerk auch Skripte zu ausgewählten Themen.
 [Stöße](/handouts/coll.pdf)
 
 [Harmonische Schwingungen](/handouts/hamos.pdf)
+
+[Kuchenrezept](/website/oldsol.md)
