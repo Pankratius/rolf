@@ -1,0 +1,88 @@
+\documentclass[a4paper, twocolumn, 9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{units}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{pgfplots}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{amsthm}
+\usepackage{setspace} %Für \setstretch{}, welches Zeilenabstände reguliert.
+
+%Entfernt den Punkt hinter dem Namen eines Theorems
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}
+\makeatother
+
+\newtheorem*{definition}{Definition:}
+\newtheorem*{satz}{Satz:}
+
+
+\begin{document}
+\pagenumbering{gobble}
+\vspace*{-2cm}
+\parbox{2cm}{\includegraphics[width=2.5cm]{../task/images/ROLF4.png}}
+\parbox{5.3cm}{\setstretch{2.0} \centering{ \huge \textbf{Erhaltung des Impulses}}\\ Maximilian Marienhagen\\ \vspace*{-0.5cm} (\href{mailto:physikrolf@asgspez.de}{physikrolf@asgspez.de)}}
+\section*{Masse und Massepunkte}
+Bis jetzt haben wir uns nur Bewegungen angeschaut ohne nach den Ursachen zu fragen. Das soll jetzt nachgeholt werden. Dazu definieren wir zunächst den Begriff der Masse.
+\begin{definition}
+Die Masse ist eine Eigenschaft der Materie.
+\end{definition}
+Dazu noch einige Bemerkungen zur Masse in der klassischen Mechanik:
+\begin{enumerate}
+    \item Ein typisches Formelzeichen ist $m$, die wichtigste Einheit kg.
+    \item Materie ohne Masse gibt es nicht.
+    \item Die Masse bleibt erhalten. Was ein Körper an Masse verliert, muss ein anderer bekommen.
+\end{enumerate}
+Jetzt können wir auch unsere vorherigen Analysen zu Bewegungen präzisieren. Tatsächlich haben wir nämlich immer die Bewegung von sogenannten Massepunkten betrachtet.
+\begin{definition}
+Ein Massepunkt ist ein Modell für reale Körper, bei dem man sich die gesamte Masse dieses Körpers in einem Punkt konzentriert vorstellt.
+\end{definition}
+Massepunkte (oder auch Punktmasse genannt) haben also keine Ausdehnung.
+\section*{Impulse und Kräfte}
+Was die Masse jetzt eigentlich bedeutet, werden wir sehen, wenn wir noch eine weitere Definition nutzen.
+\begin{definition}
+Der Impuls $p$ ist eine Eigenschaft eines Massepunktes. Es gilt $p=mv$.
+\end{definition}
+Dabei ist zu beachten, dass der Impuls genau wie die Geschwindigkeit eine richtungsbehaftete Größe ist. Aber man kann ihn sich genau wie Geschwindigkeiten in die einzelnen Richtungen zerlegt vorstellen. Man spricht dann beispielsweise von einem Impuls in x-Richtung, einem in y-Richtung und einem in z-Richtung. Diese können wieder getrennt voneinander betrachtet werden.\\
+Noch eine Definition:
+\begin{definition}
+Für die Kraft $F$ gilt $F=\dot{p}$ 
+\end{definition}
+Lasst uns mal schaun, wohin das mit obiger Definition führt.
+\begin{equation*}
+F=\frac{dp}{dt}=\frac{d}{dt}mv    
+\end{equation*}
+Wir nehmen an, dass die Masse des betrachteten Massepunktes konstant bleibt. Dann kann man sie vor die Ableitung 'ziehen'.
+\begin{equation*}
+F=m\frac{dv}{dt}=ma    
+\end{equation*}
+Dabei wurde die Definition der Beschleunigung als zeitliche Ableitung der Geschwindigkeit genutzt.\\
+Auch die Kraft ist, wie die Geschwindigkeit und der Impuls, eine gerichtete Größe und kann in ihre einzelnen Komponenten zerlegt betrachtet werden.
+\section*{Impulserhaltung}
+Stellen wir uns ein System vor, in dem sich ganz viele, sagen wir $n$, Massepunkte befinden, die praktischerweise nummeriert sind. Jeder dieser Massepunkte habe einen Impuls $p_i$ ($i$ ist die Nummer des betrachteten Massepunktes). Das Teilchen $i$ soll jetzt auf das Teilchen $j$ eine Kraft ausüben. Diese Kraft sei $F_{ij}$. Nach den Newtonschen Axiomen muss das Teilchen $j$ eine gleich große, aber entgegengesetzt gerichtete Kraft auf das Teilchen $i$ ausüben. Diese sei $F_{ji}$ Es gilt also:
+\begin{equation*}
+F_{ij}=-F_{ji}    
+\end{equation*}
+Nach der Definition der Kraft bewirkt die Kraft $F_{ij}$ eine Änderung des Impulses $p_j$ (des Impulses von Teilchen $j$). Genauso bewirkt die Kraft $F_{ji}$ eine Änderung von $p_i$. Es gilt also:
+\begin{equation*}
+\frac{dp_j}{dt}=-\frac{dp_i}{dt}    
+\end{equation*}
+Gut, was aber sagt uns jetzt diese Gleichung?\\
+Da steht doch im Grunde lediglich, dass die Änderungsrate von $p_i$ genauso groß ist wie die Änderungsrate von $p_j$. Sie unterscheiden sich allerdings im Vorzeichen. Diese Aussage gilt für jeden Zeitpunkt, in dem die Kräfte wirken. \\
+Und was bedeutet das, wenn die Änderungsraten die ganze Zeit über gleich groß aber entgegensetzt sind? \\
+Das heißt doch, das über jeden beliebigen Zeitraum $\Delta t$ die Änderung des Impulses des Körpers $i$, $\Delta p_i$, gleich groß und entgegengesetzt der Änderung des Impulses von $j$, $\Delta p_j$, sein muss. Beziehungsweise etwas eleganter:
+\begin{equation*}
+    \Delta p_i = -\Delta p_j
+\end{equation*}
+Das heißt jetzt also, dass der gesamte Impuls, den ein Körper abgibt, von einem anderen aufgenommen wird. Da dies für alle $n$ Körper gilt, kann gesagt werden, dass:
+\begin{satz}
+Der Gesamtimpuls $p_{Gesamt} = \sum p_i$ eines abgeschlossenen Systems bleibt konstant. \\ Auch die Impulserhaltung muss für die einzelnen Richtungen einzeln betrachtet werden. 
+\end{satz}
+\end{document}

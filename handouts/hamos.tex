@@ -1,0 +1,188 @@
+\documentclass[a4paper,8pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{units}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usetikzlibrary{arrows.meta}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage[european]{circuitikz}
+\usepackage{adjustbox}
+\usetikzlibrary{shapes.geometric}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+
+\usepackage[left=2.5cm,right=2.5cm,top=1.8cm,bottom=2cm]{geometry}
+
+\usepackage{pgfplots}
+\usepackage{titlesec}
+
+\titleformat*{\section}{\Large \bfseries \sffamily}
+\titleformat*{\subsection}{\large \sffamily}
+
+
+%\date{Abgabe am 12.09.2016}
+
+
+\newtheoremstyle{problemstyle}  % <name>
+        {3pt}                                               % <space above>
+        {3pt}                                               % <space below>
+        {\normalfont}                               % <body font>
+        {}                                                  % <indent amount}
+        {\sffamily \bfseries}                 % <theorem head font>
+        {\normalfont\bfseries\\}         % <punctuation after theorem head>
+        {.5em}                                          % <space after theorem head>
+        {}                                                  % <theorem head spec (can be left empty, meaning `normal')>
+\theoremstyle{problemstyle}
+
+\newtheorem{problem}{Aufgabe}
+
+
+
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\begin{multicols}{2}
+\parbox{2.5cm}{\includegraphics[width=2.5cm]{../task/images/ROLF4.png}}
+\parbox{4.5cm}{\centering{\Large \textsf{Harmonische \\Schwingungen}}\\Aaron Wild (\href{mailto:physikrolf@asgspez.de}{physikrolf@asgspez.de)}}
+\section*{Bewegungen auf Kreisbahnen}
+Dreht sich bspw. eine Kreisscheibe um eine Achse durch den Mittelpunkt, so haben Punkte mit unterschiedlichem Abstand $r$ vom Mittelpunkt unterschiedliche Geschwindigkeiten $v$, da die weiter außen liegenden Punkte bei einer Umdrehung eine größere Strecke $s$ zurücklegen müssen.\\
+Wir definineren die Winkelgeschwindigkeit als Änderung des Winkels $\varphi$ pro gegebene Zeiteinheit
+\begin{equation}
+\label{omegadef}
+    \omega = \frac{\Delta \varphi}{\Delta t}\left( = \frac{d\varphi}{dt}\right).
+\end{equation}
+Die Änderung der Winkelgeschwindigkeit nennen wir $\alpha$ 
+\begin{equation}
+    \label{alphadef}
+    \alpha = \frac{\Delta \omega}{\Delta t}= \left(\frac{d\omega}{dt}\right).
+\end{equation}
+Da (\textbf{im Bogenmaß}) $s = \varphi r$ gilt, ist 
+\begin{equation}
+\label{vdef}
+    v = \omega r.
+\end{equation}
+Wir können $\omega$ also auch als Proportionalitätsfaktor zwischen $r$ und $v$ sehen.
+
+\section*{Radialkraft}
+
+Soll sich ein Körper auf einer Kreisbahn bewegen, wobei der Geschwindigkeitsvektor seine Richtung ständig ändert, muss nach den newtonschen Axiomen auf ihn eine Kraft wirken. Diese ist gegeben durch
+\begin{equation}
+\label{fr}
+F_r = m a_r = -\frac{mv^2}{r} = - m\omega^2 r.
+\end{equation}
+Diese Kraft zeigt immer zum Kreismittelpunkt. Es kann sich dabei um Zugkräfte in einem Seil oder die Gravitation handeln.
+\section*{Harmonische Schwingungen am Kreis}
+\subsection*{Projektion der Vertikalbewegung}
+\begin{Figure}
+ \centering
+ 
+ 
+
+\begin{tikzpicture}[scale = 2]
+
+    \draw[step=.5cm,gray,very thin] (0,0) grid (1.1,1.1);
+  \draw[-{>[scale=1]},line width=1pt](0,0) -- (1.1,0);
+  \draw[-{>[scale=1]},line width=1pt] (0,0) -- (0,1.1);
+  \draw (1,0)  arc(0:90:1) ;
+  \draw[line width=1pt] (0,0) -- node[anchor = south,scale = 1]{$r$} (45:1);
+  \draw[-{>[scale=1 ]},line width=1pt](0:1/2^0.5) -- node[anchor = west, scale =1] {$y\left(t\right)$} (45:1);
+  \draw[dashed] (45:0.5) -- (0.5^0.5, 0.5^0.5*0.5);
+  \filldraw[fill=green,draw=black] (0,0) -- node[anchor = south west ,xshift = 2.5, scale = 1]{$\color{green} \omega t$} (0.2,0) arc(0:45:0.2) -- cycle;
+  \filldraw[fill=green,draw=black] (0.5*0.5^0.5,0.5*0.5^0.5) -- (0.5*0.5^0.5+0.1,0.5*0.5^0.5) arc(0:45:0.1) -- cycle;
+  \draw (0:0.5^0.5+0.1)-- (0.5^0.5+0.1,0.1) --  (0.5^0.5,0.1);
+  \node[style={draw,circle,minimum size=1pt,inner sep=0pt,outer sep=0pt,fill=black}] at (0.5^0.5+0.05,0.05){};
+  
+
+
+\end{tikzpicture}
+
+
+
+ \captionof{figure}{Berechnung der $y-$Koordinate bei der Kreisbewegung}
+ \label{fig:ypos}
+\end{Figure}
+
+Wir betrachten die Bewegung eines Körpers mit konstanter Winkelgeschwindigkeit $\omega$. Nach \eqref{omegadef} gilt für den Drekwinkel $\varphi = \omega t$.
+Nun soll die Höhe $y$ des Körpers über dem Boden analysiert werden. Da das Dreieck aus $r$ und $y$ mit dem Winkel $\varphi = \omega t$ ein rechtwinkliges Dreieck mit Hypotenuse $r$ und Gegenkathete $y$ ist (vgl. Abb. \ref{fig:ypos}), gilt 
+\begin{equation}
+\label{eom}
+\sin \varphi = \frac{y\left(t\right)}{r} \Rightarrow y\left(t\right) = r \cdot \sin \varphi = r\cdot \sin \omega t
+\end{equation}
+
+\subsection*{Kraft bei der harmonischen Schwingung}
+\begin{Figure}
+ \centering
+ \begin{tikzpicture}[scale = 2]
+
+    \draw[step=.5cm,gray,very thin] (0,0) grid (1.1,1.1);
+  \draw[-{>[scale=1]},line width=1pt](0,0) -- (1.1,0);
+  \draw[-{>[scale=1]},line width=1pt] (0,0) -- (0,1.1);
+  \draw (1,0)  arc(0:90:1) ;
+  \draw[dashed] (0,0) -- node[anchor = south,scale = 1]{} (45:1);
+    \draw[dashed](0:1/2^0.5) -- node[anchor = west, scale =1] {} (45:1);
+  \draw[red,-{>[scale=1]},line width=1pt] (45:1) -- node[anchor = south  , scale = 1] {$a_r$} (45:0.45);
+  \draw[red,-{>[scale=1]},line width=1pt] (45:1) -- node[anchor = south west, scale = 1] {$a_y$} (0.5^0.5, 0.5^0.5*0.5);
+  \draw[dashed] (45:0.5) -- (0.5^0.5, 0.5^0.5*0.5);
+  \filldraw[fill=green,draw=black] (0,0) -- node[anchor = south west ,xshift = 2.5, scale = 1]{$\color{green} \omega t$} (0.2,0) arc(0:45:0.2) -- cycle;
+  \filldraw[fill=green,draw=black] (0.5*0.5^0.5,0.5*0.5^0.5) -- (0.5*0.5^0.5+0.1,0.5*0.5^0.5) arc(0:45:0.1) -- cycle;
+  \draw (0:0.5^0.5+0.1)-- (0.5^0.5+0.1,0.1) --  (0.5^0.5,0.1);
+  \node[style={draw,circle,minimum size=1pt,inner sep=0pt,outer sep=0pt,fill=black}] at (0.5^0.5+0.05,0.05){};
+  
+
+
+\end{tikzpicture}
+
+
+
+ \captionof{figure}{Beschleunigungen bei der Kreisbewegung}
+ \label{fig:acc}
+\end{Figure}
+Wir bestimmen die $y-$Komponente der Beschleunigung $a_r$, die auf den Körper wirkt.
+Das Dreieck mit den Seiten $y$ und $r$ ist dem  Dreieck aus $a_r$ und $a_y$ ähnlich (vgl. Abb.\ref{fig:acc}), da sie beide den rechten Winkel und den Winkel $\omega t$ haben (Parallelverschiebung).
+Aus \eqref{eom} und \eqref{fr} können wir $a_y$ in Abhängigkeit von $y$ bestimmen
+\begin{equation}
+\label{hammon}
+a_y = \sin \omega t\cdot  a_r = -\frac{y}{r}\cdot \omega^2 r = -\omega ^2 y.
+\end{equation}
+Wann immer wir für die Beschleunigung, und damit für die Kraft, einen Ausdruck der Form \eqref{hammon} haben, sprechen wir von einer \textsc{harmonischen Schwingung}, und erhalten eine Lösung für $y\left(t\right)$ in der Form \eqref{eom}.\\
+Da $\sin \omega t$ eine Periode von $T = \frac{2\pi}{\omega}$ hat, kann so auch die Schwingungsdauer eines Systems der Form $\eqref{hammon}$ bestimmt werden.
+\subsection*{Beispiel: Federschwinger}
+Für eine Feder gilt das Hooksche Gesetz, $F= ma_x = - D x$, wobei $x$ die Auslenkung von der Ruhelage ist. Der Vergleich mit \eqref{hammon} zeigt, das $\omega^2 = \frac{D}{m}$ ist, und damit für die Schwingungsdauer $T = 2\pi \sqrt{\frac{m}{D}}$ gilt.
+\section*{Aufgaben}
+\begin{problem}[Kugel und Kopf]
+Jemand hält ein leichtes Seil der Länge $\ell = 8~\mathrm{m}$ über seinen Kopf, an dessen Ende sich eine Kugel der Masse $m = 2~\mathrm{kg}$ befindet, und wirbelt es kreisförmig. Die Kugel soll eine Geschwindigkeit von $4~\mathrm{\frac{m}{s}}$ haben.
+\begin{multicols}{2}
+\begin{itemize}
+    \item[a)] Wie groß ist die Winkelgeschwindigkeit $\omega$ der Kugel?
+    \item[b)] Welche Kräfte und Gegenkräfte wirken wo, und wie groß sind sie?
+\end{itemize}
+\end{multicols}
+\end{problem}
+\begin{problem}[Coladose]
+Ein Zylinder mit Radius $R$ ist mit Wasser gefüllt. Darein wird eine Dose mit Radius $r$ ($r<R$) getan, sodaß sie schwimmt. Man bestimme die Masse $m$ der Dose in Abhängigkeit von $r$, $R$ und der Schwingungsdauer bei kleinen Auslenkungen $T$\footnote{Harmonische Schwingungen treten meist nur bei \textit{kleinen} Auslenkungen aus. Bei dem Federschwinger gilt bspw. bei zu großen Auslenkungen das Hooksche Gesetz nicht mehr.}.
+\end{problem}
+\begin{problem}[Loch im Boden]
+Der Nordpol und der Südpol werden  miteinander verbunden. Jemand springt am Nordpol in den Tunnel. Wie lange dauert es, bis er am Südpol hinaus kommt? Der Erdradius beträgt $R$, und die Dichte der Erde ist $\rho$. \textit{Tipp: Die Kraft, die auf einen Körper der Masse $m$ im Abstand $r$ von dem Erdkern wirkt, ist $F = -G\frac{mM\left(r\right)}{r^2}$, wobei $M$ die Masse der Kugel mit dem Radius $r$ ($r<R$) ist. $G$ ist eine Konstante.}
+\end{problem}
+\begin{problem}[ISS]
+Welche Geschwindigkeit hat die ISS, wenn sie sich auf einer Höhe von $r =  419.18~\mathrm{km}$ über der Erde im kreisförmigen Orbit befindet?
+\end{problem}
+\end{multicols}
+\end{document}

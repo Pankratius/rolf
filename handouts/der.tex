@@ -1,0 +1,131 @@
+\documentclass[a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{units}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage[european]{circuitikz}
+\usepackage{adjustbox}
+\usepackage{framed}
+\usetikzlibrary{shapes.geometric}
+%\usepackage{multicol}
+\usepackage{pgfplots}
+\usepackage{titlesec}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{ragged}
+\usepackage{setspace}
+
+\usepackage{titling} %Braucht man, um das Bild richtig reinzukriegen
+\setlength{\droptitle}{-4cm}
+
+
+\titleformat*{\section}{\Large \bfseries \sffamily}
+\titleformat*{\subsection}{\large \sffamily}
+\title{
+\centering\raisebox{-1cm}{
+\parbox{4cm}{\includegraphics[scale=0.08]{ROLF4}}
+\parbox{11cm}{\centering{\huge \textsf{Funktionen und Ableitungen}}\\Maximilian Marienhagen, Aaron Wild\\ (\href{mailto:physikrolf@asgspez.de}{physikrolf@asgspez.de)}}}\vspace{-3\baselineskip}} %The last one regulates the space between title and body
+\date{}
+\author{}
+
+\usepackage{amsthm}
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}
+\makeatother
+
+\newtheorem*{definition}{Definition:}
+
+\begin{document}
+\pagenumbering{gobble}
+%\begin{multicols*}{2}
+\vspace*{-2cm}
+\parbox{2cm}{\includegraphics[width=2.5cm]{../task/images/ROLF4.png}}
+\parbox{5.3cm}{\setstretch{2.0} \centering{ \huge \textbf{ Funktionen \& \\Ableitungen}}\\ Maximilian Marienhagen\\ \vspace*{-0.5cm} (\href{mailto:physikrolf@asgspez.de}{physikrolf@asgspez.de)}}
+\begin{small}
+
+%\maketitle
+\section*{Funktionen}
+Eine lineare Funktion ist eine Zuordnung der Form $f(x)=y = mx+n$.\\
+Jetzt soll der Begriff der Funktion allgemeiner definiert werden.
+\begin{definition}
+Eine Funktion ist eine Zuordnung, die Werten $x$ Werte $y$ zuordnet.
+\end{definition}
+Hinweise:
+\begin{enumerate}
+\itemsep0em
+    \item Funktionen können als Formel oder Graf dargestellt werden. 
+    \item Einem Wert $x$ kann eindeutig ein Wert $y$ zugeordnet werden. Andersherum muss das nicht der Fall sein.
+    \item Es kann nicht immer jedem $x$ ein $y$ zugeordnet werden. (Betrachte z.B. $f(x)=1/x$. Bei $x=0$ gibt es keinen y-Wert, da man nicht durch 0 dividieren kann. Man sagt, die Funktion ist an dieser Stelle undefiniert.)
+\end{enumerate}
+
+\section*{Ableitungen}
+Der Anstieg einer linearen Funktion $f(x) = mx+n$ ist $m = \frac{\Delta y}{\Delta x}$.
+Was bedeutet dieser Anstieg?\\
+Der Anstieg ist sozusagen die Änderungsrate von $y$ in Abhängigkeit von $x$. Er sagt uns, um wieviel $y$ größer wird, wenn man $x$ um einen bestimmten Betrag erhöht. Er kann also als 'Steiligkeit' einer Funktion aufgefasst werden. Demnach gilt:
+\begin{enumerate}
+\itemsep0em
+    \item Je größer der Betrag des Anstiegs, desto steiler die Funktion.
+    \item Ein Anstieg von 0 heißt, dass die Funktion parallel zur x-Achse ist.
+    \item Ein negativer Anstieg bedeutet, dass die Funktion 'bergab' geht. 
+\end{enumerate}
+Schau Dir jetzt mal die Funktion $f(x)=x^2$ an:
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+        \draw[->] (-2,0) -- (2,0) node[right] {$x$};
+        \draw[->] (0,-2) -- (0,2) node[above] {$y$};
+
+        \draw[thick,purple,domain=-1.4:1.4,smooth] plot (\x,{(\x)^2}) node [below right] {$f(x)$};
+        %\draw[thick,brown,domain=-1:1,smooth] plot (\x,{2*(\x)}) node [left] {$f'(x)$};
+\end{tikzpicture}
+\end{center}
+Welchen Anstieg hat sie? Das ist leider nicht mehr so leicht herauszufinden wie bei einer linearen Funktion.\\
+Wenn wir uns den Anstieg als Steiligkeit vorstellen, fällt auf, dass der an jeder Stelle der Funktion ein anderer ist! Also kann der Anstieg keine Konstante sein. Der Anstieg muss selbst eine Funktion von $x$ sein, damit er an jeder Stelle den richtigen Wert haben kann. Diese Funktion nennen wir Ableitung oder Ableitungsfunktion und schreiben sie $f'(x)$, $(f(x))'$ oder $\frac{d}{dx}f(x)$. Hier ist sie eingezeichnet:
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+        \draw[->] (-2,0) -- (2,0) node[right] {$x$};
+        \draw[->] (0,-2) -- (0,2) node[above] {$y$};
+
+        \draw[thick,purple,domain=-1:1,smooth] plot (\x,{2*(\x)}) node [below right] {$f'(x)$};
+        %\draw[thick,brown,domain=-1:1,smooth] plot (\x,{2*(\x)}) node [left] {$f'(x)$};
+\end{tikzpicture}
+\end{center}
+Ein Paar Dinge fallen auf:
+\begin{itemize}
+\itemsep0em
+    \item Da, wo die Ableitung negativ ist, geht Funktion runter.
+    \item Da, wo die Ableitung 0 ist, verläuft die Funktion horizontal.
+    \item Da, wo sie positiv ist, geht die Funktion hoch.
+    \item Je steiler die Funktion, desto größer der Betrag der Ableitung. 
+\end{itemize}
+Um die Ableitung einer Funktion zu bestimmen, stellt man sich vor, dass man zwei Punkte irgendwo auf der Funktion platziert. Diese zwei Punkte verbindet man durch eine lineare Funktion. Dann lässt man diese Punkte immer näher aneinander kommen. Wenn sie unendlich nah einander sind, ist der Anstieg der linearen Funktion gleichzeitig die Ableitung der Funktion an dieser Stelle. Mathematisch formuliert heißt das:
+\begin{equation*}
+    f'(x) = \lim\limits_{\Delta x \to 0}\frac{\Delta y}{\Delta x}
+\end{equation*}
+Oder man wendet Ableitungsregeln an, die das Ganze viel einfacher machen.
+Die wichtigsten sind:
+\begin{align*}
+    (f(x)+g(x))' &= f'(x)+g'(x) \\ (x^n)'&=n\cdot x^{n-1}\\
+    (f(x)\cdot g(x))' &= f'(x)\cdot g(x) + f(x) \cdot g'(x) \\ (f(g(x)))' &= \frac{df}{dg}\cdot \frac{dg}{dx} 
+\end{align*}
+Natürlich kann man die Ableitung selbst nochmal ableiten. Das ist dann die zweite Ableitung und wird $f''(x)$ bzw. $\frac{df^2}{d^2x}$ geschrieben. Auch die kann wieder abgeleitet werden. Das wäre dann die dritte Ableitung usw.
+\end{small}
+\section*{Aufgaben}
+Als Übung ist es sinnvoll, mal ein Paar Funktionen zu skizzieren. 
+\begin{align*}
+    b(x) &= 13 & c(x) &= x \\
+    d(x) &= 5x+9 & e(x)&= x^2\\ 
+    f(x)&=x^2-4x+7 & g(x) &= x^3
+\end{align*}
+Bilde dann die Ableitungen mit den Ableitungsregeln. Skizziere auch die und überlege Dir, ob das Ergebnis sinnvoll ist und die oben genannten Kriterien alle erüllt.  
+
+
+%\end{multicols*}
+\end{document}

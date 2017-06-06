@@ -8,6 +8,3 @@ In der Argumentation geht es dann darum, dass ihr aus dem Verständnis für die 
 
 Die einzelnen Kriterien sind dabei prozentual gewichtet:
 ![Bewertungskriterien](bew.png)
-
-
-[zurück](www.pankratius.github.io/rolf)
