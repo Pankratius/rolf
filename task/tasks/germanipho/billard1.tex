@@ -1,0 +1,19 @@
+\begin{Exercise}[label = billard1, difficulty = 2, origin = {1. Runde IPhO 2014}, title = Billard]
+		Im Punkt $A$ liegt eine sehr kleine Billiardkugel. In welche Richtung muss die Kugel angestoßen werden, damit sie zuerst mit Bande $\overline{AB}$ stößt, dann mit der Bande $\overline{BC}$ dann mit Bande $\overline{AC}$ und schlußendlich wieder im Punkt $O$ ankommt? Alle Stöße sind dabei vollständig elastisch. \\
+		Konstruiere dazu die Bahn der Bewegung der Kugel und begründe, warum die Bahn so aussehen muss.
+\end{Exercise}
+\begin{figure}[h]
+	\centering
+		\begin{tikzpicture}[scale = 2]
+		\tkzDefPoint(-1,1){A}
+		\tkzDefPoint(2,2){B}
+		\tkzDefPoint(0,3){C}
+		\tkzDefPoint(0.2,2){O}
+		\tkzDrawPoints[color=black](A,B,C,O)
+		\tkzDrawSegments (A,B B,C C,A)
+		\tkzLabelPoints(O,A,B)
+		\tkzLabelPoints[above right](C)
+		
+		\end{tikzpicture}
+
+\end{figure}
