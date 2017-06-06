@@ -10,4 +10,4 @@ Die einzelnen Kriterien sind dabei prozentual gewichtet:
 ![Bewertungskriterien](bew.png)
 
 
-[zurück](pankratius.github.io/rolf)
+[zurück](www.pankratius.github.io/rolf)
