@@ -1,6 +1,6 @@
 \flushleft
 \begin{minipage}{.7\textwidth}
-\begin{Exercise}[label = wdsss, title = Widerstandssechsecks, difficulty = 4, origin = Jaan Kalda ]
+\begin{Exercise}[label = wdsss, title = Widerstandssechsecks, difficulty = 3, origin = Jaan Kalda ]
 		Die nebenstehende Abbildung zeigt ein regelmäßiges Sechseck. Jede Seite des Sechseck hat den Widerstand $R= 1~\Omega$. Zudem ist jeder Eckpunkt des Sechsecks mit dem Mittelpunkt des $O$ verbunden, wobei jedes Verbindungsstück ebenfalls den Widerstand $R = 1 ~\Omega$.\\
 		Berechne den Widerstand zwischen den Punkten $A$ und $O$.
 	\end{Exercise}
@@ -41,4 +41,18 @@
 	\end{scriptsize}
 	\end{tikzpicture}
 \end{minipage}
+\begin{Answer}[ref = wdsss]
+	Aus Symmetriegründen müssen die Punkte $B$ und $F$, sowie die Punkte $E$ und $C$ auf dem gleichen Potential liegen (Spiegelsymmetrie entlang der Achse durch $A$, $O$ und $D$). Damit können wir den Stromkreis mit den neuen Punkten recht einfach neu zeichnen, siehe Abbildung \ref{fig:wdsss1}. Damit ist es uns gelungen, das Problem auf eine einfache Reihen- und Parallelschaltung zu reduzieren. Die können wir jetzt einfach auswerten, indem wir Widerständen, die zwischen Punkten gleichen Potentials liegen, als Parallelschaltung ansehen, und Widestände, die zwischen Punkten unterschiedlichen Potentials liegen, als Reihenschaltung betrachten. Dabei wird es einfacher, wenn wir die Parallelschaltungen von zwei Widerständen $R$ gleich durch ihren Ersatzwiderstand $\frac{R}{2}$ ersetzten. Dann erhalten wir, mit $R = 1\Omega$,
+	\begin{equation}
+		\boxed{
+		R_{AO}=\left(\left(\left(\left(\left(\frac{2}{3} + 2\right)^{-1} +\frac{1}{2}\right)^{-1} + 2\right)^{-1} + \frac{1}{2}\right)^{-1} + 1\right)^{-1}~\Omega = \frac{9}{20}~\Omega.
+			}
+	\end{equation}
+\end{Answer}
+\begin{figure}[h]
+\centering
+\input{../tasks/kalda/widerstandssechseck1.tex}
+\caption{Vereinfachter Aufbau durch die Symmetrie, jeder Einzelwiderstand mit $R$}
+\label{fig:wdsss1}
+\end{figure}
 
