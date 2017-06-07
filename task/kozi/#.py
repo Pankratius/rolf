@@ -1,6 +1,6 @@
 import csv
 import sys
-series = 1
+series = 2
 numberoftasks = 3
 taskname = ["Eisenbahnwaggon","Linsenpositionen","gute Ampel"]
 def readpart():
