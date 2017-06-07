@@ -1,8 +1,9 @@
 \subsection*{\textbf{Aufgabe~taskid}~(taskname)}
 \vspace{-0.5cm}
 \begin{figure}[h!]
-\begin{tabular}{crcrcr}
-\textsc{erreichbare Punkte:} &posspoints& & \textsc{erreichte Punkte:} &donepoints
+\begin{tabular}{lrcrcr}
+\textsc{erreichte Punkte:} &donepoints& & \textsc{erreichbare Punkte:} &posspoints\\
+\small Trivialisierungabzug  & trivp\% & & &
 \end{tabular}
 \end{figure}
 \vspace{-0.1cm}
