@@ -26,17 +26,28 @@
 	\sqrt{2s_0g\mu} \leq \frac{s_0}{t_g} \Rightarrow t_g \geq  \sqrt{\frac{s_0}{2g\mu}}}
 	\end{equation}
 	gilt.\\
-	%Man kann die Aufgabe auch ohne Energieerhaltung nutzen. Dann muss man drei Bedingungen betrachten. Die erste Bedingung sagt, dass das Auto zum stehen gekommen ist, bevor die Ampel umschaltet, seine Geschwindigkeit also kleiner gleich null ist
-	%\begin{equation}\label{traff:cond1}
-%		v\left(t_g\right)\leq 0 \Rightarrow v_0 - g\mu t_g \leq 0 \Rightarrow v_0 \leq g \mu t_g.
-%	\end{equation}
-%	Gleichzeitig muss die Strecke, die das Auto in der Zeit $t_g$ bremsend zurücklegt, kleiner sein, als der Abstand vom der Ampel. Weil es sich um eine gleichmäßig beschleunigte Bewegung mit der Anfangsgeschwindigkeit $v_0$ handelt, muss also gelten
-%	\begin{equation}\label{traff:cond2}
-%	s\left(t_g\right) \leq s_0 \Rightarrow	-\frac{g\mu}{2}t_g^2+v_0t_g \leq s_0 \Rightarrow v_0 \leq \frac{s_0+\frac{g\mu}{2}t_g^2}{t_g}.
-%	\end{equation}
-%	Für den Fall, dass das Auto nicht bremst, sondern mit konstanter Geschwindigkeit weiterfährt, muss wieder gelten
-%	\begin{equation}\label{traff:cond3}
-%		v_0 \geq \frac{s_0}{t_g}.
-%	\end{equation}
-%	Wir können jetzt zuerst 
+	Man kann die Aufgabe auch ohne die Energieerhaltung lösen. Dazu betrachten wir wieder beide möglichen Fälle. Wenn das Auto bremsend vor der Ampel zum stehen kommen soll, benötigt es dafür die Bremszeit
+	\begin{equation}\label{traf:tb}
+		t_b = \frac{v_0}{g\mu}.
+	\end{equation}
+	Die Bremszeit $t_b$ darf natürlich nur so lang sein wie die Zeit der Gelbphase, also $t_b\leq t_g$.\\
+	Gleichzeitig darf der in der Zeit $t_b$ zurückgelegte Bremsweg $s_b$ höchsten so lang sein wie der Anfangsabstand zur Ampel $s_0$. Der Bremsweg beträgt
+	\begin{equation}\label{traf:sb}
+		s_0 \geq s_b = -\frac{g\mu}{2}t_b^2 + v_0 t_b \overset{\eqref{traf:tb}}{=} \frac{v_0^2}{2a}\Rightarrow v_0 \leq \sqrt{2s_0g\mu}.
+	\end{equation}
+	Das ist genau die gleiche Aussage wie \eqref{vfriccond}!\\
+	Die Argumentation für das Durchfahren bleibt hier die gleiche, \eqref{velcond} gilt also. Wir haben also diesmal drei Bedigungen,
+	\begin{subequations}\label{traf:voc}
+		\begin{equation}\label{traf:vosb}
+			v_0 \leq \sqrt{2s_0 g \mu}
+		\end{equation}
+		\begin{equation}\label{traf:votb}
+			v_0 \leq t_g g \mu 
+		\end{equation}
+		\begin{equation}\label{traf:vos}
+			v_0 \geq \frac{s_0}{t_g}.
+		\end{equation}
+	\end{subequations}
+	Das scheint eine Bedinung mehr zu sein, als wir bei dem Energieansatz gebraucht haben.\\
+	Stellen wir \eqref{traf:vos} aber $s_0$ um, so kommen wir auf $s_0 \leq v_0 t_g$. Weil das einen untere Abschätzung für $s_0$
 \end{Answer}

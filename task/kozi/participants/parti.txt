@@ -1,7 +1,6 @@
 \vspace*{-2cm}
 \parbox{4cm}{\includegraphics[width=2.5cm]{../images/ROLF4.png}}
-\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Bewertungsbogen}}\\ Aufgabenserie~series\\\href{mailto:physikrolf@gmail.com}{physikrolf@gmail.com},~\url{pankratius.github.io/rolf}  \\ \vspace*{-.5cm} }
-\thispagestyle{empty}	
+\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Bewertungsbogen}}\\ Aufgabenserie~series\\\href{mailto:physikrolf@gmail.com}{physikrolf@gmail.com} \\ \vspace*{-.5cm} }	
 \vspace{1cm}\\
 \noindent
 \bgroup

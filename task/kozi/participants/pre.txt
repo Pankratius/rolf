@@ -12,6 +12,12 @@
 \usepackage{nopageno}
 \usepackage{hyperref}
 \usepackage{titlesec}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lfoot{\scriptsize  Alle Aufgabenserien des ROLF-Netzwerks, Lösungen und weitere Skripte findet ihr auf \url{pankratius.github.io/rolf}}
+\rfoot{}
+\cfoot{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
 \usepackage[left=2cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
 \setlength\parindent{0pt}
 \makeatletter

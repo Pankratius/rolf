@@ -3,7 +3,7 @@
 \begin{figure}[h!]
 \begin{tabular}{lrcrcr}
 \textsc{erreichte Punkte:} &donepoints& & \textsc{erreichbare Punkte:} &posspoints\\
-\small Trivialisierungabzug  & trivp\% & & &
+\small Trivialisierungsabzug  & trivp\% & & &
 \end{tabular}
 \end{figure}
 \vspace{-0.1cm}
@@ -23,13 +23,13 @@ Argumentation:& &arggen\%&/&60\%\\\hline
 \begin{minipage}[t]{0.4\textwidth}
 	\vspace{-1.75cm}
 	Bemerkungen:\\\vspace*{0.2cm}
-	\underline{\hspace{0.75\textwidth}}\\\vspace*{0.2cm}
-	\underline{\hspace{0.75\textwidth}}
+	\underline{\hspace{0.95\textwidth}}\\\vspace*{0.2cm}
+	\underline{\hspace{0.95\textwidth}}
 	\\\vspace*{0.2cm}
-	\underline{\hspace{0.75\textwidth}}
+	\underline{\hspace{0.95\textwidth}}
 	\\\vspace*{0.2cm}
-	\underline{\hspace{0.75\textwidth}}
+	\underline{\hspace{0.95\textwidth}}
 	\\\vspace*{0.2cm}
-	\underline{\hspace{0.75\textwidth}}
+	\underline{\hspace{0.95\textwidth}}
 \end{minipage}
 	\vspace{0.5cm}
