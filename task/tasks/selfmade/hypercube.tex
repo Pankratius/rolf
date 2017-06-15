@@ -21,7 +21,7 @@ beträgt. Überlege dir an einem $n$ deiner Wahl, dass das Ergebnis dort sinnvol
 	Als nächstes sehen wir uns den Widerstand zwischen $A$ und $B$ an. Im ersten und im zweiten Fall fließt ein Strom von $\frac{I}{n}$ durch ihn. In beiden Fälle geht der Strom in die gleiche Richtung (von $A$ zu $B$). Das heißt, in der Superposition fließt ein Strom von $2\frac{I}{n}$ durch diesen Widerstand von $A$ zu $B$. Nach der Definition des Widerstands\footnote{$R=\frac{U}{I}$. Aber das solltet ihr eigentlich auch selber wissen...}, ist die an diesem Widerstand abfallende Spannung deshalb $U=r\cdot 2\frac{I}{n}$. Diese Spannung ist also gleich der Potenzialdifferenz zwischen $A$ und $B$. Jetzt können wir die Definition des Widerstandes gleich nochmal benutzen! Denn nun kennen wir den gesamten Strom, der von $A$ nach $B$ fließt ($I+\frac{I}{2^n-1}$) und die Spannungsdifferenz zwischen $A$ und $B$ ($r\cdot 2\frac{I}{n}$). Dann gilt also:
 	\begin{equation*}
 	R = \frac{r\cdot 2\frac{I}{n}}{I+\frac{I}{2^n-1}} = \frac{r\cdot 2\frac{I}{n}}{I+\frac{I}{2^n-1}} \cdot \frac{2^n-1}{2^n-1} = \frac{(2^n-1)\cdot \frac{2r}{n}}{2^n-1+1} = \frac{2(2^n-1)}{n \cdot 2^n}r = \frac{2(2^n-1)}{n \cdot 2 \cdot 2^{n-1}}r = \frac{2^n-1}{n2^{n-1}}r
-	\begin{equation*}
+	\end{equation*}
 	Das ist das gesuchte Ergebnis.\\
 	Übrigens kann man solche Superpositionstricks sehr oft bei allen möglichen Aufgaben mit Widerstandsnetzen oder Ähnlichem anwenden und sie so enorm vereinfachen.  
 	Anders geht es über eine widerliche Sache - Das macht Aaron.
