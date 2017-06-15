@@ -1,5 +1,5 @@
 \begin{Exercise}[label = hypercube, origin = {Max Marienhagen, Aaron Wild}, difficulty = 5, title =  Widerstandswürfel]
-Ein $n$-dimensionaler Hyperwürfel ist die Verallgemeinerung eines Würfels auf $n$ Dimensionen. Seine Konstruktion kann man sich so vorstellen, das ein $n-1$-dimensionaler Hyperwürfel im $n$-dimensionalen Raum parallelverschoben wird, und man das daraus entstandene Volumen betrachtet.\\
+Ein $n$-dimensionaler Hyperwürfel ist die Verallgemeinerung eines Würfels auf $n$ Dimensionen. Seine Konstruktion kann man sich so vorstellen, dass ein $n-1$-dimensionaler Hyperwürfel im $n$-dimensionalen Raum parallelverschoben wird, und man das daraus entstandene Volumen betrachtet.\\
 Ein solcher $n$-dimensionaler Hyperwürfel hat $2^n$ Eckpunkte und $n2^{n-1}$ Seitenkanten.\\
 Wir betrachten nun einen $n$-dimensionalen Hyperwürfel ($n\geq 1$), bei dem alle Seitenkanten einen Widerstand von $r$ haben. Zeige, dass der Widerstand zwischen zwei benachbarten Eckpunkten 
 \begin{equation}
@@ -8,6 +8,12 @@ Wir betrachten nun einen $n$-dimensionalen Hyperwürfel ($n\geq 1$), bei dem all
 beträgt. Überlege dir an einem $n$ deiner Wahl, dass das Ergebnis dort sinnvoll ist.
 \end{Exercise}
 \begin{Answer}[ref = hypercube]
-	Diese Aufgabe kann durch ein Superpositionsprinzip gelöst werden - Das macht Max.\\
+	Diese Aufgabe kann sehr schön einfach und elegant mithilfe des Superpositionsprinzips gelöst werden.\\
+	Wir betrachten dazu zwei benachbarte Ecken des Würfels - nennen wir sie $A$ und $B$. Nun schauen wir uns zwei Fälle an:
+	\begin{enumerate}
+	\item Ein Strom $I$ wird in Ecke $A$ eingespeist. Die Spannungen an allen Ecken des Hyperwürfels werden so eingestellt, 	dass an jeder Ecke außer $A$ derselbe Strom aus dem Würfel fließt. Da es $2^n$ Ecken gibt und der ausfließende Strom 		insgesamt wieder $I$ sein muss, fließt also an jeder Ecke außer $A$ der Strom $\frac{I}{2^n}$ aus dem Würfel.\\
+	Im $n$-dimensionalen Hyperwürfel hat jede Ecke $n$ direkt benachbarte Ecken. (Weil der Hyperwürfel durch $n-1$ 			Paralleverschiebungen aus dem eindimensionalen Hyperwürfel entsteht und bei jeder Parallelverschiebung eine benachbarte 	Ecke hinzukommt.) Das heißt, dass von der Ecke $A$ $n$ Widerstände abgehen. Durch jeden dieser Widerstände fließt aus 		Symmetriegründen ein Strom $\frac{I}{n}$ von $A$ weg.
+	\item An jeder Ecke außer
+	\end{enumerate}
 	Anders geht es über eine widerliche Sache - Das macht Aaron.
 \end{Answer}
