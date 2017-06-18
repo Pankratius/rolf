@@ -1,0 +1,56 @@
+
+\begin{Exercise}[label = infnet, title = Widerstandsnetzwerk, origin = P.Gnädig, difficulty = 4]
+	Alle Ecken in dem unendlich großen Widerstandsnetz (siehe Abbildung) haben den Widerstand $R$. Wie groß ist der Widerstand zwischen $A$ und $B$?
+\end{Exercise}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\draw
+		(-2,1) to[/tikz/circuitikz/bipoles/length=20pt, R] (0,1)
+		(0,1) to[/tikz/circuitikz/bipoles/length=20pt, R](1,1)
+		(1,1) to[/tikz/circuitikz/bipoles/length=20pt, R](3,1)
+		(-1.75,1)to[/tikz/circuitikz/bipoles/length=20pt, R](-1.75,0)
+		(-1.75,0)to[/tikz/circuitikz/bipoles/length=20pt, R](-1.75,-1)
+				(-2,0) to[/tikz/circuitikz/bipoles/length=20pt, R] (0,0)
+				(0,0) to[/tikz/circuitikz/bipoles/length=20pt, R](1,0)
+				(1,0) to[/tikz/circuitikz/bipoles/length=20pt, R](3,0)
+						(-2,-1) to[/tikz/circuitikz/bipoles/length=20pt, R] (0,-1)
+						(0,-1) to[/tikz/circuitikz/bipoles/length=20pt, R](1,-1)
+						(1,-1) to[/tikz/circuitikz/bipoles/length=20pt, R](3,-1)
+				(-.25,1)to[/tikz/circuitikz/bipoles/length=20pt, R](-.25,0)
+				(-.25,0)to[/tikz/circuitikz/bipoles/length=20pt, R](-.25,-1)
+					(1.25,1)to[/tikz/circuitikz/bipoles/length=20pt, R](1.25,0)
+					(1.25,0)to[/tikz/circuitikz/bipoles/length=20pt, R](1.25,-1)
+					(2.75,1)to[/tikz/circuitikz/bipoles/length=20pt, R](2.75,0)
+					(2.75,0)to[/tikz/circuitikz/bipoles/length=20pt, R](2.75,-1)
+			
+					;
+		\draw (2.75,1) -- (2.75,1.2);
+		\draw (-1.75,1) -- (-1.75,1.2);
+		\draw (2.75,-1) -- (2.75,-1.2);
+		\draw (-1.75,-1)--(-1.75,-1.2);
+		\filldraw[black] (-.25,0) circle (1.5pt);
+		\filldraw[black] (1.25,0) circle (1.5pt);
+		\node at (0,-.2) {$A$};
+		\node at (1.5,-.2) {$B$};
+		\node at (0.5,0.25){$R$};
+		\node at (-2.2,1) {$...$};
+			\node at (-2.2,0) {$...$};
+				\node at (-2.2,-1) {$...$};
+		\node at (3.2,1) {$...$};
+			\node at (3.2,0) {$...$};
+			\node at (3.2,-1) {$...$};
+		\node at (-1.75,-1.5) {$...$};
+		\node at (-0.25,-1.5) {$...$};
+		\node at (1.25,-1.5) {$...$};
+		\node at (2.75,-1.5) {$...$};
+				\node at (-1.75,1.5) {$...$};
+				\node at (-0.25,1.5) {$...$};
+				\node at (1.25,1.5) {$...$};
+				\node at (2.75,1.5) {$...$};
+		
+		
+
+	\end{tikzpicture}
+\end{figure}
