@@ -3,14 +3,14 @@
 \end{Exercise}
 \begin{Answer}[ref = moveant]
 	Die Gesamtgeschwindigkeit der Ameise setzt sich zusammen aus der durch ihre eigene Bewegung, also $v$, und der Geschwindigkeit der Ausdehnung des Gummibands.\\
-	Wenn sich die Gesamtlänge des Gummibandes mit der Geschwindigkeit $u$ ändern soll, folgt aus dem Hookschen Gesetz, dass die Änderungsrate der Gummibandlänge an einer Position $x$ proportional zu dieser ist. Das heißt einfach nur, dass sich das Gummiband an der Stelle $x$ mit der Geschwindigkeit $v_g = u \frac{x}{\ell\left(t\right)}$ bewegt. Hierbei müssen wir beachten, dass natürlich die Länge des Gummibandes zum aktuellen Zeitpunkt relevant ist. Aus der Aufgabenstellung wissen wir aber, dass $\ell\left(t\right) = \ell_0 + v t $ ist. \\
+	Wenn sich die Gesamtlänge des Gummibandes mit der Geschwindigkeit $u$ ändern soll, folgt aus dem Hookschen Gesetz, dass die Änderungsrate der Gummibandlänge an einer Position $x$ proportional zu dieser ist. Das heißt einfach nur, dass sich das Gummiband an der Stelle $x$ mit der Geschwindigkeit $v_gu = u \frac{x}{\ell\left(t\right)}$ bewegt. Hierbei müssen wir beachten, dass natürlich die Länge des Gummibandes zum aktuellen Zeitpunkt relevant ist. Aus der Aufgabenstellung wissen wir aber, dass $\ell\left(t\right) = \ell_0 + v t $ ist. \\
 	Mit all diesen Überlegungen kommen wir also auf eine Gesamtgeschwindigkeit $v_g$ der Ameise, die 
 	\begin{equation}\label{moveant1:eom1}
 	v_g = 	\underbrace{v}_{\mathrm{Ameisengeschwindigkeit}} +\underbrace{u\cdot \frac{x}{\ell_0 + u t}}_{Gummibandgeschwindigkeit}
 	\end{equation}
 	beträgt.\\
 	Diese Gesamtgeschwindigkeit $v_g$ ist aber gerade die Änderungsrate der Ameisenposition, also die Ableitung der Ameisenposition $x$ nach der Zeit; $v_g = \dot{x}\left(t\right)$. Damit handelt es sich bei \eqref{moveant1:eom1} um eine sog. Differentialgleichung. Das heißt, dass sie die Ableitung einer Größe (die Ameisengeschwindigkeit als Funktion der Zeit) mit der Größe selbst (also der Ameisenposition als Funktion der Zeit) in Verbindung setzt. Wir können jetzt versuchen, die zu lösen.\\
-	Das ist gar nicht \textit{so} einfach, weil es sich um eine sog. inhomogene Gleichung handelt. Das liegt daran, dass in \eqref{moveant1:eom1} nicht nur $x\left(t\right)$ und zeitliche Ableitung davon auftreten, sondern auch das konstante Glied der Ameisengeschwindigkeit ($+v$).\\
+	Das ist gar nicht \textit{so} einfach, weil es sich um eine sog. inhomogene Gleichung handelt. Das liegt daran, dass in \eqref{moveant1:eom1} nicht nur $x\left(t\right)$ und zeitliche Ableitungen davon auftreten, sondern auch das konstante Glied der Ameisengeschwindigkeit ($+v$).\\
 	Eine solche inhomogene Gleichung löst man, indem man zuerst die homogene Variante davon betrachtet, und die löst. Die homogene Variante ist einfach die inhomogene Variante, ohne das konstante Glied:
 	\begin{equation}\label{moveant1:hom}
 		\dot{x}\left(t\right) = u\cdot \frac{x\left(t\right)}{\ell_0 + u t}.
@@ -27,9 +27,9 @@
 	Jetzt haben wir eine Lösung! Toll, nicht?\\
 	Blöd ist nur, dass wir ja nur \eqref{moveant1:hom} gelöst haben. Das war aber eine ganz andere Gleichung. Der Trick beim Lösen solcher inhomogener Gleichungen ist jetzt, dass man $a$ nicht mehr konstant lässt. Vielmehr fragt man sich, ob es eine zeitabhängige Funkion $b\left(t\right)$ gibt, die man statt des konstanten $a$ an das Ergebnis aus \eqref{moveant1:homint} multipliziert, sodass man damit aber die inhomogene Variante, also \eqref{moveant1:eom1}, löst.\\
 	Warum das funktioniert, werden wir gleich sehen.\\
-	Um dieses neue $a\left(t\right)$ jetzt zu finden, setzten wir einfach für $x$ in \eqref{moveant1:eom1} $x\left(t\right) = b\left(t\right) \left(\ell_0 + u t\right) $ ein. Dafür brauchen wir aber noch $v_g$, also $\dot{x}\left(t\right)$. Das kriegen wir einfach mit der Produktregel
+	Um dieses neue $b\left(t\right)$ jetzt zu finden, setzten wir einfach für $x$ in \eqref{moveant1:eom1} $x\left(t\right) = b\left(t\right) \left(\ell_0 + u t\right) $ ein. Dafür brauchen wir aber noch $v_g$, also $\dot{x}\left(t\right)$. Das kriegen wir einfach mit der Produktregel
 	\begin{equation}\label{moveant1:prodrule}
-		\frac{d}{dt}\left(b\left(t\right)\cdot\left(\ell_0 + u t\right)\right) = \dot{b}\cdot \left(t\right) \left(\ell_0 + u t\right)  + b\left(t\right)  \cdot u.
+		\frac{d}{dt}\left(b\left(t\right)\cdot\left(\ell_0 + u t\right)\right) = \dot{b} \left(t\right)\cdot  \left(\ell_0 + u t\right)  + b\left(t\right)  \cdot u.
 	\end{equation}
 	Einsetzen in \eqref{moveant1:eom1} führt auf
 	\begin{equation}\label{moveant1:homsub}
@@ -67,9 +67,9 @@
 	\end{equation}
 	haben. Das ist im Gegensatz zu \eqref{moveant1:eom1} nicht mehr inhomogen, kann also einfach integriert werden
 	\begin{equation*}
-		\int~d\psi  = \int \frac{v}{\ell_0 + u t}~dt \Rightarrow \psi\left(t\right) \frac{v}{u}\left(\ell_0 + ut\right) + c,
+		\int~d\psi  = \int \frac{v}{\ell_0 + u t}~dt \Rightarrow \psi\left(t\right)= \frac{v}{u}\left(\ell_0 + ut\right) + c,
 	\end{equation*}
-	wobei $c$ schonwieder die Integrationskonstante ist.\\
+	wobei $c$ schon wieder die Integrationskonstante ist.\\
 	Weil wir festgelegt haben, dass $\psi\left(0\right) = 0$ ist, können wir $c$ wieder zu $c = -\frac{v}{u}\ln \ell_0$ bestimmen.\\
 	Die Kriechzeit kriegen wir jetzt, indem wir uns einfach erinnern, dass am Ende $\psi\left(T\right) = 1$ gelten soll,
 	\begin{equation}\label{moveant1:eom2sol}
