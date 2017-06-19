@@ -1,3 +1,23 @@
-\begin{Exercise}[label = movelens1, title = Bewegung auf Linse, origin = {}, difficulty = 3]
+\begin{Exercise}[label = movelens1, title = Bewegung auf Linse, origin = {}, difficulty = 1]
 	Ein Objekt bewegt sich mit einer Geschwindigkeit von $v_1$ auf eine Sammellinse der Brennweite $f$ zu. Wie groß ist die Geschwindigkeit $v_2$ des entstehenden Bildes, wenn das Objekt einen Abstand $g$ von der Sammellinse hat?
 \end{Exercise}
+\begin{Answer}[ref = movelens1]
+	Betrachten wir die Abbildungsgleichung, so ist die Bildweite $b\left(t\right)$ gegeben durch die Brennweite und die Gegenstandsweite $g\left(t\right)$ als Funktion der Zeit $t$ gegeben durch
+	\begin{equation}\label{movelens1:abb}
+		\frac{1}{f} = \frac{1}{g\left(t\right)} + \frac{1}{b\left(t\right)} \Rightarrow b\left(t\right) = \frac{f\cdot g\left(t\right)}{g\left(t\right)-f}.
+	\end{equation}
+	Die Geschwindigkeit des Bildes ist nun einfach die zeitliche Ableitung der Bildweite $v_2 = \dot{b}\left(t\right)$. Deswegen reicht es, wenn wir \eqref{movelens1:abb} nach der Zeit ableiten:
+	\begin{equation}\label{movelens1:res1}
+	v_2 = \dot{b}\left(t\right)=\frac{d}{dt}\left(\frac{fg\left(t\right)}{g\left(t\right)-f}\right) = f \frac{d}{dt}\left(\frac{g\left(t\right)}{g\left(t\right)-f}\right) = f\cdot \frac{\dot{g}\left(t\right)\cdot \left(g\left(t\right)-f\right)-g\left(t\right) \dot g\left(t\right)}{\left(g\left(t\right)-f\right)^2} \overset{\dot{g}\left(t\right) = v_1}{=} -v_1\cdot \frac{f^2}{\left(g\left(t\right)-f\right)^2}.
+	\end{equation}
+	Wenn wir die Kettenregel nehmen wollen, dann können wir auch mit der newtonschen Abbildungsgleichung rechnen\footnote{Herleitung ist eine einfache Übung!}
+	\begin{equation}\label{movelens1:newt}
+		f^2 = x_1\left(t\right)x_2\left(t\right),
+	\end{equation}
+	wobei $x_1 = \left(g-f\right)$ und $x_2 = \left(b-f\right)$. Stellen wir die nach $x_2\left(t\right)=\frac{f^2}{x_1\left(t\right)}$ um, und beachten , dass $\dot{x_1}\left(t\right) = \dot{g}\left(t\right) = v_1$ und $v_2 = \dot{b}\left(t\right) = \dot{x_2}$ gilt, kommen wir auf 
+	\begin{equation}\label{movelens1:res2}
+ v_2 = \frac{d}{dt}\left(\frac{f^2}{x_1\left(t\right)}\right) = f^2\frac{d}{dt}\left(\frac{1}{x_1\left(t\right)}\right) = f^2 \frac{d}{dt}\left(\left(x_1\left(t\right)\right)^{-1}\right) = - f^2\cdot \dot{x_1}\left(t\right) \cdot \frac{1}{x_1\left(t\right)^2} = -v_1 \frac{f^2}{\left(g-f\right)^2},
+	\end{equation}
+	wobei wir für $\frac{d}{dt}\left(\left(x_1\left(t\right)\right)^{-1}\right)$ die Kettenregel genommen haben.\\
+	Es kommt also das gleiche raus - Cool!
+\end{Answer}
