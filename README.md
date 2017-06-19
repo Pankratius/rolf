@@ -1,10 +1,10 @@
 ### Aktuelle Aufgabenserie
 
-In der aktuellen Aufgabenserie gibt es wieder drei Aufgaben, aus Mechanik und Elektrizitätslehre.
+Die aktuelle Aufgabenserie sollte eigentlich bis Dienstag, **19. Juni** abgegeben werden. Weil wir aber mit den Musterlösungen noch nicht fertig sind, habt ihr noch bis Freitag, **23. Juni**, Zeit.
 
 [Serie 2](/website/koziarchiv/2.pdf)
 
-Die Aufgaben gebt ihr bitte bis zum **19. Juni** an euren Ansprechpartner oder per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com). Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
+Dann gebt ihr sie bitte an euren Ansprechpartner oder per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) ab. Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
 
 ### Lösungen der vergangenen Serien
 
