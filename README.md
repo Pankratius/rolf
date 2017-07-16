@@ -1,12 +1,13 @@
 ### Aktuelle Aufgabenserie
 
 Es gibt neue Aufgaben! Diesmal sind es gleich vier, aber dafür gibt es auch ein wenig mehr Zeit, nämlich bis zum **17. August 2017**.
+Zu jeder Aufgabe gibt es inzwischen auch Tipps, die die Bearbeitung leichter machen sollten.
 _Wir wünschen euch schöne Sommerferien!_
 
 
-[Serie 3](/website/koziarchiv/3.pdf)
+[Serie 3, mit Tipps](/website/koziarchiv/3t.pdf)
 
-Dann gebt ihr sie bitte an euren Ansprechpartner oder per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) ab. Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
+Eure Lösungen gebt ihr bitte an euren Ansprechpartner oder per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) ab. Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
 
 ### Lösungen der vergangenen Serien
 
