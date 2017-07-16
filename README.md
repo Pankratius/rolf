@@ -12,6 +12,7 @@ Eure Lösungen gebt ihr bitte an euren Ansprechpartner oder per Mail an [physikr
 ### Lösungen der vergangenen Serien
 
 [Serie 1](/website/koziarchiv/1.pdf)
+
 [Serie 2](/website/koziarchiv/2.pdf)
 
 ## Mitmachen?
