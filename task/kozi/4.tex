@@ -11,21 +11,32 @@
 \newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
 \usepackage{xcolor}
 %\usepackage{draftwatermark}
-%\SetWatermarkText{\textsc{Entwurf}}
-%\SetWatermarkScale{6}
+%\SetWatermarkText{\textsc{Draft 2}}
+%\SetWatermarkScale{3}
 %\SetWatermarkColor{red!30}
 
-
+\usepackage[printwatermark]{xwatermark}
+%\newsavebox\mybox
+%\savebox\mybox{\tikz[color=red,opacity=0.3]\node{\textsc{Entwurf}};}
+%\newwatermark*[
+%allpages,
+%angle=45,
+%scale=10,
+%xpos=-4cm,
+%ypos=4cm
+%]{\usebox\mybox}
+\pagestyle{fancy}
+\fancyhead[L]{\includegraphics[width=2cm]{../images/rolfal.jpg}}
+\fancyhead[R]{\textsc{Lösung Aufgabenserie 4}}
 
 
 \begin{document}
-	\vspace*{-2cm}
-	\parbox{4cm}{\includegraphics[width=2.5cm]{../images/ROLF4.png}}
+	\vspace*{-1cm}
+	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/logo_scaled.pdf}}
 	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Aufgabenserie 4 
-				}}\\
-				 Abgabe: 5. Oktober \\ \vspace*{-.5cm} }
-	
-	
+			}}\\
+			Abgabe: 5. Oktober \\ \vspace*{-.5cm} }
+		\vspace{0.5cm}
 
 \thispagestyle{empty}
 \begin{framed}
@@ -37,8 +48,8 @@
 
 \noindent
 
-\input{../tasks/selfmade/rollingshutter} 
-\input{../tasks/selfmade/cori1}
+\input{../tasks/selfmade/atwood} 
+\input{../tasks/germanipho/bms}
 \input{../tasks/selfmade/trinity}
 
 

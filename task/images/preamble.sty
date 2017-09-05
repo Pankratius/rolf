@@ -14,7 +14,7 @@
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.5.1}
+\pgfplotsset{width=6cm,compat=1.13}
 \usepackage{import}
 \usepackage{hyperref}
 \usepackage[european]{circuitikz}
@@ -32,6 +32,10 @@
 \numberwithin{equation}{Exercise}
 \numberwithin{figure}{Exercise}
 
+
+%for footnotes:
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 %\renewcommand{\ExerciseHeader}{\par\noindent\textsf{\textbf{
 %			Aufgabe \ExerciseHeaderNB} (\ExerciseHeaderTitle)

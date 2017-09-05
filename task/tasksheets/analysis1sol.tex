@@ -5,34 +5,44 @@
 \usepackage{../images/preamble}
 \usepackage{rotating}
 \usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
+\usepackage{xcolor}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\textsc{Draft 2}}
+%\SetWatermarkScale{3}
+%\SetWatermarkColor{red!30}
+
+\usepackage[printwatermark]{xwatermark}
+\pagestyle{fancy}
+\fancyhead[L]{\includegraphics[width=2cm]{../images/rolfal.jpg}}
+
+
 
 \begin{document}
-	\vspace*{-2cm}
-	\parbox{4cm}{\includegraphics[width=2.5cm]{../images/ROLF4.png}}
-	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Analysis mit Physik üben I}}\\ \href{mailto:physikrolf@gmail.com}{physikrolf@gmail.com}, \url{pankratius.github.io/rolf} \\ \vspace*{-.5cm} }
-	\begin{framed}
+	\vspace*{-1cm}
+	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/rolfal.jpg}}
+	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Analysis mit Physik üben I
+			}}\\
+			\url{pankratius.github.io/rolf},  \href{mailto:physikrolf@gmail.com}{physikrolf@gmail.com} \\ \vspace*{-.5cm} }
+		\vspace{0.5cm}
+		
+		\thispagestyle{empty}
+\begin{framed}
+	\noindent
 		\small
-	Wir verwenden die Physikkonvention, eine zeitliche Ableitung als Punkt darzustellen; $\dot{x} = \frac{dx\left(t\right)}{dt} = \frac{d}{dt}\left(x\left(t\right)\right)$.
-	\end{framed}
-	
-
-\thispagestyle{empty}
-
+		Wir verwenden die Physikkonvention, eine zeitliche Ableitung als Punkt darzustellen; $\dot{x} = \frac{dx\left(t\right)}{dt} = \frac{d}{dt}\left(x\left(t\right)\right)$.
+\end{framed}
 
 \noindent
+
+
 \input{../tasks/kalda/moveant}
 \input{../tasks/germanipho/movelens1}
 \input{../tasks/kalda/boatgraph}
 
-
-
-
-
-%
-%\newpage
-%\begin{turn}{270}
-%\input{../tasks/selfmade/throwimbig}
-%\end{turn}
 
 
 

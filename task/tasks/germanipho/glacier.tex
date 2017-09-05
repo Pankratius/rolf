@@ -1,0 +1,33 @@
+\begin{Exercise}[label = glacier, origin = {Orpheus-Seminar 2014, Lucas Rettenmeier}, difficulty = 3, title = Gletscherschmelze]
+Wenn sich ein Gletscher zu schnell über seinen Untergrund bewegt, kann er aufgrund von Reibung zu schmelzen beginnen. \\
+Um diesen Vorgang besser zu verstehen, betrachten wir eine quaderförmige Eisplatte mit Seitenlängen $a$ und Höhe $H$, die mit konstanter Geschwindigkeit über eine horizontale Ebene bewegt wird. Der Gleitreibungskoeffizient zwischen dem Eis und der Fläche beträgt $\mu$.\\
+Nimm an, dass die Oberfläche des Gletschers eine konstante Temperatur $\vartheta_0 <0^\circ$ hat, und der Untergrund keine Wärme leitet. Die Dichte des Eis beträgt $\rho$, und die Wärmeleitfähigkeit $\kappa$. \\
+Bei welcher kritischen Geschwindigkeit $v$ beginnt das Eis zu schmelzen? Auf welche Höhe schmilzt der Gletscher, wenn er sich mit dem dreifachen der kritischen Geschwindigkeit bewegt?
+\end{Exercise}
+\begin{Answer}[ref = glacier]
+	Während der Bewegung wirkt die ganze Zeit eine Gleitreibungskraft $F_r$. Diese kann durch den gegebenen Gleitreibungskoeffizienten, die Dichte des Eisbergs und seine Abmessungen ausgerechnet werden,
+	\begin{equation}\label{glacier:friction}
+		F_r = F_g\mu = mg\mu = \rho V g\mu = \rho a^2Hg\mu.
+	\end{equation}
+Durch die Reibungsarbeit nimmt der Gletscher Energie auf, die nach einer Strecke $s$ gegeben ist durch $F_rs$. Damit lässt sich die Leistung schreiben als
+\begin{equation}\label{glacier:power}
+	P = \frac{\Delta E}{\Delta t} = \rho a^2 H g\mu \cdot \frac{\Delta s}{\Delta t} = \rho a^2 H g\mu v,
+\end{equation}
+wobei $v=\frac{\Delta s}{\Delta t}$ die Gletschergeschwindigkeit ist.\\
+Diese Leistung führt nun zur Erwärmung des Gletschers. Dies geschieht durch Wärmeleitung, welche durch \footnote[2]{vgl. Serie 2, Aufgabe 2}
+\begin{equation}\label{glacier:powerh}
+	P = \frac{A\kappa \left(\vartheta_o-\vartheta_u\right)}{H} =- \frac{a^2\kappa \vartheta_o}{H},
+\end{equation}
+gegeben ist.
+Dabei ist $H$ genau die Dicke der wärmeleitenden Schicht ist, $A =a^2$ die Gletscheroberfläche und $\vartheta_u$ die Temperatur der Gletscherunterseite ist, die beim Schmelzen genau $\vartheta_u = 0^\circ$ beträgt. \\
+Weil \eqref{glacier:power} und \eqref{glacier:powerh} den gleichen Vorgang beschreiben, können wir sie einfach gleichsetzen, und nach der Geschwindigkeit $v$ auflösen
+\begin{equation}\label{glacier:vel}
+	\boxed{ \rho a^2 H g\mu v = - \frac{a^2\kappa \vartheta_o}{H} \Rightarrow v = \frac{-\kappa \vartheta_o}{H^2\rho g\mu }.}
+\end{equation} 
+Stellen wir diese Gleichung jetzt nach $H$ um, erhalten wir die stabile Gletscherhöhe als Funktion der Geschwindigkeit, $H\left(v\right)$. Durch einfaches einsetzen erhalten wir dann die neue Höhe $H'$,
+\begin{equation}
+	\boxed{
+		H' = H\left(3v\right) = \sqrt{\frac{-\kappa \vartheta_o}{3v\rho g \mu}} = \frac{1}{\sqrt{3}} H = \frac{\sqrt{3}}{3}H.
+		}
+\end{equation}
+\end{Answer}

@@ -86,6 +86,10 @@
 	\begin{equation}\label{varn1:inte}
 		\int \mathrm{d}y = \int \frac{q-x}{\sqrt{q^2-\left(q-x\right)^2}}~\mathrm{d}x \Rightarrow y\left(x\right)= \sqrt{q^2-\left(q-x\right)^2}+c
 	\end{equation}
-	Aus $y\left(0\right)= 0$ folgt $c=0$. \eqref{varn1:inte} ist aber nur die Gleichung für einen Halbkreis in positiver $y$-Richtung um $\left(q,0\right)$. Damit kann $d$ genauso wie in \eqref{varn1:dsol} ausgerechnet werden.
+	Aus $y\left(0\right)= 0$ folgt $c=0$. \eqref{varn1:inte} ist aber nur die Gleichung für einen Halbkreis in positiver $y$-Richtung um $\left(q,0\right)$. Damit kann $d$ genauso wie in \eqref{varn1:dsol} ausgerechnet werden.\\
+	Streng genommen kommt das Integral aus \eqref{varn1:inte} aus der Substitution $\tilde{x} = 1-\frac{x}{q}$:
+	\begin{equation*}
+		\int \frac{q-x}{\sqrt{q^2-\left(q-x\right)}}~dx = \int \frac{1-\frac{x}{q}}{\sqrt{1-\left(1-\frac{x}{q}\right)^2}}~dx = -q \cdot  \int \frac{\tilde{x}}{\sqrt{1-\left(1-\tilde{x}\right)^2}}~d\tilde{x} = q \cdot  \sqrt{1-\tilde{x}^2} + c = \sqrt{q^2-\left(q-x\right)^2} + c.
+	\end{equation*}
 	
 \end{Answer}

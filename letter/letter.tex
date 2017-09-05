@@ -1,0 +1,61 @@
+\documentclass[DIN, pagenumber=false, parskip=half,%
+               fromalign=right, 
+               fromrule=false]{scrlttr2}
+
+
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[official]{eurosym}
+\RequirePackage{graphicx}
+
+\KOMAoptions{fromlogo=true,backaddress=true,foldmarks=true,fromemail=true,firstfoot=off,fromurl=true}
+% if you have a word with just uppercase letter you should use the package soul
+% for better readability
+\usepackage{soul}
+\sodef\so{}{.14em}{.4em plus.1em minus .1em}{.4em plus.1em minus .1em}
+
+ 
+ % do not indent the signature
+\renewcommand*{\raggedsignature}{\raggedright} 
+
+ % the sender:
+\setkomavar{fromname}{\textsc{ROLF-Netzwerk \vspace{0.25cm}}}
+\setkomavar{fromaddress}{c/o Aaron Wild\\Europaring 18\\53123 Bonn}
+\setkomavar{signature}{Aaron Wild}
+\setkomavar{fromemail}{physikrolf@gmail.com}
+\setkomavar{fromlogo}{
+	\includegraphics[width=5cm]{../task/images/logo_scaled}
+}
+\setkomavar{fromurl}{pankratius.github.io/rolf}
+
+\firstfoot{\parbox[b]{\linewidth}{\hrule\vspace*{0.5ex}\scriptsize{ROLF-Netwerk $\diamondsuit$ pankratius.github.io/rolf $\diamondsuit$ physikrolf@gmail.com}}}
+
+ 
+\begin{document}
+ 
+% the receiver:
+\begin{letter}{Ute Fischer-Salzwedel\\Friedrich-Schiller-Gymnasium\\Thomas-Mann-Straße 2\\99423 Weimar
+}
+
+
+%===================================
+
+\opening{Sehr geehrte Frau Fischer-Salzwedel,}
+
+anbei senden wir Ihnen die neue Aufgabenserie des ROLF-Netzwerks.\\
+Wir würden uns sehr freuen, wenn Sie diese an interessierte Schüler ab der 9. Klasse verteilen könnten. Voraussichtlich in der zweiten Oktoberwoche werden wir Ihnen dann die nächste Aufgabenserie sowie die Musterlösungen zu der jetztigen schicken. \\
+Sollten Sie Fragen oder Anregung haben, können Sie uns immer per E-Mail erreichen.
+
+\closing{Vielen Dank für Ihre Unterstützung!\\Mit freundlichen Grüßen\vspace{1cm}}
+
+
+%===================================
+\setkomavar*{enclseparator}{Anlage} 
+\encl{Aufgabenserie 4}
+
+
+\end{letter}
+ 
+\end{document}

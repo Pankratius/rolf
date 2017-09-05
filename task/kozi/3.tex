@@ -1,24 +1,44 @@
 \documentclass[a4paper]{article}
-\usepackage{exercise}
+%\usepackage{exercise}
 %um nur aufgaben zu zeigen
-%\usepackage[noanswer]{exercise} 
+\usepackage[noanswer]{exercise} 
 \usepackage{../images/preamble}
 \usepackage{rotating}
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
 \newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
+\usepackage{xcolor}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\textsc{Draft 2}}
+%\SetWatermarkScale{3}
+%\SetWatermarkColor{red!30}
+
+%\usepackage[printwatermark]{xwatermark}
+%\newsavebox\mybox
+%\savebox\mybox{\tikz[color=red,opacity=0.3]\node{\textsc{Entwurf}};}
+%\newwatermark*[
+%allpages,
+%angle=45,
+%scale=10,
+%xpos=-4cm,
+%ypos=4cm
+%]{\usebox\mybox}
+%\pagestyle{fancy}
+%\fancyhead[L]{\includegraphics[width=2cm]{../images/rolfal.jpg}}
+%\fancyhead[R]{\textsc{Lösung Aufgabenserie 3}}
+
 
 \begin{document}
-	\vspace*{-2cm}
-	\parbox{4cm}{\includegraphics[width=2.5cm]{../images/ROLF4.png}}
-	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Aufgabenserie 3 - Sommerspaß\\ %\textit{mit Tipps}
-				}}%\\
-				 Abgabe: 17. August \\ \vspace*{-.5cm} }
-	
-	
-
-\thispagestyle{empty}
+	\vspace*{-1cm}
+	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/rolfal.jpg}}
+	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Aufgabenserie 3 
+			}}\\
+			Abgabe: 17. August \\ \vspace*{-.5cm} }
+		\vspace{0.5cm}
+		
+		\thispagestyle{empty}
 \begin{framed}
 	\noindent
 	\scriptsize

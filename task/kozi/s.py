@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 import csv
 import sys
 import os
-series = 1
+series = 2
 numberoftasks = 3
-taskname = ['a','b','c']
+taskname = ['Widerstandswürfel','Wärmetauscher','Büchse']
 numberoftasks = len(taskname)
 kritval = [40,20,40,40,60,40,60]
 krit = ['donepoints','posspoints','trivp','angen','annach','anz','anmath','arggen','argnach','argri']
@@ -64,7 +65,7 @@ def getseriespoints(partlist,sn,numberoft):
         seriespos = seriespos + int(partlist[i][2])
         seriesgain = seriesgain + float(partlist[i][11])
     return [round(seriesgain,3),seriespos]
-        
+
 
 def gettaskvalues(tasklist):
     taskpoints = [round(float(tasklist[11]),3),float(tasklist[2]),100*(1-float(tasklist[10]))] #gained,pos,triv
@@ -83,7 +84,7 @@ def makepartdata(partlist,sn,numberoft):
         t.append(gettaskvalues(partlist[i]))
     l.append(t)
     return l
-                
+
 def makedoc():
     with open('participants/pre.txt','r') as myfile:
         pream = myfile.read()
@@ -120,8 +121,8 @@ data = []
 with open('data.txt','r') as f:
     for line in f:
         data.append(line.split())
-        
-series = int(data[0][0])
+
+#series = int(data[0][0])
 taskname = []
 for i in range(1,len(data),1):
     cu = ''
@@ -146,5 +147,3 @@ with open('results.tex','a') as myfile:
     myfile.write('\end{document}')
 os.system("pdflatex results.tex")
 print 'done'
-        
-    
