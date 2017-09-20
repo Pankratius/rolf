@@ -1,7 +1,7 @@
 \documentclass[a4paper]{article}
-\usepackage{exercise}
+%\usepackage{exercise}
 %um nur aufgaben zu zeigen
-%\usepackage[noanswer]{exercise} 
+\usepackage[noanswer]{exercise} 
 \usepackage{../images/preamble}
 \usepackage{rotating}
 \usetikzlibrary{decorations.pathmorphing}
@@ -19,26 +19,33 @@
 
 
 \begin{document}
-	\vspace*{-2cm}
-	\parbox{4cm}{\includegraphics[width=2.5cm]{../images/ROLF4.png}}
-	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Aufgabenseminar Himmelsmechanik
-				}}\\
-\href{mailto:physikrolf@gmail.com}{physikrolf@gmail.com}, \url{pankratius.github.io/rolf} \\ \vspace*{-.5cm} }
+	\vspace*{-1cm}
+	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/logo_scaled.pdf}}
+	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Aufgabenseminar\\ Himmelsmechanik
+			}}\\\url{pankratius.github.io/rolf}
+			 }
+		\vspace{0.5cm}
 	
 	
 
 \thispagestyle{empty}
-%\begin{framed}
-%	\noindent
-%	\scriptsize
-%	Die Aufgaben sollten bis zum \textbf{5. Oktober} bearbeitet werden. Die Lösungen schickt ihr an .
-%	Jede Aufgabe hat eine bestimmte Anzahl an erreichbaren Punkten. Wie viele das sind, müsst ihr raten. Versucht, die Lösungen so genau wie möglich aufzuschreiben. Für besonders schnelle/gute/witzige Lösungen kann es Bonuspunkte geben.\\ Die aktuellen Aufgaben sowie alle alten Aufgabenserien mit Lösungen findet ihr auch auf \url{pankratius.github.io/rolf}. %\\\textit{Zu jeder Aufgabe gibt es jetzt Tipps. Die sollten beim Lösen der Aufgaben helfen.\\ Sollte das so sein macht bitte in euren Lösungen kenntlich, dass bestimmte Schritte von den Tipps und nicht von euch kommen. Darauf gibt es keinen Abzug, es ist nur für uns gut zu wissen.}
-%\end{framed}
+\begin{framed}
+	\noindent
+	\scriptsize
+	
+	Gravitationskraft $\mathbf{F} = \frac{mMG}{r^2}\hat{\mathbf{r}}$; Gravitationspotential $U\left(r\right) = -\frac{mMG}{r}$; Gesamtenergie auf einer elliptischen Flugbahn $E = \frac{mMG}{2a}$; Fläche einer Ellipse $A = \pi a b$; für Punkt auf Ellipse bleibt Summe der Abstände zu den Brennpunkten konstant,  Runge-Lenz-Vektor $\mathbf{\varepsilon} = \frac{\mathbf{L}\times \mathbf{v}}{GmM} + \hat{\mathbf{r}} = \mathrm{const.}$\\
+	Kepler I: Bewegung von HK auf Kegelschnitten, Brennpunkt im Schwerpunkt; Kepler II: Radiusvektor überschreitet gleiche Flächen in gleichen Zeiten; Kepler III: für zwei Bahnen gilt $\nicefrac{T^2}{T^2} = \nicefrac{a_1^2}{a_2^3}$\\
+	 \noindent\rule{1\textwidth}{0.4pt}
+	wichtige Größen: Abstand von Schwerpunkt ($r$), Gravitationskraft($\mathbf{F}$), Gravitationspotential ($U\left(r\right)$), Energie ($E\left(r\right)$), Drehimpuls ($\mathbf{L}$), Umlaufzeit ($T$), große Halbachse ($a$), kleine Halbachse ($b$), Masse eines Körpers im gegebenen Gravitationsfeld ($m$), Masse des Gravitationsfeld erzeugenden Körpers ($M$), Gravitationskonstante ($G$)
+	
+	
+\end{framed}
 
 \noindent
 
 \input{../tasks/selfmade/polygrav} 
-
-
+\input{../tasks/kalda/cmellipse}
+\input{../tasks/ipho/cmrot}
+\input{../tasks/germanipho/cmcomet}
 
 \end{document}
