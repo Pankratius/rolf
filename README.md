@@ -53,8 +53,10 @@ Hier gibt es Aufgaben zur [Analysis](/website/anat.md)
 [Netzwerk Teilchenwelt](http://www.teilchenwelt.de)
 
 ###	Weitere praktische Lernressourcen
+Hier kann gerade Mathe für Physikaufgaben sehr schön lernen:
 
 [KhanAcademy](https://www.khanacademy.org)
+
 Ansonsten bieten die relativ alten Physikvorlesung von Prof. Walter Lewin vom MIT einen tollen Überblick, über alles, was man wissen sollte:
 
 [Klassische Mechanik](http://mit.espe.edu.ec/courses/physics/8-01-physics-i-classical-mechanics-fall-1999/)
@@ -67,4 +69,4 @@ Auch deren Mathevorlesungen sind gerade in der Analyis nicht schlecht:
 
 ### Noch Fragen? Her damit!
 
-Kontaktiert uns unter: [physikrolf@gmail.com](mailto:physikrolf@gmail.com) 
+Kontaktiert uns unter: [physikrolf@gmail.com](mailto:physikrolf@gmail.com)
