@@ -3,3 +3,47 @@
 	Ein geklebter Bimetallstreifen besteht aus zwei Metallschichten der Dicke $d$, die  Wärmeausdehungskoeffizienten $\alpha_1$ bzw. $\alpha_2$ ($\alpha_2>\alpha_1$) haben. Im Anfgangszustand ist der Streifen gerade. 
 	Wie groß ist der Krümmungsradius, wenn der Streifen um $\Delta T$ erwärmt wird? Was passiert im Grenzfall fast gleicher Wärmeausdehungskoeffizienten ($\alpha_2\rightarrow\alpha_1$)?
 \end{Exercise}
+\begin{Answer}[ref = bms]
+	\begin{figure}[h]
+		\centering
+			\begin{tikzpicture}[scale =1.5]
+			\clip(-0.47848681813981486,-1.0992522773586708) rectangle (2.556743060771764,1.7
+			191547261822666);
+			\draw [shift={(0.,0.)},thick] plot[domain=0.:0.9394498790362418,variable=\t]({1.*1.5*cos(\t r)+0.*1.5*sin(\t r)},{0.*1.5*cos(\t r)+1.*1.5*sin(\t r)});
+			\draw [shift={(0.,0.)},thick] plot[domain=0.:0.9394498790362418,variable=\t]({1.*1.*cos(\t r)+0.*1.*sin(\t r)},{0.*1.*cos(\t r)+1.*1.*sin(\t r)});
+			\draw [shift={(0.,0.)}] plot[domain=0.:0.9394498790362418,variable=\t]({1.*1.25*cos(\t r)+0.*1.25*sin(\t r)},{0.*1.25*cos(\t r)+1.*1.25*sin(\t r)});
+			\draw[thick] (0.5853462909316203,0.800551302621677)-- (0.8851425892165119,1.2105689636734724);
+			\draw[thick] (1.,0.)-- (1.5,0.);
+				
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(1,0){A}
+			\tkzDefPoint(53.83:1){B}
+			\tkzMarkAngle[scale = .5](A,O,B)
+			\tkzLabelAngle[pos = .55](A,O,B){$\varphi$}
+			\tkzDrawPoints(O)
+			\tkzDrawSegment[dashed](A,O)
+			\tkzDrawSegment[dashed](B,O)
+			
+			\draw[|-|] (0,-.5) --  (1.25,-.5) node [midway, below] {$R$};
+			
+			\draw[|-|] (1.25,-0.25) --(1.5,-0.25) node [midway, above] {$d$};
+			\end{tikzpicture}
+	\end{figure}
+	Wir bezeichnen die ursrpüngliche Länge des Bimetallstreifens mit $\ell$. Durch das Erwärmen erhalten wir zwei neue Längen, die gegeben sind durch
+	\begin{equation}\label{bms:therm}
+		\ell_1 = \ell\left(1+\alpha_1\Delta T\right) ~\mathrm{und}~\ell_2 = \ell\left(1+\alpha_2 \Delta T\right).
+	\end{equation}
+	Diese Längenänderung führt zu einer kreisförmigen Krümmung des Streifens mit eben dem Krümmungsradius $R$ an der Verbindungsstelle. Den Winkel dieser Krümmung nennen wir $\varphi$. \\
+	Damit können wir die neuen Längen jetzt auch als Bogenlängen über dem Winkel $\alpha$ darstellen:
+	\begin{equation}\label{bms:arc}
+		\ell_1 = \left(R-\frac{d}{2}\right) \varphi ~\mathrm{und}~\ell_2 = \left(R+\frac{d}{2}\right)\varphi.
+	\end{equation}
+	Die beiden Gleichungen \eqref{bms:therm} und \eqref{bms:arc} stellen nun ein Gleichungssystem da, was man nach $R$ umstellen kann. Wenn man das macht, kommt man auf
+	\begin{equation}\label{bms:rsol}
+		\boxed{
+			R = d\cdot \frac{2+\left(\alpha_1 + \alpha_2\right) \Delta T}{2\left(\alpha_2 - \alpha_1\right)\Delta T}
+			}
+	\end{equation}
+	Im Grenzfall fast gleicher Längenausdehnungskoeffizienten sollte es nicht zu einer Krümmung kommen, weil sich ja beide Streifen gleich stark ausdehnen. Dementsprechend sollte der Krümmungsradius gegen unendlich gehen.\\
+	Das sehen wir auch an dem dimensionslosen, zweiten Faktor in Gleichung \eqref{bms:rsol}. Im Fall $\alpha_2\rightarrow \alpha_1$ kommt der Nenner des Bruchs immer näher an null, sodass der Krümmungsradius ohne jede Grenze steigt, also keine Krümmung vorliegt.
+\end{Answer}
