@@ -42,15 +42,21 @@ Hier gibt es Aufgaben zur [Analysis](/website/anat.md)
 
 ### Andere Organisationen, bei denen ihr Physik machen könnt
 
--Internationale Physikolympiade (IPHO)
+Internationale Physikolympiade (IPhO)
 
--Bundeswettbewerb Physik
+Bundeswettbewerb Physik
 
--International Young Physicists' Tournament(IYPT)
+International Young Physicists' Tournament (IYPT)
 
--Orpheus Verein
+Orpheus Verein
 
--Netzwerk Teilchenwelt
+Netzwerk Teilchenwelt
+
+###	Weitere praktische Lernressourcen
+
+KhanAcademy
+
+
 
 ### Noch Fragen? Her damit!
 
