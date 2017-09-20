@@ -42,22 +42,29 @@ Hier gibt es Aufgaben zur [Analysis](/website/anat.md)
 
 ### Andere Organisationen, bei denen ihr Physik machen könnt
 
-Internationale Physikolympiade (IPhO)
+[Auswahlwettbewerb zur Internationalen Physikolympiade (IPhO)](http://ipho.info)
 
-Bundeswettbewerb Physik
+[Bundesweiter Wettbewerb Physik](http://www.mnu.de/wettbewerbe)
 
-International Young Physicists' Tournament (IYPT)
+[German Young Physicists' Tournament (GYPT)](https://gypt.org)
 
-Orpheus Verein
+[Orpheus Verein](https://www.orpheus-verein.de)
 
-Netzwerk Teilchenwelt
+[Netzwerk Teilchenwelt](http://www.teilchenwelt.de)
 
 ###	Weitere praktische Lernressourcen
 
-KhanAcademy
+[KhanAcademy](https://www.khanacademy.org)
+Ansonsten bieten die relativ alten Physikvorlesung von Prof. Walter Lewin vom MIT einen tollen Überblick, über alles, was man wissen sollte:
 
+[Klassische Mechanik](http://mit.espe.edu.ec/courses/physics/8-01-physics-i-classical-mechanics-fall-1999/)
+[Elektrodynamik](http://mit.espe.edu.ec/courses/physics/8-02-electricity-and-magnetism-spring-2002/)
+[Wellenlehre](http://mit.espe.edu.ec/courses/physics/8-03-physics-iii-vibrations-and-waves-fall-2004/)
 
+Auch deren Mathevorlesungen sind gerade in der Analyis nicht schlecht:
+
+[Analysis I](https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/)
 
 ### Noch Fragen? Her damit!
 
-Kontaktiert uns unter: physikrolf@gmail.com
+Kontaktiert uns unter: [physikrolf@gmail.com](mailto:physikrolf@gmail.com) 
