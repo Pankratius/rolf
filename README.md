@@ -1,5 +1,7 @@
 # Herzlich Willkommen auf der Website des ROLF-Netzwerks!
 
+Hier findet ihr die aktuelle Aufgabenserie (oder manchmal sogar Tipps dazu), alte Aufgabenserien samt Lösungen sowie Skripte und Handouts des ROLF-Netzwerks.
+
 ### Aktuelle Aufgabenserie
 
 Aufgabenserie 4 ist da!
@@ -37,3 +39,11 @@ Zusätzlich gibt es vom ROLF-Netzwerk auch Skripte zu ausgewählten Themen.
 [Kuchenrezept](/website/oldsol.md)
 
 Hier gibt es Aufgaben zur [Analysis](/website/anat.md)
+
+### Andere Organisationen, bei denen ihr Physik machen könnt
+
+-Internationale Physikolympiade (IPHO)
+-Bundeswettbewerb Physik
+-International Young Physicists' Tournament(IYPT)
+-Orpheus Verein
+-Netzwerk Teilchenwelt
