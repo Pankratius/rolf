@@ -60,8 +60,11 @@ Hier kann gerade Mathe für Physikaufgaben sehr schön lernen:
 Ansonsten bieten die relativ alten Physikvorlesung von Prof. Walter Lewin vom MIT einen tollen Überblick, über alles, was man wissen sollte:
 
 [Klassische Mechanik](http://mit.espe.edu.ec/courses/physics/8-01-physics-i-classical-mechanics-fall-1999/)
+
 [Elektrodynamik](http://mit.espe.edu.ec/courses/physics/8-02-electricity-and-magnetism-spring-2002/)
+
 [Wellenlehre](http://mit.espe.edu.ec/courses/physics/8-03-physics-iii-vibrations-and-waves-fall-2004/)
+
 
 Auch deren Mathevorlesungen sind gerade in der Analyis nicht schlecht:
 
