@@ -57,7 +57,7 @@ Hier kann gerade Mathe für Physikaufgaben sehr schön lernen:
 
 [KhanAcademy](https://www.khanacademy.org)
 
-Ansonsten bieten die relativ alten Physikvorlesung von Prof. Walter Lewin vom MIT einen tollen Überblick, über alles, was man wissen sollte:
+Ansonsten bieten die relativ alten Physikvorlesung von Prof. Walter Lewin vom MIT einen tollen Überblick über alles, was man wissen sollte:
 
 [Klassische Mechanik](http://mit.espe.edu.ec/courses/physics/8-01-physics-i-classical-mechanics-fall-1999/)
 
@@ -69,6 +69,10 @@ Ansonsten bieten die relativ alten Physikvorlesung von Prof. Walter Lewin vom MI
 Auch deren Mathevorlesungen sind gerade in der Analyis nicht schlecht:
 
 [Analysis I](https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/)
+
+Englisch kann man übrigens hier sehr schön lernen:
+
+[Duolingo](http://duolingo.de)
 
 ### Noch Fragen? Her damit!
 
