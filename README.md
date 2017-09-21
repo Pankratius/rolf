@@ -72,7 +72,7 @@ Auch deren Mathevorlesungen sind gerade in der Analyis nicht schlecht:
 
 Englisch kann man übrigens hier sehr schön lernen:
 
-[Duolingo](http://duolingo.de)
+[Duolingo](http://duolingo.org)
 
 ### Noch Fragen? Her damit!
 

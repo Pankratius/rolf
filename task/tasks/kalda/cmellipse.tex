@@ -1,6 +1,23 @@
-\begin{Exercise}[title = Ballistische Rakete, origin = J. Kaalda, difficulty = 4, label = cmellipse]
-	Eine Rakete wird vom Nordpol der Erde (Radius $r$) mit der ersten kosmischen Geschwindigkeit gestartet, sodass sie am Äquator landet. 
+\begin{Exercise}[title = Ballistische Rakete, origin = J. Kaalda, difficulty =3, label = cmellipse]
+	Eine Rakete wird vom Nordpol der Erde (Radius $R$, Masse $M$) mit der ersten kosmischen\footnote[2]{Das ist die Geschwindigkeit, mit der ein Körper eine stabile Kreisbahn um die Erde haben kann.} Geschwindigkeit gestartet, sodass sie am Äquator landet. 
 	\Question Wie groß ist die große Halbachse $a$ der Flugbahn?
 	\Question Was ist der größte Abstand $h$ der Rakete von der Erdoberfläche?
 	\Question Wie lang ist die Flugzeit $T$ der Rakete?
 \end{Exercise}
+\begin{Answer}[ref = cmellipse]
+	\Question Die erste kosmische Geschwindigkeit $v_0$ kann man am einfachsten durch das Gleichsetzen von  Radial- und Gravitationskraft errechnen
+	\begin{equation*}\label{cmellipse:vo}
+		\frac{GMm}{R^2} = \frac{mv_0^2}{R} \Rightarrow v_0 = \sqrt{\frac{\Gamma}{R}}.
+	\end{equation*}
+	Die Gesamtenergie beim Abschuss ist damit gegeben durch
+	\begin{equation*}
+		E = \frac{mv_0^2}{2} - \frac{\Gamma m}{R} = -\frac{\Gamma m}{2R}
+	\end{equation*}
+	Damit können wir die große Halbachse $a$ ausrechnen, weil wir ja wissen, wie die beiden zusammenhängen
+	\begin{equation}\label{cmellipse:sma}
+	\boxed{
+		E = -\frac{\Gamma m}{2a} = -\frac{\Gamma m}{2R} \Rightarrow a = R.}
+	\end{equation}
+	Das kann man sich auch daran überlegen, dass die Gesamtenergie bei gegebener Geschwindigkeit unabhängig von der Ausrichtung beim Starten nur vom Abstand zum Erdmittelpunkt abhängen darf, und damit die große Halbachse, die nur von der Energie abhängt, nur $R$ sein kann.
+	\Question Wir wissen, dass einer der beiden Brennpunkte der Erdmittelpunkt sein muss (1. Keplersches Gesetz). 
+\end{Answer}
