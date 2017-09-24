@@ -8,7 +8,7 @@ Aufgabenserie 4 ist da!
 
 [Serie 4](/website/koziarchiv/4.pdf)
 
-Die Lösungen sendet ihr bitte bis zum _05.Oktober_ an die gewohnte Adresse.
+Die Lösungen sendet ihr bitte bis zum _05. Oktober_ an die gewohnte Adresse.
 
 Die Lösungen für Serie 3 sind noch nicht ganz fertig. Deswegen hier nur die Aufgaben.
 [Serie 3, mit Tipps](/website/koziarchiv/3t.pdf)

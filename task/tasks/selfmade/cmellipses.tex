@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.541266947042949,-2.117285434822983) rectangle (3.440995527238834,3.4115693078693945);
+\draw (0.,2.) -- (2.,2.) -- (2.,0.) -- (0.,0.) -- cycle;
+\draw(0.,0.) circle (2.cm);
+\draw [domain=-2.541266947042949:6.440995527238834] plot(\x,{(-0.--1.*\x)/1.});
+\draw [rotate around={45.:(1.,1.)}] (1.,1.) ellipse (2.cm and 1.4142135623730951cm);
+\draw (0.,2.)-- (2.,2.);
+\draw (2.,2.)-- (2.,0.);
+\draw (2.,0.)-- (0.,0.);
+\draw (0.,0.)-- (0.,2.);
+\begin{scriptsize}
+\draw [fill=black] (0.,0.) circle (1.5pt);
+\draw [fill=black] (0.,2.) circle (1.5pt);
+%\draw [fill=black] (1.,1.) circle (1.5pt);
+\draw [fill=black] (2.,2.) circle (1.5pt);
+\draw [fill=black] (2.,0.) circle (1.5pt);
+\draw [fill=black] (1.414213562373095,1.414213562373095) circle (1.5pt);
+\draw [fill=black] (2.414213562373095,2.414213562373095) circle (1.5pt);
+\end{scriptsize}
+
+\node at (0,-0.35) {$F_1$};
+\node at (0,2.35) {$S$};
+\node at (1.8,2.2) {$F_2$};
+\node at (1.4142,1.1) {$C$};
+\node at (2.75,2.4142) {$B$};
+\node at (2.2,0) {$P$};
+\end{tikzpicture}

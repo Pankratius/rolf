@@ -1,3 +1,32 @@
 \begin{Exercise}[difficulty = 3, title = Komet, origin = {Auswahlwettbewerb IPhO 2007, 3. Runde}, label = cmcomet]
-	Ein Komet bewegt sich auf einer parabolischen Bahn um die Sonne. Im sonnennächsten Punkt beträgt sein Abstand von der Sonne $\nicefrac{r_e}{3}$, wobei $r_e$ der Radius der als kreisförmig angenommenen Erdbahn ist. Alle anderen Wechselwirkungen als die mit der Sonne vernachlässigendend, wie lang ist die Zeit $\tau$, die sich der Komet innerhalb der Erdbahn befindet?
+	Ein Komet bewegt sich auf einer parabolischen Bahn um die Sonne. Im sonnennächsten Punkt beträgt sein Abstand von der Sonne $\nicefrac{r_e}{3}$, wobei $r_e$ der Radius der als kreisförmig angenommenen Erdbahn ist. Alle anderen Wechselwirkungen als die mit der Sonne vernachlässigendend, wie lang ist die Zeit $\tau$, die sich der Komet innerhalb der Erdbahn befindet?\\
+	\small{Es ist \begin{equation}
+		\label{cmcomet:int}
+		\int \frac{x}{\sqrt{x-a}}~dx = \frac{2}{3}\left(x+2a\right)\sqrt{x-a}\end{equation} für $x>a$ (Warum?).}
 \end{Exercise}
+\begin{Answer}[ref = cmcomet]
+	Wir wissen, dass parabolische Bahnen zu einer Gesamtorbitenergie von $E = 0$ korrespondieren
+	\begin{equation}\label{cmcomet:edef}
+		  0 = \frac{\dot{r}^2 + r^2\dot{\varphi}^2}{2}- \frac{\Gamma}{r}.
+	\end{equation}
+	Hier bezeichnet $\varphi$ den Drehwinkel. Gleichzeitig wissen wir auch, dass der Betrag des Drehimpulses $\ell := \left|\mathbf{L}\right| = m r^2\dot{\varphi}$ konstant ist. Damit können wir die Winkelgeschwindigkeit durch $r$ und $\ell$ ausdrücken, und können die Energie nur in Abhängigkeit von $r$ und seinen Ableitungen darstellen
+	\begin{equation}\label{cmcomet:effe}
+		0 =\frac{\dot{r}^2}{2} + \frac{r^2}{2} \left(\frac{\ell}{mr^2}\right)^2 - \frac{\Gamma}{r} = \frac{\dot{r}^2}{2} + \frac{\ell^2}{2m^2r^2} - \frac{\Gamma}{r}.
+	\end{equation}
+	Das ist jetzt nur noch eine Differentialgleichung in $r\left(t\right)$, die wir zu lösen versuchen können. Bevor wir das machen, können wir noch schnell, auch mit \eqref{cmcomet:effe} den Drehimpuls ausrechnen, weil wir wissen, dass im Perihel $\dot{r} = 0$ gilt, und $r = \frac{r_e}{3}$:
+	\begin{equation}\label{cmcomet:ldef}
+		0 = \frac{\ell^2}{2m^2r^2} - \frac{\Gamma}{r} \Rightarrow \ell = m \sqrt{\frac{2}{3}\Gamma r}.
+	\end{equation}
+	Jetzt müssen wir wirklich nur noch die Differentialgleichung lösen. Wir stellen erstmal nach $\dot r$ um, bevor wir dann die Variablen trennen:
+	\begin{equation*}
+		\dot{r} = \pm \sqrt{\frac{\Gamma}{r} - \frac{\ell^2}{2m^2r^2}} =\pm \sqrt{2\Gamma}\sqrt{\frac{1}{r} -  \frac{r_e}{3r^2}}.
+	\end{equation*}
+	Mit $\dot{r} = \frac{dr}{dt}$ können wir jetzt einfach den Physiker-Umstell-Trick machen, und die Symmetrie des Problems nehmen, um uns über Vorzeichen keine Gedanken mehr machen zu müssen
+	\begin{equation*}
+		\int_0^\tau ~dt = \frac{2}{\sqrt{2\Gamma}}\int_{\frac{r_e}{3}}^{r_e} \frac{r}{\sqrt{r- \frac{r_e}{3}}}~dr.
+	\end{equation*}
+	Das Integral \eqref{cmcomet:int} ist zufällig das, was wir hier brauchen, und kommen so am Ende auf
+	\begin{equation*}
+		\boxed{\tau = \frac{20}{9} \cdot \sqrt{\frac{R^3}{3\Gamma}}.} 
+	\end{equation*}
+\end{Answer}
