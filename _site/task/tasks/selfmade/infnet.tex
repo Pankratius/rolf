@@ -1,0 +1,272 @@
+
+\begin{Exercise}[label = infnet, title = Widerstandsnetzwerk, origin = P.Gnädig, difficulty = 4]
+	Alle Kanten in dem unendlich großen Widerstandsnetz (siehe Abbildung) haben den Widerstand $R$. Wie groß ist der Widerstand zwischen $A$ und $B$?
+\end{Exercise}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\draw
+		(-2,1) to[/tikz/circuitikz/bipoles/length=20pt, R] (0,1)
+		(0,1) to[/tikz/circuitikz/bipoles/length=20pt, R](1,1)
+		(1,1) to[/tikz/circuitikz/bipoles/length=20pt, R](3,1)
+		(-1.75,1)to[/tikz/circuitikz/bipoles/length=20pt, R](-1.75,0)
+		(-1.75,0)to[/tikz/circuitikz/bipoles/length=20pt, R](-1.75,-1)
+				(-2,0) to[/tikz/circuitikz/bipoles/length=20pt, R] (0,0)
+				(0,0) to[/tikz/circuitikz/bipoles/length=20pt, R](1,0)
+				(1,0) to[/tikz/circuitikz/bipoles/length=20pt, R](3,0)
+						(-2,-1) to[/tikz/circuitikz/bipoles/length=20pt, R] (0,-1)
+						(0,-1) to[/tikz/circuitikz/bipoles/length=20pt, R](1,-1)
+						(1,-1) to[/tikz/circuitikz/bipoles/length=20pt, R](3,-1)
+				(-.25,1)to[/tikz/circuitikz/bipoles/length=20pt, R](-.25,0)
+				(-.25,0)to[/tikz/circuitikz/bipoles/length=20pt, R](-.25,-1)
+					(1.25,1)to[/tikz/circuitikz/bipoles/length=20pt, R](1.25,0)
+					(1.25,0)to[/tikz/circuitikz/bipoles/length=20pt, R](1.25,-1)
+					(2.75,1)to[/tikz/circuitikz/bipoles/length=20pt, R](2.75,0)
+					(2.75,0)to[/tikz/circuitikz/bipoles/length=20pt, R](2.75,-1)
+			
+					;
+		\draw (2.75,1) -- (2.75,1.2);
+		\draw (-1.75,1) -- (-1.75,1.2);
+		\draw (2.75,-1) -- (2.75,-1.2);
+		\draw (-1.75,-1)--(-1.75,-1.2);
+		\filldraw[black] (-.25,0) circle (1.5pt);
+		\filldraw[black] (1.25,0) circle (1.5pt);
+		\node at (0,-.2) {$A$};
+		\node at (1.5,-.2) {$B$};
+		\node at (0.5,0.25){$R$};
+		\node at (-2.2,1) {$...$};
+			\node at (-2.2,0) {$...$};
+				\node at (-2.2,-1) {$...$};
+		\node at (3.2,1) {$...$};
+			\node at (3.2,0) {$...$};
+			\node at (3.2,-1) {$...$};
+		\node at (-1.75,-1.5) {$...$};
+		\node at (-0.25,-1.5) {$...$};
+		\node at (1.25,-1.5) {$...$};
+		\node at (2.75,-1.5) {$...$};
+				\node at (-1.75,1.5) {$...$};
+				\node at (-0.25,1.5) {$...$};
+				\node at (1.25,1.5) {$...$};
+				\node at (2.75,1.5) {$...$};
+		
+		
+
+	\end{tikzpicture}
+\end{figure}
+
+\begin{Answer}[ref = infnet]
+	Diese Aufgabe kann man wieder mit dem Superpositionsprinzip lösen (siehe Serie 2).
+	Wir betrachten dazu zuerst den Fall, dass in den Punkt $A$ von irgendwo her ein Strom $I$ fließt. Weil das Netz unendlich groß ist, und alle Widerstandskanten den gleichen Widerstand $R$ haben, gibt es keine bevorzugte Fließrichtung für den Strom. Da nach der ersten Kirchhoffschen Regel (Knotensatz) aber der Strom, der in einen Punkt reinfließt, auch wieder rausfließen muss, fließt in jeder der vier an den Punkt $A$ angrenzenden Kanten jetzt ein Strom von $\frac{I}{4}$:
+	
+		\begin{center}
+		\begin{tikzpicture}[decoration={
+			markings,
+			mark=at position 0.5 with {\arrow{>}}}
+		] 
+		\draw
+		(-2,1) to (0,1)
+		(0,1) to(1,1)
+		(1,1) to(3,1)
+		(-1.75,1)to(-1.75,0)
+		(-1.75,0)to(-1.75,-1)
+		%(-2,0) to[/tikz/circuitikz/bipoles/length=20pt, R] (0,0)
+		%(0,0) to[/tikz/circuitikz/bipoles/length=20pt, R](1,0)
+		(1,0) to(3,0)
+		(-2,-1) to (0,-1)
+		(0,-1) to(1,-1)
+		(1,-1) to(3,-1)
+		%(-.25,1)to[/tikz/circuitikz/bipoles/length=20pt, R](-.25,0)
+		%(-.25,0)to[/tikz/circuitikz/bipoles/length=20pt, R](-.25,-1)
+		(1.25,1)to(1.25,0)
+		(1.25,0)to(1.25,-1)
+		(2.75,1)to(2.75,0)
+		(2.75,0)to(2.75,-1)
+		
+		;
+		\draw[postaction = {decorate}] (0,0) to (-2,0); 
+		\draw[postaction = {decorate}] (0,0) to (1,0);
+		\draw[postaction = {decorate}] (-.25,0) to (-.25,1);
+		\draw[postaction = {decorate}] (-.25,0) to (-.25,-1); 
+		
+		\node at (-.75,0.3) {$\frac{I}{4}$};	
+		\node at (1,0.3){$\frac{I}{4}$};
+		\draw (2.75,1) -- (2.75,1.2);
+		\draw (-1.75,1) -- (-1.75,1.2);
+		\draw (2.75,-1) -- (2.75,-1.2);
+		\draw (-1.75,-1)--(-1.75,-1.2);
+		\filldraw[black] (-.25,0) circle (1.5pt);
+		\filldraw[black] (1.25,0) circle (1.5pt);
+		\node at (0,-.2) {$A$};
+		\node at (1.5,-.2) {$B$};
+		%\node at (0.5,0.25){$R$};
+		\node at (-2.2,1) {$...$};
+		\node at (-2.2,0) {$...$};
+		\node at (-2.2,-1) {$...$};
+		\node at (3.2,1) {$...$};
+		\node at (3.2,0) {$...$};
+		\node at (3.2,-1) {$...$};
+		\node at (-1.75,-1.5) {$...$};
+		\node at (-0.25,-1.5) {$...$};
+		\node at (1.25,-1.5) {$...$};
+		\node at (2.75,-1.5) {$...$};
+		\node at (-1.75,1.5) {$...$};
+		\node at (-0.25,1.5) {$...$};
+		\node at (1.25,1.5) {$...$};
+		\node at (2.75,1.5) {$...$};
+		
+		\draw[violet, thick,postaction={decorate}] (-1,-0.75) to [out = 20] (-0.25,0);
+		\node at (-1.2,-0.65) {$\color{violet} I$};
+		
+		
+		
+		\end{tikzpicture}
+		\end{center}
+		Hierbei wurden die Widerstände nicht mehr eingezeichnet, um die Übersichtlichkeit zu erhalten.\\
+		Wir betrachten nun den anderen Fall, in dem es uns irgendwie gelingt, dass aus dem Punkt $B$ ein Strom von $I$ rausfließt. Weil es wieder keine bevorzugte Richtung für den Ursprung des Stroms gibt, der über $B$ aus dem Netz fließt, muss (wieder nach dem Knotensatz) in jeder der vier angrenzenden Kanten ein Strom von $\frac{I}{4}$ fließen:
+		
+				\begin{center}
+					\begin{tikzpicture}[decoration={
+						markings,
+						mark=at position 0.5 with {\arrow{>}}}
+					] 
+					\draw
+					(-2,1) to (0,1)
+					(0,1) to(1,1)
+					(1,1) to(3,1)
+					(-1.75,1)to(-1.75,0)
+					(-1.75,0)to(-1.75,-1)
+					(-2,0) to (0,0)
+					%(0,0) to (1,0)
+					%(1,0) to(3,0)
+					(-2,-1) to (0,-1)
+					(0,-1) to(1,-1)
+					(1,-1) to(3,-1)
+					(-.25,1)to(-.25,0)
+					(-.25,0)to(-.25,-1)
+					%(1.25,1)to(1.25,0)
+					%(1.25,0)to(1.25,-1)
+					(2.75,1)to(2.75,0)
+					(2.75,0)to(2.75,-1)
+					
+					;
+		
+					\draw[postaction = {decorate}]  (0,0)--(1.25,0) ;
+					\draw[postaction = {decorate}](3,0)-- (1.25,0)  ;
+					\draw[postaction = {decorate}](1.25,-1)-- (1.25,0)  ;
+					\draw[postaction = {decorate}](1.25,1)-- (1.25,0) ;
+					
+
+					
+					\node at (1.5,0.3) {$\frac{I}{4}$};		
+					\node at (1,0.3){$\frac{I}{4}$};
+					
+					\draw (2.75,1) -- (2.75,1.2);
+					\draw (-1.75,1) -- (-1.75,1.2);
+					\draw (2.75,-1) -- (2.75,-1.2);
+					\draw (-1.75,-1)--(-1.75,-1.2);
+					\filldraw[black] (-.25,0) circle (1.5pt);
+					\filldraw[black] (1.25,0) circle (1.5pt);
+					\node at (0,-.2) {$A$};
+					\node at (1.5,-.2) {$B$};
+					%\node at (0.5,0.25){$R$};
+					\node at (-2.2,1) {$...$};
+					\node at (-2.2,0) {$...$};
+					\node at (-2.2,-1) {$...$};
+					\node at (3.2,1) {$...$};
+					\node at (3.2,0) {$...$};
+					\node at (3.2,-1) {$...$};
+					\node at (-1.75,-1.5) {$...$};
+					\node at (-0.25,-1.5) {$...$};
+					\node at (1.25,-1.5) {$...$};
+					\node at (2.75,-1.5) {$...$};
+					\node at (-1.75,1.5) {$...$};
+					\node at (-0.25,1.5) {$...$};
+					\node at (1.25,1.5) {$...$};
+					\node at (2.75,1.5) {$...$};
+					
+					\draw[violet, thick,postaction={decorate}] (1.25,0) to [out = 240] (2.25,-.75);
+					\node at (1.5,-0.65) {$\color{violet} I$};
+					
+					
+					
+					\end{tikzpicture}
+				\end{center}
+			Jetzt kommt der Superpositionstrick zum Einsatz. Wir \glqq addieren\grqq{} (also überlagern) einfach die beiden Fälle, die wir uns eben ganz einfach anschauen konnten, und hoffen, dass etwas sinnvolles dabei heraus kommt.\\
+			In diesem Fall heißt das, dass wir uns ein Stromnetzwerk anschauen, in dem in Punkt $A$ ein Strom $I$ reinfließt, und aus Punkt $B$ ein Strom $I$ rausfließt. Das klingt genau nach dem, was wir haben wollen, wenn wir den Widerstand zwischen $A$ und $B$ rausfinden wollen.\\
+			Die Ströme aus den beiden einfachen Fällen addieren sich hier einfach, sodass zwischen $A$ und $B$ ein Strom von $\frac{I}{4} + \frac{I}{4} = \frac{I}{2}$ fließt:
+							\begin{center}
+								\begin{tikzpicture}[decoration={
+									markings,
+									mark=at position 0.5 with {\arrow{>}}}
+								] 
+								\draw
+								(-2,1) to (0,1)
+								(0,1) to(1,1)
+								(1,1) to(3,1)
+								(-1.75,1)to(-1.75,0)
+								(-1.75,0)to(-1.75,-1)
+								(-2,0) to (0,0)
+								%(0,0) to (1,0)
+								%(1,0) to(3,0)
+								(-2,-1) to (0,-1)
+								(0,-1) to(1,-1)
+								(1,-1) to(3,-1)
+								(-.25,1)to(-.25,0)
+								(-.25,0)to(-.25,-1)
+								%(1.25,1)to(1.25,0)
+								%(1.25,0)to(1.25,-1)
+								(2.75,1)to(2.75,0)
+								(2.75,0)to(2.75,-1)
+								
+								;
+								
+								\draw[thick,postaction = {decorate}]  (-0.25,0)--(1.25,0) ;
+								\draw(3,0)-- (1.25,0)  ;
+								\draw(1.25,-1)-- (1.25,0)  ;
+								\draw(1.25,1)-- (1.25,0) ;
+								
+								
+								
+
+								\node at (0.5,0.4){$\frac{I}{4} + \frac{I}{4} =$};
+								\node at (0.5,-0.4) {$\frac{I}{2}$};
+								
+								\draw (2.75,1) -- (2.75,1.2);
+								\draw (-1.75,1) -- (-1.75,1.2);
+								\draw (2.75,-1) -- (2.75,-1.2);
+								\draw (-1.75,-1)--(-1.75,-1.2);
+								\filldraw[black] (-.25,0) circle (1.5pt);
+								\filldraw[black] (1.25,0) circle (1.5pt);
+								\node at (0,-.2) {$A$};
+								\node at (1.5,-.2) {$B$};
+								%\node at (0.5,0.25){$R$};
+								\node at (-2.2,1) {$...$};
+								\node at (-2.2,0) {$...$};
+								\node at (-2.2,-1) {$...$};
+								\node at (3.2,1) {$...$};
+								\node at (3.2,0) {$...$};
+								\node at (3.2,-1) {$...$};
+								\node at (-1.75,-1.5) {$...$};
+								\node at (-0.25,-1.5) {$...$};
+								\node at (1.25,-1.5) {$...$};
+								\node at (2.75,-1.5) {$...$};
+								\node at (-1.75,1.5) {$...$};
+								\node at (-0.25,1.5) {$...$};
+								\node at (1.25,1.5) {$...$};
+								\node at (2.75,1.5) {$...$};
+								
+								\draw[violet, thick,postaction={decorate}] (1.25,0) to [out = 240] (2.25,-.75);
+								\node at (1.5,-0.65) {$\color{violet} I$};
+								\draw[violet, thick,postaction={decorate}] (-1,-0.75) to [out = 20] (-0.25,0);
+								\node at (-1.2,-0.65) {$\color{violet} I$};
+								
+								
+								
+								\end{tikzpicture}
+							\end{center}
+					Die Ströme durch die anderen Kanten können jetzt nicht mehr einfach bestimmt werden, aber die interessieren uns auch nicht wirklich.\\
+					Durch den Widerstand $R$ zwischen $A$ und $B$ fließt nun also ein Strom von $\frac{I}{2}$. Nach dem Ohmschen Gesetz entspricht das einem Spannungsabfall von $U_{AB} =  R \cdot  \frac{I}{2}$ \textbf{zwischen $A$ und $B$}.\\
+					Der gesuchte Widerstand $R_{AB}$ zwischen $A$ und $B$ ergibt sich jetzt nicht nur durch den direkt geschalteten Widerstand $R$, sondern auch durch all die anderen angrenzenden Widerstände. Wir können ihn aber durch den Spannungsabfall ausrechnen, den wir gerade ausgerechnet haben. Denn wen zwischen $A$ und $B$ ein Strom $I$ fließt ($\frac{I}{2}$ durch die direkte Verbindung, und der Rest irgendwie anders durch das Widerstandnetz), und der Spannungsabfall zwischen $A$ und $B$ gerade $R\cdot \frac{I}{2}$ beträgt, ist der Ersatzwiderstand zwischen $A$ und $B$ nach dem Ohmschen Gesetz gegeben durch $R_{AB} = \frac{U_{AB}}{I} = \frac{R\cdot \frac{I}{2}}{I} = \frac{R}{2}$.
+			
+\end{Answer}

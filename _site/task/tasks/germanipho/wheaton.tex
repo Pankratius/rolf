@@ -1,0 +1,32 @@
+\begin{Exercise}[label = wheaton, title = {Brückenschaltung}, difficulty = 3, origin = {1. Runde IPhO, 2015}, title = Brückenschaltung]
+	In dem dargestellten Stromkreis fließt ein Strom von $I = 1~\mathrm{A}$ wenn alle Widerstände gleich groß sind, also $R_1=R_2$. \\
+	Wie groß ist der Strom, wenn die Spannungsquelle gleich bleibt, aber $R_2 = 2R_1$ gilt?
+\end{Exercise}
+\begin{figure}[h]
+	\centering
+		\begin{circuitikz}[scale = .95] \draw
+			(-3,0)	to[battery1, l=$U$](2,0)--(2,3)
+			to[short, i=$I$](0.5,3)
+			to[short,-*,l=$A$](0.5,3)
+			(-2,4)	to[R, l=$R_1$](0.5,4)--(0.5,3)
+			(-2,2) 	to[R, l=$R_2$](0.5,2)--(0.5,3)
+			(-2,2)	to[R, l=$R_1$] (-2,4)
+			%(-2,2)  to[short,-*,l_=$C$](-2,2)
+		%	(-2,4)  to[short,-*,l_=$B$](-2,4)
+			(-2,2)	to[R, l_=$R_1$] (-4,2)
+			(-2,4)  to[R, l_=$R_2$](-4,4)
+		%	(-4,3)	to[short,-*, l_=$D$](-4,3)--(-4,4)--(-4,2)
+			(-4,3)	to[R, l=$R_1$](-6,3)--(-6,0)--(-3,0)
+			;
+			\node at (-2,1.7) {$C$};
+			\filldraw[black] (-2,2) circle (1.5pt);
+			\node at (-2,4.3){$B$};
+			\filldraw[black] (-2,4) circle (1.5pt);
+			\node at (-3.7,3) {$D$};
+			\draw (-4,4)--(-4,2);
+			\filldraw[black] (-4,3) circle (1.5pt);
+			
+		\end{circuitikz}
+	\caption{Brückenschaltung}
+	\label{fig:whb1}
+\end{figure}

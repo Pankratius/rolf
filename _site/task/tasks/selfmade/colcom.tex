@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+	\draw  (0,0) circle (0.3);
+	\draw  (-.6,0) circle (0.3);
+	\draw[->] (-0.6,0) -- (2.4,0);
+	\draw[->, dashed] (0,0) -- (2.31,-1.155);
+	\draw[->, dashed] (0,-1.155) -- (2.31,-1.155);
+	\draw[->, dashed] (0,0) -- (0,-1.155);
+	\node at (3.5,0) {$p_1 = p_{1,\parallel}$};
+	\node at (3.5,-1.155) {$p_2$};
+	\node at (-0.5,-1) {$p_{2,\bot}$};
+	\node at (1.155,-1.75) {$p_{2,\parallel}$};
+	
+	\tkzDefPoint(0,0){O}
+	\tkzDefPoint(2.4,0){A}
+	\tkzDefPoint(2.31,-1.155){B}
+	\tkzMarkAngle[scale = 0.85](B,O,A)
+	\tkzLabelAngle(B,O,A){$\theta$}
+	 
+\end{tikzpicture}

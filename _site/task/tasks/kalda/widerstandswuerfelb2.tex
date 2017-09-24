@@ -1,0 +1,27 @@
+\begin{circuitikz} \draw
+	(0,0) to (0.5,0)
+	(0.5,-0.5) to (0.5,0.5)
+	\foreach \h in {-0.5,0,0.5}
+		{(0.5,\h) to[R] (2.5,\h)}
+	(2.5,0.5) to (2.5,-0.5)
+	(2.5,0) to (3,0)	
+ 	(3,-1.5) to (3,1.5)
+	\foreach \h in {-1.5,-1,-0.5,0.5,1,1.5}
+	{(3,\h) to[R] (5,\h)}
+	(5,1.5) to (5,-1.5)
+	(5,0) to (6,0)
+	(6,-0.5) to (6,0.5)
+	\foreach \h in {-0.5,0,0.5}
+	{(6,\h) to[R] (8,\h)}
+	(8,0.5) to (8,-.5)
+	(8,0) to (8.5,0)
+	;
+	\node at (-0.2,0) {$X$};
+	\filldraw[black] (0,0) circle (1.5pt);
+	\node at (8.7,0) {$Y$};
+	\filldraw[black] (8.5,0) circle (1.5pt); 
+	\node at (2.75,0.3) {$a$};
+	\filldraw[black] (2.75,0) circle (1.5pt);
+	\node at (5.5,0.3) {$b$};
+	\filldraw[black] (5.5,0) circle (1.5pt);
+\end{circuitikz}

@@ -1,0 +1,55 @@
+\begin{Exercise}[title = Ballistische Rakete, origin = J. Kaalda, difficulty =3, label = cmellipse]
+	Eine Rakete wird vom Nordpol der Erde (Radius $R$, Masse $M$) mit der ersten kosmischen\footnote[2]{Das ist die Geschwindigkeit, mit der ein Körper eine stabile Kreisbahn um die Erde haben kann.} Geschwindigkeit gestartet, sodass sie am Äquator landet. 
+	\Question Wie groß ist die große Halbachse $a$ der Flugbahn?
+	\Question Was ist der größte Abstand $h$ der Rakete von der Erdoberfläche?
+	\Question Wie lang ist die Flugzeit $T$ der Rakete?
+\end{Exercise}
+\begin{Answer}[ref = cmellipse]
+	\begin{figure}[h]
+		\centering
+		\input{../tasks/selfmade/cmellipses}
+		\caption{Skizze der Flugbahn}
+		\label{fig:cmellsk}
+	\end{figure}
+	\Question Die erste kosmische Geschwindigkeit $v_0$ kann man am einfachsten durch das Gleichsetzen von  Radial- und Gravitationskraft errechnen
+	\begin{equation*}\label{cmellipse:vo}
+		\frac{GMm}{R^2} = \frac{mv_0^2}{R} \Rightarrow v_0 = \sqrt{\frac{\Gamma}{R}}.
+	\end{equation*}
+	Die Gesamtenergie beim Abschuss ist damit gegeben durch
+	\begin{equation*}
+		E = \frac{mv_0^2}{2} - \frac{\Gamma m}{R} = -\frac{\Gamma m}{2R}
+	\end{equation*}
+	Damit können wir die große Halbachse $a$ ausrechnen, weil wir ja wissen, wie die beiden zusammenhängen
+	\begin{equation}\label{cmellipse:sma}
+	\boxed{
+		E = -\frac{\Gamma m}{2a} = -\frac{\Gamma m}{2R} \Rightarrow a = R.}
+	\end{equation}
+	Das kann man sich auch daran überlegen, dass die Gesamtenergie bei gegebener Geschwindigkeit unabhängig von der Ausrichtung beim Starten nur vom Abstand zum Erdmittelpunkt abhängen darf, und damit die große Halbachse, die nur von der Energie abhängt, nur $R$ sein kann.
+	\Question Wir wissen, dass einer der beiden Brennpunkte $F_1$ der Erdmittelpunkt sein muss (1. Keplersches Gesetz). Die Distanz des anderen Brennpunkts vom Erdmittelpunkt finden wir über die Ellipseandefinition. Für alle Punkte $P$ auf dem Ellipsenumfang gilt für die Abstände von den Brennpunkten $F_1$ und $F_2$
+	\begin{equation}\label{cmellipse:edef}
+	\overline{F_1P} + \overline{F_2P} = 2a,
+	\end{equation}
+	wobei $a$ die große Halbachse ist, die wir ja in \eqref{cmellipse:sma} ausgerechnet haben.\\
+	Aus Symmetriegründen müssen die beiden Brennpunkte nun auf einer Breite von $\frac{\pi}{4}$ liegen. Betrachten wir jetzt noch den Startpunkt $S$, so ist offensichtlich $\overline{F_1S}= R$. Da aber $R=a$ gilt, ist ebenfalls $\overline{F_2S} = a$. Die beiden Brennpunkte sind also durch die entsprechenden Eckpunkte eines Quadrats mit Seitenlänge $R$  gegeben.\\
+	Jetzt kommt nur noch elementare Geometrie, siehe Abbildung \ref{fig:cmellsk}. Wir wissen, dass die Höhe $h$ gegeben ist durch 
+	\begin{equation}\label{cmellipse:hdef}
+		h = \overline{CB} = \overline{F_1B} - \overline{F_1C} =  \overline{F_1B} - R.
+	\end{equation}
+	Gleichzeitig ist aus Symmetriegründen $\overline{F_1B} = R + \frac{1}{2}\overline{F_1F_2}$. Das können wir wiederum als $\overline{F_1F_2} = \frac{\sqrt{2}}{2}R$ über die Diagonale im Quadrat ausdrücken.\\
+	Setzen wir den ganzen Spaß jetzt in \eqref{cmellipse:hdef} ein, kommen wir schlußendlich auf
+	\begin{equation}\label{cmellipse:maxh}
+		\boxed{h = \frac{\sqrt{2}}{2}R.}
+	\end{equation}
+	\Question Die Zeit, die für die Flugbahn berechnet wird, können wir durch eine Kombination des zweiten und dritten keplerschen Gesetzes errechnen. \\
+	Zuerst wissen wir aus dem dritten keplerschen Gesetz das die Zeit für die gesamte Ellipsenbahn (würde die Rakete nicht am Äquator in die Erde rammen) gegeben ist durch die Umlaufzeit auf der äquivalenten Kreisbahn, weil ja beide die gleiche große Halbachse $a$ haben. Die Umlaufzeit für die gesammte Ellipse beträgt also
+	\begin{equation}\label{cmellipse:tfull}
+		T = \frac{2\pi R}{v} = 2\pi \sqrt{\frac{R}{{\Gamma}}}.
+	\end{equation}
+	Jetzt können wir den Flächensatz nehmen. Wir wissen, dass der Vektor zwischen dem Koordinatenursprung (und damit $F_1$) und der Rakete in gleichen Zeiten gleiche Flächen überschreitet.\\
+	Der Flächeninhalt der Ellipse ist gegeben durch $A = \pi ab$, wobei $b$ die kleine Halbachse ist. In unserem Fall ist $b = \frac{1}{2}\cdot \overline{PS}  = \frac{\sqrt{2}}{4}R$. Dementsprechend ist $A = \frac{\pi\sqrt{2}}{4}R^2$.\\
+	Der Flächeninhalt des Teilstücks ist jetzt der der halben Ellipse plus dem des Dreiecks $\Delta F_1PS$. Das hat aber einfach den Flächeninhalt $\frac{R^2}{2}$, sodass der Gesamtflächeninhalt des tatsächlich überflogenen Sektors gegeben ist durch $A_s = \frac{R^2}{2}\left(\pi \sqrt{2} + 1\right)$.\\
+	Nach dem zweiten keplerschen Gesetz gilt somit letztendlich für die Flugzeit $\tau$
+	\begin{equation}
+		\boxed{\frac{A}{T} = \frac{A_s}{\tau} \Rightarrow \tau = T\cdot \frac{A_s}{A} = \left(2\sqrt{2}+ \pi\right) \sqrt{\frac{R}{\Gamma}}.}
+	\end{equation}
+\end{Answer}

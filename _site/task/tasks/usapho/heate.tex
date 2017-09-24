@@ -1,0 +1,39 @@
+\begin{Exercise}[label=heate, origin = {US IPhO Auswahlwettbewerb, Halbfinale 2013}, title = Wärmetauscher,difficulty = 4]
+Die durch Wärmeleitung übertragene Wärmeleistung zwischen zwei parallelen Wänden kann näherungsweise durch die Gleichung 
+\begin{equation}\label{he:fg}
+	P = \lambda A \frac{T_a-T_b}{d}
+\end{equation}
+beschrieben werden. Dabei ist $A$ die Fläche, durch die Wärme strömt, $d$ der Abstand zwischen den beiden Wänden und $\lambda$ eine Konstante, die vom Material zwischen den beiden Wänden abhängt (die sog. Wärmeleitfähigkeit). $T_a$ ist die Temperatur der wärmeren Wandoberfläche und $T_b$ die der kälteren Wandoberfläche.\\
+Ein Wärmetauscher ist ein Gerät, dass Wärme von einer warmen Flüssigkeit zu einer kälteren Flüssigkeit überträgt (Abb. \ref{fig:heate}).
+Dabei fließt warme Flüssigkeit (rot) mit einer Geschwindigkeit $v$ von rechts nach links, und kalte Flüssigkeit (blau) mit einer Geschwindigkeit von $v$ von links nach rechts. Die Dichte der Flüssigkeiten ist $\rho$ und die Wärmekapazität $c$. Beide befinden sich in Röhren der Höhe $h$ ($h$ ist sehr klein).  Die beiden Flüßigkeiten sind durch eine Metallwand (grau) der Dicke $d$ mit der Wärmeleitfähigkeit $\lambda$ getrennt. \\
+Die Temperaturdifferenz zwischen der einfließenden warmen Flüssigkeit und der einfließenden kalten Flüssigkeit beträgt $\Delta T_e$. \\
+Bestimme die Temperaturdifferenz zwischen der abgekühlten, ausfließenden warmen Flüssigkeit und der aufgewärmten, ausfließenden kalten Flüßigkeit, $\Delta T_a$. Nimm dafür an, dass die Temperaturdifferenz $\Delta T$ zwischen warmer und kalter Flüssigkeit entlang der Wand konstant bleibt.
+
+\end{Exercise}
+\begin{figure}[h]
+	\centering
+	\input{../tasks/usapho/heate1}
+	\caption{Ein Wärmetauscher}
+	\label{fig:heate}
+\end{figure}
+\begin{Answer}[ref= heate]
+	Die warme (rote) Flüssigkeit strömt mit einer Temperatur $T_{w,e}$ in den Wärmetauscher und verlässt ihn mit einer Temperatur $T_{w,a}$. Diese Temperaturänderung  $\Delta T_w$ kommt durch den Wärmeaustausch mit der Leistung $P$ aus \eqref{he:fg}. 
+	Diese ist definiert als die Wärmezufuhr pro gegebener Zeiteinheit, also $P = \frac{Q}{t}$. Die Zeit $t$, in der hier die warme Flüssigkeit Wärme abgibt, ist genau die Zeit, die gebraucht wird, um die Röhre des Wärmetauschers zu durchlaufen, also $ t = \frac{\ell}{v}$. In dieser Zeit fließt eine Masse von $m = \rho V = \rho A h$ durch den Wärmetauscher, wobei $A$ genau die Fläche ist, über die die Wärmeübertragung stattfindet. Die Temperaturänderung $\Delta T_w$ kann also über die abgegebene Leistung berechnet werden zu
+	\begin{equation}\label{he:tloss}
+		P = -\frac{Q}{t} = \frac{m c \Delta T_w}{t} \Rightarrow \Delta T_w =- \frac{Pt}{mc} \overset{\eqref{he:fg}}{=} \underbrace{\frac{\lambda A \Delta T }{d}}_{=P}\cdot \underbrace{\frac{\ell}{v}}_{= t}\cdot \underbrace{\frac{1}{\rho c A h}}_{=\frac{1}{mc}} = -\frac{\lambda \Delta T\ell}{dv\rho c h}.
+	\end{equation}
+	Da wir die Temperatur der ausfließenden warmen Flüssigkeit $T_{w,a}$ auch durch die der einfließenden kalten Flüssigkeit $T_{k,e}$ und die (konstante) Temperaturdifferenz zwischen den beiden Wänden $\Delta T$ ausdrücken können, ist
+	\begin{equation}\label{he:dtr}
+		\Delta T_{w} = T_{w,a} - T_{w,e} = T_{k,e}+\Delta T - T_{w,e} = \Delta T - \Delta T_e,
+	\end{equation}
+	wobei $\Delta T_e$ die Temperaturdifferenz der einfließenden Flüssigkeiten ist. 
+	Wir können \eqref{he:tloss} und \eqref{he:dtr} gleichsetzten, und so die Temperaturdifferenz zwischen den Wänden bestimmen
+	\begin{equation}\label{he:tdiffwall}
+	-\frac{\lambda \Delta T\ell}{dv\rho c h} = \Delta T - \Delta T_e \Rightarrow \Delta T \left(1+\frac{\lambda \ell}{dv\rho c h}\right) = \Delta T_e\Rightarrow \Delta T = \Delta T_e \left(1+\frac{\lambda \ell}{dv\rho c h}\right)^{-1}.
+	\end{equation}
+	Durch $\Delta T$ können wir jetzt die gesuchte Temperaturdifferenz zwischen den ausfließenden Flüssigkeiten $\Delta T_a$ finden. Es ist 
+	\begin{equation}
+	\boxed{
+		\Delta T_a = T_{w,a} - T_{k,a} = T_{k,e} + \Delta T - \left(T_{w,e}-\Delta T\right) = 2\Delta T - \Delta T_{e} =\Delta T_e\left( \frac{2}{1+\frac{\lambda \ell}{dv\rho c h}}-1\right).}
+	\end{equation}
+\end{Answer}

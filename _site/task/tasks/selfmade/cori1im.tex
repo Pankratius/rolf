@@ -1,0 +1,20 @@
+\tikzset{->-/.style={decoration={
+			markings,
+			mark=at position .5 with {\arrow{>}}},postaction={decorate}}}
+\begin{tikzpicture}
+\node[draw,ellipse,minimum width=4cm,minimum height=2cm] (ell) {};
+\foreach \ang in {-80,-20,-10,0,10,20,80} {
+  \pgfmathtruncatemacro{\rang}{180 - \ang}
+  \draw[very thin, dashed,shorten >=1pt,shorten <=1pt] (ell.\ang) -- (ell.\rang);
+}
+\foreach \ang in {-65,-45,...,65} {
+  \pgfmathsetmacro{\xrad}{2*sin(\ang)}
+  \draw[thin, dashed] (0,1) arc [x radius=\xrad,y radius=1,start angle=90,end angle=-90];
+}
+\pgfmathsetmacro{\xrad}{2*sin(10)}
+\draw[very thick, blue,->-] (0,1) arc[x radius = \xrad, y radius = 1, start angle = 90, end angle = -90];
+  \pgfmathtruncatemacro{\rang}{180 - 15}
+  \draw[thick, shorten >=1pt,shorten <=1pt,] (ell.15) -- (ell.\rang);
+ \node at (2.25,.65) {$15^\circ~\mathrm{N}$};
+
+\end{tikzpicture}

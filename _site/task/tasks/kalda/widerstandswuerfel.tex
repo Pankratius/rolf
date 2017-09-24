@@ -1,0 +1,26 @@
+\begin{Exercise}[label = wdsw, title = Widerstandswürfel , difficulty = 2, origin ={Jaan Kalda,\url{http://www.ioc.ee/~kalda/ipho/}}]
+	Gegeben ist ein Würfel, wobei jede der Kanten einen Widerstand von $R = 1~\mathrm{\Omega}$ hat.\\
+	Wie groß ist der Widerstand entlang einer Raumdiagonale?
+\end{Exercise}
+\begin{Answer}[ref=wdsw]
+	Wir wollen den Widerstand zwischen den Punkten $X$ und $Y$ bestimmen, also entlang der Raumdiagonale (siehe Abb. \ref{fig:wdsws1}). Weil die Raumdiagonale eine Symmetrieachse ist, sollte das Problem symmetrisch sein, und deswegen eine recht einfache Lösung haben.\\
+	Um die zu finden, schauen wir uns die Punkte $a$ und $b$ an, die jeweils den gleichen Abstand von $X$ und $Y$ haben. Diese müssen jeweils auf dem gleichen Potential liegen. Um zu sehen, warum das so ist, stellen wir uns vor, dass der Strom $I$ aus dem Punkt $X$ in die drei Punkte $a$ fließt. Weil alle drei Punkte gleich weit von $X$ entfernt sind (bzw. zwischen jedem Punkt $a$ und $X$ jeweils der Widerstand $R$ ist), muss sich der Strom gleichmäßig aufteilen. Gleichzeitig ist aber jeder Punkt $a$ mit zwei Punkten $b$ verbunden ist, muss sich auch hier der Strom gleichmäßig aufteilen. Also müssen alle Punkte $a$ auf dem gleichen Potential liegen, und auch alle Punkte $b$ auf einem anderen selben Potential.\\
+	Damit können wir einen neuen Stromkreis zeichnen, in dem es nur einen Punkt $a$ und nur einen Punkt $b$ gibt, siehe Abb. \ref{fig:wdsws2}. Dieser ist eine einfache Schaltung von Widerständen, die alle den Wert $R$ haben. Werten wir die einzelnen Parallelschaltungen aus, so trägt die ersten einen Wert von $\frac{R}{3}$ bei, und die zweite einen Wert von $\frac{R}{6}$ und die dritte wieder $\frac{R}{3}$. Der Gesamtwiderstand ergibt sich aus der Reihenschaltung der drei, also $R_g = 2\cdot \frac{R}{3}+ \frac{R}{6} = \frac{5R}{6}$.
+	
+
+\end{Answer}
+\begin{figure}[h]
+\begin{subfigure}[b]{0.4\textwidth}
+	\centering
+	\input{../tasks/kalda/widerstandswuerfelb1.tex}
+	\caption{Skizze des Wurfels}
+	\label{fig:wdsws1}
+\end{subfigure}
+\begin{subfigure}[b]{0.6\textwidth}
+	\centering
+	\input{../tasks/kalda/widerstandswuerfelb2.tex}
+	\caption{vereinfachtes Schaltbild}
+	\label{fig:wdsws2}
+\end{subfigure}
+\caption{Schaltskizzen zum Aufbau}
+\end{figure}

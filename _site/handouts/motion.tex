@@ -1,0 +1,69 @@
+\documentclass[a4paper, twocolumn, 9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{units}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{pgfplots}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{amsthm}
+\usepackage{setspace} %Für \setstretch{}, welches Zeilenabstände reguliert.
+
+%Entfernt den Punkt hinter dem Namen eines Theorems
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}
+\makeatother
+
+\newtheorem*{definition}{Definition:}
+
+\begin{document}
+\pagenumbering{gobble}
+\vspace*{-2cm}
+\parbox{2cm}{\includegraphics[width=2.5cm]{../task/images/ROLF4.png}}
+\parbox{5.3cm}{\setstretch{2.0} \centering{ \huge \textbf{ Beschreiben von Bewegungen}}\\ Maximilian Marienhagen\\ \vspace*{-0.5cm} (\href{mailto:physikrolf@asgspez.de}{physikrolf@asgspez.de)}}
+\begin{footnotesize}
+\section*{Angeben von Positionen}
+Die Physik hat das Ziel herauszufinden, {\it warum} Dinge passieren.\\ Das ist allerdings oft recht kompliziert und stellt einen nicht selten sehr langwierigen Prozess dar. \\
+Fangen wir also mal damit an, zu beschreiben, {\it was} denn überhaupt passiert.\\
+Das wohl einfachste physikalische Konzept ist das des Ortes. Jemand will einer anderen Person mitteilen, wo sich ein Gegenstand befindet oder wo ein Ereignis stattfindet. Was braucht man alles, um jemandem einen bestimmten Ort zu beschreiben?
+\begin{enumerate}
+    \item Als erstes muss man sich auf eine Einheit einigen. Das kann alles mögliche sein, z.B. Fuß, Handbreit, Lichtjahr, sogar Pferdelängen oder soetwas sind vollkommen in Ordnung - man muss sich nur darauf einigen und sicherstellen, dass alle wissen, was gemeint ist. \\Wir wählen, grundsätzlich völlig willkürlich ber im Einklang mit physikalischen Standards, die Einheit Meter. Jeder von euch kann sich unter dem Wort Meter etwas vorstellen. Nur dadurch gewinnt diese Einheit eine Bedeutung. Wüsste jemand nicht, was ein Meter ist, dann wäre es vollkomen sinnlos, ihm zu sagen, dass etwas soundsoviele Meter lang ist.
+    \item Als Nächstes muss man sich auf ein Koordinatensystem einigen. Man muss festlegen, von wo überhaupt gemessen wird. Man muss sich im Klaren darüber sein, wie das Messen funktioniert. Wir arbeiten für gewöhnlich mit einem sogenannten dreidimensionalen kartesischen Koordinatensystem. Auch das ist im Prinzip vollkommen willkürlich, aber diese Wahl ist sinnvoll, da sie sehr oft sehr praktisch ist. \\
+    Dreidimensional heißt in diesem Fall, dass unser Koordinatensystem drei Achsen hat, die wir x,y,z (oder $x_1$,$x_2$,$x_3$ oder sonstwie) nennen.\\
+    Kartesisch heißt, dass diese Achsen senkrecht zueinander stehen. Außerdem gilt die sogenannte Rechte-Hand-Regel: Wenn man Daumen, Zeigefinger und Mittelfinger seiner rechten Hand so positioniert, dass sie senkrecht zueinander sind, dann zeigt der Daumen in Richtung der x-Achse, der Zeigefinger in Richtung der y-Achse und der Mittelfinger in Richtung der z-Achse.\\
+    Man muss sich weiterhin darauf einigen, wo der Punkt (0,0,0), der sogenannte Bezugspunkt, ist und in welche Richtungen die Achsen zeigen. 
+\end{enumerate}
+Wenn diese beiden Voraussetzungen erfüllt sind, und nur dann, hat es eine Bedeutung, wenn ich jemandem z.B. sage, dass ein rotes Auto im Punkt (4m,3m,5m) ist.\\
+Schön, jetzt können wir Positionen angeben. Aber wie sieht es mit Bewegungen aus?\\
+\section*{Geradlinige Bewegungen}
+Wer schon einmal aus dem Fenster geschaut hat, weiß, dass Sachen sich bewegen. Das Auto aus dem vorherigen Beispiel wird wahrscheinlich nicht ewig an diesem Punkt bleiben, sondern seine Position kann sich sehr wohl ändern.\\
+Wir werden uns zuerst Bewegungen in nur einer Richtung anschauen. Dafür wählen wir uns ein Koordinatensystem, in welchem die Bewegungen vollständig auf der x-Achse verlaufen. (Ich kann mein Koordinatensystem so drehen oder schieben, wie es mir gefällt, darf aber innerhalb einer Messung oder einer Beschreibung nicht weiterdrehen oder weiterschieben; sonst wären die Werte sinnlos.)\\
+Wir sagen jetzt also, dass ein Körper, oder vielmehr ein Punkt, denn ausgedehnte Dinge betrachten wir noch nicht, sich im Punkt (x,0,0) befindet. Da die letzten beiden Koordinaten immer 0 bleiben werden, können wir nus ein bisschen Schreibarbeit sparen und einfach sagen, dass der Körper sich an der Stelle x befindet.\\
+Jetzt definieren wir die Geschwindigkeit v des Körpers als die Änderungsrate seiner Position. Eine Änderungsrate ist aber nichts anderes als eine Ableitung, in diesem Fall nach der Zeit. In ein Paar verschiedenen Schreibweisen heißt das:
+\begin{equation*}
+    v= \frac{dx}{dt}=\frac{d}{dt}x=x'(t)=\dot{x}
+\end{equation*}
+Die letzte, mit dem Punkt, bedeutet, dass man die Größe unter dem Punkt nach der Zeit ableitet und Physiker mögen diese Notation sehr gerne.\\
+Als nächstes definieren wir die Beschleunigung a als die Änderungsrate der Geschwdindigkeit, also:
+\begin{equation*}
+    a = \frac{dv}{dt}=\frac{d}{dt}v=v'(t)=\dot{v}
+\end{equation*}
+Die Beschleunigung ist also die zeitliche Ableitung der zeitlichen Ableitung der Position. Das heißt, sie ist die zweite Ableitung der Position nach der Zeit, also:
+\begin{equation*}
+    a = \frac{d^2 x}{dt^2}=\frac{d^2}{dt^2}x=x''(t)=\ddot{x}
+\end{equation*}
+\section*{Grafische Interpretation}
+Stellen wir uns eine Bewegung mit variierender Geschwindigkeit vor. Wenn wir das $v-t-$Diagramm betrachten ($v$ ist an der y-Achse), so kann man für jedes $v$ sagen: Wir tun jetzt so, als ob für ein ganz kurzes $\Delta t$ die Geschwindigkeit $v$ konstant bleibt. Dann ist die in dieser Zeit zurückgelegte Strecke der Fläche des Rechtecks mit den Seitenlängen $v$ und $\Delta t$ gleich. Wenn man sich für den gesamten Grafen solche Zeitintervalle und Rechtecksflächen einzeichnet und dann in Gedanken, die Zeitintervalle immer kleiner macht, sodass es immer mehr davon gibt und die Rechtecke immer schmaler werden, so wird klar, dass die gesamte zurückgelegte Strecke der Fläche unter dem Grafen entspricht. Diese Betrachtungsweise ist recht praktisch, denn oft können solche Flächen recht einfach berechnet werden.   
+\section*{Allgemeinere Bewegungen}
+Nach dem sogenannten Superpositionsprinzip kann jede Bewegung als Summe von mehreren Teilbewegungen betrachtet werden. Das ist echt praktisch. Man kann sich zum Beispiel vorstellen, dass jemand einen Ball von einem Dach aus waagerecht wirft. Dann bewegt der Ball sich gleichzeitig in die waagerechte und in die senkreche Richtung. Das tolle ist, dass wir diese komplizierte Bewegung als Summe von zwei einfachen Bewegungen, der waagerechten und der senkrechten, verstehen können. Die zwei dürfen wir dann getrennt voneinander betrachten.  
+\section*{Aufgaben}
+Betrachte eine Bewegung, für die gilt $v(t)=k\cdot t+c$, wobei $k$ und $c$ Konstanten sind. Stelle diese Bewegung im $v-t-$Diagramm dar. Bestimme $a(t)$, sowohl am Grafen, als auch durch Ableiten. Bestimme die zurückgelegte Strecke $x(t)$ anhand geometrischer Überlegungen am Grafen.   
+\end{footnotesize}
+
+\end{document}

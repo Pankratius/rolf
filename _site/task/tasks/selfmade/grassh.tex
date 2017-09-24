@@ -1,0 +1,60 @@
+\begin{Exercise}[label = grassh, title = fauler Grashüpfer, origin = P.Gnädig, difficulty = 5]
+	Ein fauler Grashüpfer möchte über einen Baumstumpf mit Radius $r = 20~\mathrm{cm}$ springen.\\
+	Wie groß ist die dafür mindestens benötigte Geschwindigkeit, wenn der Luftwiderstand vernachlässigt werden kann?
+\end{Exercise}
+\begin{Answer}[ref = grassh]
+	Bei minimaler Anfangsgeschwindigkeit sollte die Grashüpferbahn den Baumstamm in genau zwei Punkten symmetrisch zur Achse um den Baumstumpf berühren, und damit ihren Scheitelpunkt direkt auf dieser Achse haben, wie in Abbildung \ref{fig:grasshs} gezeigt ist. Dass die Bahn symmetrisch zur Symmetrieachse des Baums ist, liegt daran, dass sie reversibel sein sollte. Das bedeutet, dass es keinen Unterschied machen sollte, ob der Grashüpfer links oder rechts vom Baum losspringt, weshalb die Bahn symmetrisch sein muss. 
+	%	\begin{figure}[h]
+	%		\centering
+	%		\input{../tasks/selfmade/grasshsketch}
+	%		\caption{Skizze der Grashüpferbahn}
+	%		\label{fig:grasshs}		
+	%	\end{figure}
+	Es ist jetzt am einfachsten, wenn man zuerst die Bewegung des Grashüpfers von $B$ nach $B^{\ast}$ betrachtet. Die Geschwindigkeit des Grashüpfers in $B$ nennen wir $v_1$, und den Winkel, den die Grashüpfergeschwindigkeit mit dem Boden macht $\theta$.\\
+	Dann wissen wir, dass die Wurfweite $s_w$ dieses schrägen Wurfes gegeben ist durch
+	\begin{equation}\label{grassh:weite}
+		s_w = \frac{2 v_1^2 \sin \theta \cos \theta}{g}.
+	\end{equation}
+	Geometrisch interpretiert muss diese Wurfweite $s_w$ genau die Strecke zwischen $B$ und $B^{\ast}$ sein. Wir versuchen jetzt, $\overline{BB^{\ast}}$ durch bekannte Parameter auszudrücken.\\
+	Dazu macht es Sinn, wenn wir uns den Winkel $\angle COB$ anschauen. Wir wissen nämlich, dass die Geschwindigkeit (genauer: der Geschwindigkeits\textit{vektor}) tangiential zur Bahn sein muss, der Geschwindigkeitsvektor steht also senkrecht auf der Strecke $\overline{OB}$. Gleichzeitig ist das Dreieck $\Delta BOC$ ein rechtwinkliges, mit dem rechten Winkel $\angle BCO$. Damit ist also $\angle BOC = 180^\circ-90^\circ-\angle CBO = 90^\circ- \left(90^\circ- \theta\right) = \theta$.\\
+	Jetzt können wir noch eine zweite Bedingung für $s_w$ aufstellen, allerdings in Abhängigkeit von $\theta$ und $r$. Das ist gut, weil wir dann einfach \eqref{grassh:weite} nehmen können, um $v_1$ auszurechen. Die Bedingung ist einfach, dass $s_w$ tatsächlich der Strecke $\overline{BB^\ast}$ entspricht. Es ist $\overline{BB^\ast} = 2 \overline{BC}$.\\
+	Die Strecke $\overline{BC}$ können wir trigonometrisch durch $\theta$ im Dreieck $\Delta BOC$ ausrechnen. Dieses hat nämlich die Hypothenuse $r$, und der Winkel $\theta$ hat die Gegenkathete $\overline{BC}$. Also ist $\overline{BC} = r\cdot \sin \theta$. Damit haben wir jetzt die zweite Bedingung für $s_w$,
+	\begin{equation}\label{grassh:weite2}
+		s_w = \overline{BB^\ast} = 2 \overline{BC} = 2 r\cdot \sin \theta.
+	\end{equation}
+	Setzten wir \eqref{grassh:weite} und \eqref{grassh:weite2} gleich, kommen wir auf
+	\begin{equation}\label{grassh:v2}
+		\frac{2v_1^2\sin \theta \cos \theta}{g} = 2 r\cdot \sin \theta \Rightarrow v_1 = \sqrt{\frac{rg}{\cos\theta}}.
+	\end{equation}
+	Wir können jetzt die Energieerhaltung benutzten, um daraus die tatsächliche Anfangsgeschwindigkeit $v_0$ auszurechnen.\\
+	Dazu brauchen wir aber noch die Höhe $h_B$ von Punkt $B$ überhalb des Bodens. Auch die können wir wieder durch $\theta$ ausrechnen. Die Höhe setzt sich nämlich zusammen aus der Höhe des Kreismittelpunkts $O$ über dem Boden (also dem Radius $r$) und der Strecke $\overline{OC}$. Die ist aber gerade die Ankathete zu $\theta$ im Dreieck $\Delta BOC$, sodass wir schreiben können $h_b = r + r\cos \theta = r\cdot\left(1+\cos \theta \right).$\\
+	Die Energieerhaltung setzt nun die kinetische Energie am Punkt $A$ mit der Summe aus potentieller und kinetischer Energie in $B$ gleich, also
+	\begin{equation}\label{grassh:coe}
+		m\frac{v_0^2}{2} = m \frac{v_1^2}{2} + m g h_B\Rightarrow v_0^2 = \underbrace{\frac{rg}{\cos\theta}}_{\mathrm{aus}~\eqref{grassh:v2}} + 2g \underbrace{r\left(1+\cos \theta\right)}_{=h_B} =2 rg\cdot\left(1+\frac{1}{2\cos \theta}+ \cos \theta\right),
+	\end{equation}
+	wobei $m$ die Masse des Grashüpfers ist, die aber keine Rolle spielen sollte. \\
+	Um den niedrigst möglichen  Wert für $v_0$ zu finden, reicht es, denn niedrigst möglichen Wert für $v_0^2$ zu finden. Mit \eqref{grassh:coe} geht das jetzt auf zwei unterschiedliche Wege. Für den einen kann man einfach ableiten und dann die Ableitung null setzten:
+	\begin{equation}
+		\frac{dv_0^2}{d\theta} \overset{!}{=} 0 \Rightarrow \frac{d}{d\theta}\left(\frac{1}{\cos \theta}+2\cos \theta\right)\overset{!}{=} 0\Rightarrow -2\sin \theta + \frac{1}{\cos^2 \theta} \sin \theta = 0 \Rightarrow \cos^2 \theta = \frac{1}{2} \Rightarrow \theta = 45^\circ.
+	\end{equation}
+	Hierbei wurde im ersten Schritt ausgenutzt, dass der erste Term in der Summe, aus der sich $v_0$ ergibt, nicht von $\theta$ abhängt, und somit für die Ableitung nicht relevant ist. Gleichzeitig kann der Faktor $rg$ gekürzt werden, weil $\frac{0}{rg} = 0$ gilt. Für die Ableitung von $\frac{1}{\cos \theta}$ kann man am einfachsten die Kettenregel nehmen. Das einfache Ergebnis für $\theta$ am Ende liegt daran, dass wir wissen, das $\theta>0$ und $\theta<90^\circ$ sein muss.\\
+	Wenn man nicht ableiten kann, ist das aber nicht schlimm. Hier hilft die Ungleichung vom arithmetischen und geometrischen Mittel
+	\begin{equation}\label{grassh:arge}
+	\frac{x_1+x_2+...+x_n}{n}\geq \sqrt[n]{x_1\cdot x_2 \cdot ... \cdot x_n},
+	\end{equation} 
+	wobei man den linken Term arithmetisches Mittel (oft auch nur Durchschnitt) nennt, und den rechten geometrisches Mittel.
+	Wir können jetzt den interessanten Term, also $2 \cos \theta + \frac{1}{\cos \theta}$ schreiben als 
+	\begin{equation}\label{grassh:arge1}
+		\frac{1}{2}\left(\frac{2}{\cos \theta} + 4 \cos \theta\right).
+	\end{equation}
+	In \eqref{grassh:arge1} haben wir den Term aber nur als arithmetisches Mittel zweier Terme ausgedrückt. Das muss aber immer mindestens genauso groß sein, wie das geometrische Mittel der beiden Teile, also
+	\begin{equation}\label{grassh:arge2}
+		\frac{1}{2}\left(\frac{2}{\cos \theta} + 4 \cos \theta\right) \geq \sqrt[2]{\frac{2}{\cos \theta}\cdot 4 \cos \theta} = \frac{\sqrt{2}}{2}.
+	\end{equation}
+	Denn kleinstmöglichen Wert für $v_0$ erhalten wir dann, wenn hier die Gleichheit gilt, weil ja den kleinstmöglichen Wert für die Summe aus \eqref{grassh:coe} darstellt. Stellen wir die Gleichung \eqref{grassh:arge2} nach $\theta$ um, so erhalten wir übrigens wieder $\theta = 45^\circ$.\\
+	Setzt man das jetzt in \eqref{grassh:coe} ein, kommt man am Ende auf
+	\begin{equation*}
+		\boxed{
+		v_0 = \sqrt{2gr\left(1+\sqrt{2}\right)}\approx 3.1~\mathrm{m\cdot s^{-1}}.}
+	\end{equation*}
+\end{Answer}

@@ -1,0 +1,30 @@
+\begin{minipage}[b]{0.8\textwidth}
+\noindent
+\begin{Exercise}[label = can, title = {Büchse}, origin = {nach 3. Runde IPhO, 2011},difficulty = 1]
+	Bestimme die Position des Schwerpunkts $h_s$ einer gefüllten zylinderförmigen Büchse in Abhängigkeit der Füllhöhe $h_f$ und der relevanten Parameter. Nimm dafür an, dass die Büchse eine gleichmäßige Massenverteilung hat. 
+\end{Exercise}
+\end{minipage}
+\begin{minipage}[b]{0.2\textwidth}
+\centering
+\begin{tikzpicture}
+\draw (-0.5,1)--(-0.5,0)--(0.5,0)--(0.5,1);
+\fill[pattern = north east lines] (-0.5,0.6)--(-0.5,0)--(0.5,0)--(0.5,0.6);
+\filldraw[black] (0,0.3) circle (2pt);
+\draw[<->] (0.7,0) -- (0.7,0.3) node[midway, right]{$h_s$} ;
+\draw[<->] (-0.7,0) -- (-0.7,0.6) node[midway, left]{$h_f$};
+
+\end{tikzpicture}
+\end{minipage}
+\begin{Answer}[ref = can]
+	Weil die Büchse eine gleichmäßige Massenverteilung hat, und wir auch annehmen können, dass die Flüssigkeit eine gleichmäßige Dichte hat, muss das System rotationssymetrisch um die senkrechte Achse durch den Deckel und den Boden sein. Das heißt aber nichts anderes, als das eine Drehung der Büchse um diese Achse keine messbaren Unterschiede hervorbringen kann, weshalb der Schwerpunkt in auf dieser Achse liegen muss. Wäre das nämlich nicht so, gäbe es eine Möglichkeit, festzustellen, wie die Büchse um diese Achse gedreht wurden ist, welche es aber wegen der Rotationssymetrie nicht geben darf.\\
+	Die Höhe des Schwerpunkts kann man nun am Einfachsten über die Definitionsgleichung bestimmen. Dafür stellen wir uns das System zusammengesetzt aus der Flüssigkeit und der Büchse vor. Der Schwerpunkt der Büchse liegt bei $h_{Sp,b} = \frac{h_b}{2}$, wobei $h_b$ die Höhe der Büchse ist, und der der Flüssigkeit liegt bei $h_{Sp,f}=\frac{h_f}{2}$. Die Höhe $h$ des Gesamtschwerpunkts (relativ zum Boden der Büchse) ist gegeben durch
+	\begin{equation}\label{can:spdef}
+		h = \frac{m_{b}h_{Sp,b}+m_{f}h_{Sp,f}}{m_{b}+m_{f}},
+	\end{equation}
+	wobei $m_b = \rho_b h_b$ die Masse der Büchse ist, und $m_f = \rho_f h_f$ die Masse der Flüßigkeit. Setzt man diese beiden Ausdrücke in \eqref{can:spdef} ein, so erhält man schlußendlich
+	\begin{equation*}
+		\boxed{
+			h_s = \frac{h_b^2 \rho_b + h_f^2 \rho_f}{2\left(\rho_f h_f + \rho_b h_b\right)}
+			}
+	\end{equation*}
+\end{Answer}

@@ -1,0 +1,77 @@
+\begin{minipage}[b]{0.8\textwidth}
+\begin{Exercise}[label = atwood, origin = Aaron Wild, title = Atwoodmaschinen, difficulty = 4]
+	Eine Atwoodmaschine besteht im einfachsten Fall aus einer festen Rolle, an der (durch eine masselose Schnur verbunden) zwei Massen $m_1$ und $m_2$ hängen.
+	\Question Bestimme für den Fall einer einfachen Atwoodmaschine die Beschleunigung des Systems sowie die Zugkraft im Seil. 
+	\ExeText Betrachte jetzt eine unendlichen Atwoodmaschine, bei der alle Massen $m$ betragen.
+	\Question Bestimme die Beschleunigung der obersten Masse, für den Fall, dass alle Massen gleichzeitig los gelassen werden.
+\end{Exercise}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth}
+	\centering
+		\begin{tikzpicture}
+		\draw[thick] (-1,0) -- (1,0);
+		\fill[pattern = north east lines] (-1,0) rectangle (1,0.25);
+		\draw[thick] (0,0)-- (0,-.5);
+		\draw (0,-0.5) circle (0.25);
+		\filldraw[black] (0,-0.5) circle (1pt);
+		
+		\draw (-.25,-0.5) -- (-.25,-1);
+		\filldraw[black] (-.25,-1) circle (1.5pt);
+		\node at (-.75,-1) {$m$};
+		\draw (.25,-0.5)--(.25,-1);
+		\draw (.25,-1) circle (0.25);
+		\filldraw[black] (.25,-1) circle (1pt);
+		\draw (0,-1) -- (0,-1.5);
+		\filldraw[black] (0,-1.5) circle (1.5pt);
+		\node at (-.5,-1.5) {$m$};
+		\draw (.5,-1) -- (.5,-1.5);
+		\draw (.5,-1.5) circle (0.25);
+		\filldraw[black] (.5,-1.5) circle (1pt);
+		\draw (.25,-1.5) -- (.25,-2);
+		\filldraw[black] (.25,-2) circle (1.5pt);
+		\node at (-.25,-2) {$m$};
+		\draw (.75,-1.5) -- (.75,-2);
+		\node at (.75,-2.25) {$...$};
+		
+		
+		\end{tikzpicture}
+\end{minipage}
+
+\begin{Answer}[ref = atwood]
+	\Question Weil die beiden Massestücken der einfachen Atwoodmaschine durch eine Seil fest verbunden sind, müssen sie sich beide mit der Beschleunigung $a$ bewegen, die eine Masse nach oben, und die andere nach unten.\\
+	Wir definieren die Bewegungsrichtung der Masse $m_1$ (willkürlich!) als positiv, weswegen die der Masse $m_2$ negativ sein muss. Wenn die Spannkraft im Seil $F_s$ ist, gilt dann für die auf $m_1$ und $m_2$ wirkenden Kräfte
+	\begin{subequations}\label{atwood:forces}
+		\begin{equation}
+			F_s - m_1 g = F_1
+		\end{equation}
+		\begin{equation}
+			m_2 g - F_s = F_2.
+		\end{equation}
+	\end{subequations}
+	In beiden Teilen von \eqref{atwood:forces} gilt nun, dass die Kraft gleich der Masse mal der wirkenden Beschleunigung ist, also $F_1 = m_1 a$ bzw. $F_2 = m_2 a$, sodass \eqref{atwood:forces} ein Gleichungssystem in den beiden Unbekannten $a$ und $F_s$ darstellt, welches einfach gelöst werden kann, um auf
+	\begin{subequations}
+			\begin{equation}\label{atwood:acc}
+			\boxed{	a = \frac{\left(m_2-m_1\right)g}{m_1+m_2}}
+			\end{equation}
+			\begin{equation}
+			\boxed{				T = \frac{2m_1m_2g}{m_1+m_2}.}
+			\end{equation}
+	\end{subequations}
+	zu kommen. \\
+	Gleichung \eqref{atwood:acc} macht auch intuitiv Sinn, weil hier für $m_1 = m_2$ für die Beschleunigung $a= 0$ folgt, was heißt, dass sich die Atwoodmaschine bei gleichen Massen nicht aus der stabilen Gleichgewichtslage bewegt (wie wir erwarten würden).
+	\Question Dieser Aufgabenteil lässt sich durch eine Skalierungsargumentation für die ersten zwei Rollen lösen. Dazu betrachten wir die Spannung im ersten und zweiten Seil, $F_{S,1}$ bzw. $F_{S,2}$. Die Seilspannung muss sich zwischen dem ersten Massenstück und dem zweiten Seil aufgeteilt haben, sodass $F_{S,2} = \nicefrac{1}{2} F_{S,1}$ gelten muss. \\
+	Gleichzeitig können wir analysieren, wie die Wirkung der Gravitations skalieren muss. Dazu überlegen wir uns zuerst, was passieren würden, wenn die Gravitationskraft der Erde um einen Faktor $\nu$ skaliert werden würde. Selbstverständlich würde dann auch die Gravitation um diesen Faktor $\nu$ skaliert werden. Dementsprechend würde aber auch die Spannkraft $F_s$ um einen Faktor $\nu$ skaliert werden, sodass die neue Spannkraft $\nu F_s$ beträgt.\\
+	Wenn wir nun die zweite Rolle betrachten, und ihre Beschleunigung $a_2$ nennen, ist die effektiv wirkende Beschleunigung $a_2-g$, weil wir ja noch die Kraft durch die oberste Rolle betrachte müssen.\\
+	Weil das \glqq Netzwerk\grqq{} aus Rollen aber unendlich groß sein soll, darf es keinen Unterschied geben, ob man nun die erste oder die zweite Rolle betrachtet. Folglich muss
+	\begin{equation}\label{atwood:accsol1}
+		\frac{T}{g} = \frac{\nicefrac{T}{2}}{g-a_2}
+	\end{equation}
+	gelten. Wenn wir jetzt nach $a_2$ umstellen, finden wir, dass $a_2 = \nicefrac{g}{2}$ gelten muss. Weil aber die Beschleunigung der zweiten Masse die gleiche sein muss wie die der ersten Masse, da die beiden ja über ein Seil miteinander verbunden sind, ist auch die Beschleunigung der obersten Masse $\nicefrac{g}{2}$.\\
+	%Für den zweiten Lösungsansatz vergleichen wir zuerst den Fall einer Masse $m$, die ohne jegliche Rolle von der Wand hängt, und wieder zwei Massen $m_1$ bzw. $m_2$, die über eine feste Rolle verbunden sind. Die Frage ist nun, wie $m$ gewählt werden muss, damit die Spannkraft $F_{s,m}$ so groß ist, wie die, die in dem System aus $m_1$ und $m_2$ wirkt. 
+	%Dazu berechnen wir zuerst wieder die Beschleunigungen bedingt durch Spannkraft und Gravitationskraft. Für den Fall der Ersatzmasse $m$ ist das relativ einfach, und es gilt einfach
+	%\begin{equation}\label{key}
+	%	
+	%\end{equation}
+	
+\end{Answer}

@@ -1,0 +1,25 @@
+\definecolor{uuuuuu}{rgb}{0,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.4cm,y=0.4cm]
+\clip(-6.30926285541875,-5.079399315321746) rectangle (11.071298451570728,4.523799709853244);
+\draw(-5.,2.) circle (0.4cm);
+\draw [domain=-6.30926285541875:11.071298451570728] plot(\x,{(-0.-2.*\x)/4.});
+\draw [rotate around={121.96061535190904:(4.74402173057387,-2.0519849213730423)}] (4.74402173057387,-2.0519849213730423) ellipse (0.5563777820971756cm and 0.24705527243519773cm);
+\draw [domain=-6.30926285541875:0.0] plot(\x,{(-8.-0.*\x)/-4.});
+\draw [domain=0.0:11.071298451570728] plot(\x,{(--4.683158326232204-2.*\x)/2.341579163116102});
+\draw [domain=-6.30926285541875:11.071298451570728] plot(\x,{(-0.-0.*\x)/4.683158326232204});
+\draw (0.,-5.079399315321746) -- (0.,4.523799709853244);
+\draw [rotate around={90.:(0.,0.)}] (0.,0.) ellipse (1.5246980581926266cm and 0.09715558721658457cm);
+\draw (-5.95587682861185,1.1386432797168) node[anchor=north west] {$M$};
+\draw (-3.9742985586211743,3.126262312988584) node[anchor=north west] {$P$};
+\draw (-2.4995842659069156,-0.005679903483405781) node[anchor=north west] {$F$};
+\draw (2.100119837558987,1.0645445866458446) node[anchor=north west] {$F'$};
+\draw (5.94461691876947,-1.53074650871054) node[anchor=north west] {$P'$};
+\begin{scriptsize}
+\draw [fill=black] (-5.,2.) circle (1.5pt);
+\draw [fill=black] (-4.,2.) circle (1.5pt);
+\draw [fill=black] (-2.341579163116102,0.) circle (1.5pt);
+\draw [fill=black] (2.341579163116102,0.) circle (1.5pt);
+\draw [fill=black] (5.6477321341809175,-2.8238660670904587) circle (1.5pt);
+\draw [fill=uuuuuu] (0.,2.) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}

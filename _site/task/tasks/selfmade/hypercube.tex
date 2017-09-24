@@ -1,0 +1,27 @@
+\begin{Exercise}[label = hypercube, origin = {Max Marienhagen}, difficulty = 5, title =  Widerstandswürfel]
+Ein $n$-dimensionaler Hyperwürfel ist die Verallgemeinerung eines Würfels auf $n$ Dimensionen. Seine Konstruktion kann man sich so vorstellen, dass ein $n-1$-dimensionaler Hyperwürfel im $n$-dimensionalen Raum parallelverschoben wird, und man das daraus entstandene Volumen betrachtet.\\
+Ein solcher $n$-dimensionaler Hyperwürfel hat $2^n$ Eckpunkte und $n2^{n-1}$ Seitenkanten.\\
+Wir betrachten nun einen $n$-dimensionalen Hyperwürfel ($n\geq 1$), bei dem alle Seitenkanten einen Widerstand von $r$ haben. Zeige, dass der Widerstand zwischen zwei benachbarten Eckpunkten 
+\begin{equation}
+	R = \frac{2-2^{1-n}}{n}r = \frac{2^n-1}{n2^{n-1}}r
+\end{equation}
+beträgt. Überlege dir an einem $n$ deiner Wahl, dass das Ergebnis dort sinnvoll ist.
+\end{Exercise}
+\begin{Answer}[ref = hypercube]
+	Diese Aufgabe kann sehr schön einfach und elegant mithilfe des Superpositionsprinzips gelöst werden.\\
+	Wir betrachten dazu zwei benachbarte Ecken des Würfels - nennen wir sie $A$ und $B$. Nun schauen wir uns zwei Fälle an:
+	\begin{enumerate}
+	\item Ein Strom $I$ wird in Ecke $A$ eingespeist. Die Spannungen an allen Ecken des Hyperwürfels werden so eingestellt, 	dass an jeder Ecke außer $A$ derselbe Strom aus dem Würfel fließt. Da es $2^n$ Ecken gibt und der ausfließende Strom 		insgesamt wieder $I$ sein muss, fließt also an jeder Ecke außer $A$ der Strom $\frac{I}{2^n-1}$ aus dem Würfel.\\
+	Im $n$-dimensionalen Hyperwürfel hat jede Ecke $n$ direkt benachbarte Ecken. (Weil der Hyperwürfel durch $n-1$ 			Paralleverschiebungen aus dem eindimensionalen Hyperwürfel entsteht und bei jeder Parallelverschiebung eine benachbarte 	Ecke hinzukommt.) Das heißt, dass von der Ecke $A$ $n$ Widerstände abgehen. Durch jeden dieser Widerstände fließt aus 		Symmetriegründen ein Strom $\frac{I}{n}$ von $A$ weg.
+	\item An jeder Ecke außer $B$ wird ein Strom $\frac{I}{2^n-1}$ in den Hyperwürfel eingespeist. Bei Ecke $B$ fließt ein 		Strom $I$ aus dem Würfel heraus. Aus Symmetriegründen fließt durch die $n$ direkt an $B$ anliegenden Widerstände ein Strom 	   von jeweils $\frac{I}{n}$.  
+	\end{enumerate}
+	Jetzt betrachten wir die Superposition beider Fälle. Das heißt, wir addieren für jede Ecke das dort anliegende Potenzial im 	    ersten und zweiten Fall. Für jeden Widerstand addieren wir (vorzeichenbehaftet) die im ersten und zweiten Fall 		durchfließenden Ströme\footnote{Das darf man machen, weil die Ohmschen Gesetze linear sind.}.\\
+	Schauen wir uns zunächst alle Ecken, außer $A$ und $B$ an. Im ersten Fall verlässt ein Strom $\frac{I}{2^n-1}$ aus dem 		Hyperwürfel heraus. Im zweiten Fall fließt an jeder dieser Ecken genau derselbe Strom in den Hyperwürfel hinein. Das heißt, 	    dass in der Superposition an all diesen Ecken kein Strom in den Würfel rein oder aus ihm raus fließt.\\
+	Nun schauen wir uns Ecke $A$ an: Im ersten Fall fließt der Strom $I$ dort in den Würfel, im zweiten Fall der Strom 		$\frac{I}{2^n-1}$. In der Superposition fließt also an der Ecke $A$ ein Strom von $I+\frac{I}{2^n-1}$    	       in den Hyperwürfel herein. Aus Ecke $B$ fließt nach einer ganz ähnlichen Argumentation genau derselbe Strom heraus (muss ja auch so sein, weil wir gerade gesehen haben, dass bei allen anderen Ecken kein Strom rein- oder rausgeht). Dieser Strom ist also auch der Gesamtstrom, der von $A$ nach $B$ fließt.\\
+	Als nächstes sehen wir uns den Widerstand zwischen $A$ und $B$ an. Im ersten und im zweiten Fall fließt ein Strom von $\frac{I}{n}$ durch ihn. In beiden Fälle geht der Strom in die gleiche Richtung (von $A$ zu $B$). Das heißt, in der Superposition fließt ein Strom von $2\frac{I}{n}$ durch diesen Widerstand von $A$ zu $B$. Nach der Definition des Widerstands\footnote{$R=\frac{U}{I}$. Aber das solltet ihr eigentlich auch selber wissen...}, ist die an diesem Widerstand abfallende Spannung deshalb $U=r\cdot 2\frac{I}{n}$. Diese Spannung ist also gleich der Potenzialdifferenz zwischen $A$ und $B$. Jetzt können wir die Definition des Widerstandes gleich nochmal benutzen! Denn nun kennen wir den gesamten Strom, der von $A$ nach $B$ fließt ($I+\frac{I}{2^n-1}$) und die Spannungsdifferenz zwischen $A$ und $B$ ($r\cdot 2\frac{I}{n}$). Dann gilt also:
+	\begin{equation*}
+	R = \frac{r\cdot 2\frac{I}{n}}{I+\frac{I}{2^n-1}} = \frac{r\cdot 2\frac{I}{n}}{I+\frac{I}{2^n-1}} \cdot \frac{2^n-1}{2^n-1} = \frac{(2^n-1)\cdot \frac{2r}{n}}{2^n-1+1} = \frac{2(2^n-1)}{n \cdot 2^n}r = \frac{2(2^n-1)}{n \cdot 2 \cdot 2^{n-1}}r = \frac{2^n-1}{n2^{n-1}}r
+	\end{equation*}
+	Das ist das gesuchte Ergebnis.\\
+	Übrigens kann man solche Superpositionstricks sehr oft bei allen möglichen Aufgaben mit Widerstandsnetzen oder Ähnlichem anwenden und sie so enorm vereinfachen.  
+\end{Answer}

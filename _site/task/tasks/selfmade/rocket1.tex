@@ -1,0 +1,15 @@
+\begin{Exercise}[label = rocket1, title = Rakete im Weltraum, difficulty = 4, origin = Aaron Wild]
+	Eine Rakete bewegt sich im Weltraum. Dabei soll sie am Anfang in Ruhe sein. Dann wird das Triebwerk gezündet, welches eine konstante Auströmgeschwindigkeit $v_a$ und mit konstantem Treibstoffverbrauch $|\dot{m}| = \lambda =\mathrm{const.}$ betrieben wird. \\
+	Bei vollem Tank hat die Rakete eine Masse $m_0$ und bei leerem eine Masse $m_1<m_0$. Welche Geschwindigkeit hat die Rakete erreicht, wenn der Tank leer ist?
+\end{Exercise} 
+\begin{Answer}[ref = rocket1]
+	Betrachten wir das System aus der Rakete und dem auströmenden Treibstoff, wirken keine externen Kräfte auf das System, $\sum_i \vec{F}_i = 0$.\\
+	Für diese Aufgabe ist es dann sinnvoll, die Definition der Kraft als zeitliche Änderung des Impulses zu verwenden
+	\begin{equation}\label{rocket1:fdef}
+		\vec{F} = \frac{d\vec{p}}{dt} = \frac{d}{dt}\left(m\vec{v}\right) = \dot{m}\vec{v}+ m\dot{\vec{v}},
+	\end{equation}
+	wobei im letzten Schritt die Produktregel verwendet wurde.\\
+	Wir können uns jetzt die Rakete mit dem ausströmenden Treibstoff als ein System aus zwei Teilen denken. Der eine Teil ist die Rakete an sich, mit der sich zeitlich ändernden Masse $m\left(t\right) = m_0 - \lambda t$ und der Raketengeschwindigkeit $v_r$ in die positive $x-$Richtung \footnote{Die Wahl der Koordinatenrichtungen ist komplett willkürlich, aber so wird die Aufgabe sehr einfach zu lösen - alles andere wäre unnötig umständlich.}. Der andere Teil ist der Treibstoff, der in die negative $x$-Richtung mit der Geschwindigkeit $-v_a$ nach hinten ausströmt, und das mit der konstaten Rate $\lambda$, mit der sich natürlich auch die Masse der Rakete ändert.\\
+	Die zeitliche Änderung Raketenimpulses ist also sowohl durch die sich ändernde Masse, als auch durch die veränderliche Geschwindigkeit bestimmt. Wir können jetzt \eqref{rocket1:fdef} verwenden
+
+\end{Answer}

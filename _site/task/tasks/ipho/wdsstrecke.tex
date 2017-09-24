@@ -1,0 +1,39 @@
+\flushleft
+\begin{minipage}{.57\textwidth}
+\begin{Exercise}[label = wdsstrecke, title = Widerstandsstrecke, difficulty = 3, origin = IPhO 1996 ]
+Bestimme den Widerstand zwischen den Punkten $A$ und $B$
+	\end{Exercise}
+\end{minipage}
+\hfill
+\begin{minipage}{.2\textwidth}
+	\flushleft
+	\includegraphics[scale = .2]{../tasks/ipho/wdsstrecke.png}
+\end{minipage}
+\begin{Answer}[ref = wdsstrecke]
+	Um die Aufgabe einfach lösen zu können, muss man wissen, dass wen zwei Punkte nur durch einen Draht verbunden sind, sie auf dem gleichen Potential liegen müssen. Das liegt einfach daran, dass über ihnen keine Spannung abfallen kann, weil nichts da ist, an dem Spannung abfallen könnte \footnote{Außer natürlich der Draht selber. Aber in fast allen Aufgaben geht man davon aus, dass Drähte widerstandsfrei sind. Wenn das nicht so ist, sollte es auch angegeben sein.}\\
+	Wir nennen diese Punkte $A$, $B$ und $C$ (siehe Abb.\ref{fig:wdsstreckeep}). Jetzt kann man einfach einen Stromkreis zeichnen, in dem es nur noch die Punkte $A$, $B$ und $C$ gibt. Dafür ist es hilfreich, wenn man die Widerstände nummeriert, sodass man sich nicht vertut. Wenn wir uns \ref{fig:wdsstreckeep} anschauen, dann stellen wir zuerst fest, dass $A$ mit $C$ durch die Widerstände 1 und 2 verbunden ist, $A$ mit $B$ durch 3 und $B$ mit $C$ durch die Widerstände $4$ und $5$. \\
+	Der neue Stromkreis sieht dann so aus, wie in Abb.\ref{fig:wdsstreckes} gezeigt. Hier können wir jetzt mit den ganz normalen Regeln für Reihen- und Parallelschaltungen arbeiten. Die Widerstände 4 und 5 sind parallel geschaltet, die Widerstände 1 und 2 auch, und die Ersatzwiderstände für diese beiden Parallelschaltungen sind gemeinsam in Reihe parallel zu dem Widerstand 3 geschaltet.
+	Damit ist der Gesamtwiderstand
+	\begin{equation*}
+		\boxed{
+			\frac{1}{R_{AB}} =\underbrace{\frac{1}{R}}_{Wds. 3} + \overbrace{\frac{1}{\underbrace{\frac{R}{2}}_{1\parallel 2}+\underbrace{\frac{R}{2}}_{4\parallel 5}}}^{Wds.~parallel~zu~3} \Rightarrow R_{AB} = \frac{R}{2} = 0.5~\Omega,
+			}
+	\end{equation*}
+	wobei mit einem Einzelwiderstand von $ R = 1~\Omega$ gerechnet wurde, wie in der Skizze zur Aufgabenstellung gezeigt.
+\end{Answer}
+\begin{figure}[h]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\input{../tasks/ipho/wdsstrecke1.tex}
+		\caption{Punkte auf gleichem Potential}
+		\label{fig:wdsstreckeep}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\input{../tasks/ipho/wdsstrecke2.tex}
+		\caption{vereinfachter Stromkreis}
+		\label{fig:wdsstreckes}	
+	\end{subfigure}
+	\caption{Skizzen zum Aufbau}
+\end{figure}
+	

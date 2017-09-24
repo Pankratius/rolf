@@ -1,0 +1,95 @@
+\begin{minipage}[b]{0.6\textwidth}
+\begin{Exercise}[title = Variabler Brechungsindex, label = varn1, origin = IPhO 1974, difficulty = 4]
+	Gegeben ist eine planparalle Platte. Ihre Brechzahl ändert sich nach der Gleichung
+	\begin{equation}\label{varn1:nx}
+		n\left(x\right) = \frac{n_a}{1-\frac{x}{q}},
+	\end{equation}
+	wobei $n_a = 1.2$ die Brechzahl im Punkt $A$, und $q = 0.13~\mathrm{cm}$ eine Konstante ist. \\
+	Im Punkt $A$ ($x_a = 0$) fällt senkrecht zur Platte ein Lichstrahl ein. Dieser verlässt die Platte im Punkt $B$ unter einem Winkel von $\alpha = 30^{\circ}$ zur ursprünglichen Richtung. Bestimme den Brechungsindex des Materials im Punkt $B$ und die Dicke der Platte $d$.
+\end{Exercise}
+\end{minipage}
+\begin{minipage}[b]{0.4\textwidth}
+\centering
+\begin{tikzpicture}
+\clip (-1.5,-2.75) rectangle (4,4);
+\draw[thick] (-0.5,1) -- (2.75,1);
+\draw[thick] (-0.5,-1) -- (2.75,-1);
+\draw[decorate,decoration={snake, amplitude = 0.7mm, segment length = 5.5mm}] (-0.5,1) -- (-0.5,-1);
+\draw[decorate,decoration={snake, amplitude = 0.7mm, segment length = 5.5mm}] (2.5,1) -- (2.5,-1);
+\draw[very thick,->] (0,-1) -- (0,2);
+\draw[very thick,->] (0,-1) -- (3,-1);
+\node at (-0.25,1.9) {$y$};
+\node at (3.2,-1) {$x$};
+\draw[<->] (-1,1) -- (-1,-1) node[midway, fill = white] {$d$};
+	\begin{scope}[ every node/.style={sloped,allow upside down}
+	] 
+			\draw(0,-1.75) -- node {\midarrow} (0,-1);
+	\end{scope}
+\node at (-0.2,-1.2) {$A$};
+\node at (1.5,0.7) {$B$};
+\tkzDefPoint(1.5,1){B}
+\tkzDefPoint(0,-1){A}
+\tkzDefPoint(1.5,1.86){b1}
+\tkzDefPoint(2,1.866025){b2}
+\tkzMarkAngle[scale = 0.75](b2,B,b1)
+\tkzLabelAngle(b2,B,b1){$\alpha$}
+\tkzDrawSegment(B,b1)
+\tkzDrawSegment(B,b2)
+\tkzDefPoint(0.9,0.4){C}
+\tkzCircumCenter(A,C,B)\tkzGetPoint{O}
+\tkzDrawArc(O,B)(A)
+\end{tikzpicture}
+\end{minipage}
+\begin{Answer}[ref = varn1]
+	Wir rechnen zuerst den Brechungsindex des Materials im Punkt $B$ aus. Dazu hilft uns das Brechungsgesetz. Allgemein gilt für einen Strahl, der aus einem Material mit Brechungsindex $n_1$ unter einem Winkel $\alpha_1$ zum Lot auf einen Übergang zu einem Material mit Brechungsindex $n_2$ triftt
+	\begin{equation*}
+		n_1 \sin \alpha_1 = n_2 \sin \alpha_2,
+	\end{equation*}
+	wobei $\alpha_2$ der entsprechende Ausfallswinkel ist.\\
+	Wir können uns das Material mit dem sich änderten Brechungsindex so vorstellen, als sei es aus sehr vielen kleinen Schichten mit Brechungsindex $n_i$ aufgebaut. Da jeweils das Brechungsgesetz gilt, muss also für zwei direkt hintereinader liegende Schichten gelten:
+	\begin{equation*}
+		n_{i-1} \sin \alpha_{i-1} = n_{i} \sin \alpha_i.
+	\end{equation*}
+	Das ist aber nichts anderes als die Aussage, dass $n \sin \alpha := c$ entlang des gesamten Materials konstant bleiben muss.\\
+	Damit können wir jetzt den Brechungsindex im Punkt $B$ ausrechnen. Weil das Licht senkrecht eintrifft, ist
+	\begin{equation}\label{varn1:cdef}
+	c = n_a \sin 90^\circ = n_a.
+	\end{equation}
+	Gleichzeitig gilt für die Brechung am Punkt $B$ 
+	\begin{equation}\label{varn1:bdef}
+	\sin \alpha = n_B \sin \left(90^\circ-\beta\right) = n_B \cos \beta ,
+	\end{equation}
+	wobei $\beta_b$ der Einfallswinkel im Punkt $B$ ist. Mit dem trigonmetrische Pythagoras ($\sin^2 x + \cos^2 x = 1$) und $c = n_B \sin \beta_B$ kann man \eqref{varn1:bdef} umstellen zu
+	\begin{multline}\label{varn1:nb}
+		\sin \alpha = n_b \sqrt{1-\sin^2 \beta_B} =  \sqrt{n_b^2-n_b^2 \sin^2 \beta_B} = \sqrt{n_b^2-c^2} \overset{\eqref{varn1:cdef}}{=} \sqrt{n_b^2-n_a^2}\\ \boxed{\Rightarrow n_b = \sqrt{\sin^2 \alpha + n_a^2} = 1.3.}
+	\end{multline}
+	Wir können jetzt die Form des Lichstrahls ausrechnen, und damit $d$ berechnen. Das geht über mehrere Methoden.\\
+	Bei der ersten denkt man ein bisschen nach. Dazu betrachtet man den Einfallswinkel $\beta\left(x\right)$ bei dem Übergang zwischen zwei gedachten Schichten an der Stelle $x$. Für diesen gilt mit \eqref{varn1:cdef} und \eqref{varn1:nx}
+	\begin{equation}\label{varn1:circdef}
+		\sin \beta\left(x\right) = \frac{c}{n\left(x\right)} \overset{\eqref{varn1:cdef}}{=} \frac{n_a}{n\left(x\right)} \overset{\eqref{varn1:nx}}{=} \frac{q-x}{q}.
+	\end{equation}
+	Wir betrachten nun den Kreis $k$ um den Punkt $O$, welcher die Koordinaten $\left(q,0\right)$ hat. Die Tangente an diesen Kreis an der Stelle $x$ schließt mit dem Kreis genau den Winkel $\sin \beta\left(x\right)$ ein, wie man im Dreieck $\Delta OCC'$ sehen kann. Weil der Strahl auch wenn er in das Material kommt tangential zu diesem Kreis verläuft, muss er innerhalb des Materials entlag dieser Kreisbahn verlaufen.\\
+	Gleichzeitig können wir die $x$-Koordinate von $B$ einfach durch Umstellen von \eqref{varn1:nx} finden
+	\begin{equation}\label{varn1:xb}
+		n_b = \frac{n_a}{1-\frac{x}{q}}\Rightarrow x_B =q \left(1-\frac{n_a}{n_b}\right) = 1~\mathrm{cm}.
+	\end{equation}
+	Damit können wir jetzt im rechtwinkligen Dreieck $\Delta BB'O$ die Dicke $d$ ausrechnen
+	\begin{equation}\label{varn1:dsol}
+	\boxed{
+		d = \sqrt{q^2-\left(q-x_b\right)^2} = 5~\mathrm{cm}.}
+	\end{equation}
+	Mann kann nachdenken auch durch Ableiten ersetzen. Mit $\tan\left(\arcsin x\right) = \frac{x}{\sqrt{1-x^2}}$ können wir aus \eqref{varn1:circdef} den Anstieg der Funktion $y\left(x\right)$ für den Lichtstrahl bestimmen
+	\begin{equation*}
+		\frac{\mathrm{d}y}{\mathrm{d}x} = \tan \beta = \frac{q-x}{\sqrt{q^2-\left(q-x\right)^2}}.
+	\end{equation*}
+	Das ist eine separierbare Differentialgleichung, die wir integrieren können
+	\begin{equation}\label{varn1:inte}
+		\int \mathrm{d}y = \int \frac{q-x}{\sqrt{q^2-\left(q-x\right)^2}}~\mathrm{d}x \Rightarrow y\left(x\right)= \sqrt{q^2-\left(q-x\right)^2}+c
+	\end{equation}
+	Aus $y\left(0\right)= 0$ folgt $c=0$. \eqref{varn1:inte} ist aber nur die Gleichung für einen Halbkreis in positiver $y$-Richtung um $\left(q,0\right)$. Damit kann $d$ genauso wie in \eqref{varn1:dsol} ausgerechnet werden.\\
+	Streng genommen kommt das Integral aus \eqref{varn1:inte} aus der Substitution $\tilde{x} = 1-\frac{x}{q}$:
+	\begin{equation*}
+		\int \frac{q-x}{\sqrt{q^2-\left(q-x\right)}}~dx = \int \frac{1-\frac{x}{q}}{\sqrt{1-\left(1-\frac{x}{q}\right)^2}}~dx = -q \cdot  \int \frac{\tilde{x}}{\sqrt{1-\left(1-\tilde{x}\right)^2}}~d\tilde{x} = q \cdot  \sqrt{1-\tilde{x}^2} + c = \sqrt{q^2-\left(q-x\right)^2} + c.
+	\end{equation*}
+	
+\end{Answer}

@@ -1,0 +1,61 @@
+\documentclass[a4paper]{article}
+\usepackage{exercise}
+%um nur aufgaben zu zeigen
+\renewcommand{\title}{Aufgabenseminar\\ Himmelsmechanik}
+\newcommand{\titleh}{Aufgabenseminar Himmelsmechanik}
+
+%\usepackage[noanswer]{exercise} 
+\usepackage{../images/preamble}
+\usepackage{rotating}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
+\usepackage{xcolor}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\textsc{Entwurf}}
+%\SetWatermarkScale{6}
+%\SetWatermarkColor{red!30}
+
+\pagestyle{fancy}
+\fancyhead[L]{\includegraphics[width=2cm]{../images/logo_scaled.pdf}}
+\fancyhead[R]{\textsc{\titleh}}
+
+
+
+\begin{document}
+	\vspace*{-1cm}
+	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/logo_scaled.pdf}}
+	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{\title
+			}}\\\url{pankratius.github.io/rolf}
+			 }
+		\vspace{0.5cm}
+	
+	
+
+\thispagestyle{empty}
+\begin{framed}
+	\noindent
+	\scriptsize
+	
+	Gravitationskraft $\mathbf{F} = \frac{mMG}{r^2}\hat{\mathbf{r}}$; Gravitationspotential $U\left(r\right) = -\frac{mMG}{r}$; Gesamtenergie auf einer elliptischen Flugbahn $E = \frac{mMG}{2a}$; Fläche einer Ellipse $A = \pi a b$; für Punkt auf Ellipse bleibt Summe der Abstände zu den Brennpunkten konstant,  Runge-Lenz-Vektor $\mathbf{\varepsilon} = \frac{\mathbf{L}\times \mathbf{v}}{GmM} + \hat{\mathbf{r}} = \mathrm{const.}$\\
+	Kepler I: Bewegung von HK auf Kegelschnitten, Brennpunkt im Schwerpunkt; Kepler II: Radiusvektor überschreitet gleiche Flächen in gleichen Zeiten; Kepler III: für zwei Bahnen gilt $\nicefrac{T^2}{T^2} = \nicefrac{a_1^2}{a_2^3}$\\
+	 \noindent\rule{1\textwidth}{0.4pt}
+	wichtige Größen: Abstand von Schwerpunkt ($r$), Gravitationskraft($\mathbf{F}$), Gravitationspotential ($U\left(r\right)$), Energie ($E\left(r\right)$), Drehimpuls ($\mathbf{L}$), Betrag des Drehimpulses ($\ell$), Umlaufzeit ($T$), große Halbachse ($a$), kleine Halbachse ($b$), Masse eines Körpers im gegebenen Gravitationsfeld ($m$), Masse des Gravitationsfeld erzeugenden Körpers ($M$), Gravitationskonstante ($G$)\\
+	Wo es sinnvoll ist, ersetzen wir $GM$ durch eine neue Konstante, $\Gamma$
+	
+	
+\end{framed}
+
+\noindent
+
+\input{../tasks/selfmade/polygrav} 
+\input{../tasks/kalda/cmellipse}
+\input{../tasks/ipho/cmrot}
+\input{../tasks/germanipho/cmcomet}
+\input{../tasks/selfmade/bertrand}
+\input{../tasks/germanipho/gravgrad}
+\input{../tasks/selfmade/phshift}
+
+\end{document}

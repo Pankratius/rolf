@@ -1,0 +1,25 @@
+  \ctikzset{bipoles/resistor/width=0.4}
+\begin{tikzpicture}
+	\draw
+		\foreach \h in {1,2,3,4,5}
+		{(\h-1,0) to[/tikz/circuitikz/bipoles/length=25pt, R] (\h,0)};
+	\foreach \h in {0,1,2,3,4,5}
+	{\filldraw[black] (\h,0) circle (1.5pt);}
+	\node at (-0.2,0) {$A$};
+	\node at (5.2,0) {$B$};
+	\node at (1,0.3){$C$};
+	\node at (2,-0.3){$A$};
+
+	\node at (3,-0.3) {$B$};
+	\node at (4,0.3) {$C$};
+	\draw (0,0) -- (0,0.5) -- (2,.5)--(2,0);
+	\draw (1,0) -- (1,-.5) -- (4,-.5) -- (4,0);
+	\draw (3,0) -- (3,.5) -- (5,.5)--(5,0);
+	\foreach \h in {1,2,3,4,5}
+	{\node at (-0.5+ \h,0) {\footnotesize \h};}
+
+	
+	 
+	
+
+\end{tikzpicture}

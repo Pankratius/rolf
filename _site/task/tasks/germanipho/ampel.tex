@@ -1,0 +1,53 @@
+\begin{Exercise}[label = ampel, title = Gute Ampel, difficulty = 3, origin = Alte IPhO-Aufgabe ]
+	Ein Auto nähert sich auf einer Straße einer Ampel mit der Geschwindigkeit $v_0$.  Der Gleitreibungskoeffizient zwischen Straße und Auto beträgt $\mu$.\\ Die Ampel springt von Grün auf Gelb, wenn der Abstand Auto-Ampel gerade $s_0$ beträgt. Wie lang muss die Ampel gelb sein, damit der Autofahrer, unabhängig von $v_0$, entweder vor der Ampel zum Stehen kommt, oder aber mit konstanter Geschwindigkeit die Ampel kreuzt?
+\end{Exercise}	
+\begin{Answer}[ref = ampel]
+	Diese Aufgabe kann man über mehrere Wege lösen.\\
+	 Am Einfachsten geht es mit der Energieerhaltung. Wenn das Auto nach zurücklegen der Strecke $s_0$ auf jeden Fall zum Stehen gekommen sein, muss die auf dieser Strecke aufgebrachte Reibungsarbeit $E_r$ mindestens so groß sein, wie die kinetische Energie $E_{kin}$ vor dem Bremsen. Damit gillt
+	 \begin{equation}\label{energycond}
+	 E_{r} \geq E_{kin} \Rightarrow mg\mu s_0 \geq \frac{mv_0^2}{2}.
+	 \end{equation}
+	 Damit man vor der Ampel bei gegebener Strecke stehen bleiben kann, muss die Geschwindigkeit so gewählt werden, dass \eqref{energycond} erfüllt ist. Durch das Wurzelziehen ändert sich die Richtung der Ungleichung nicht, sodass man höchsten mit einer Geschwindigkeit von 
+	 \begin{equation}\label{vfriccond}
+	 	v_0\leq \sqrt{2s_0g\mu}
+	 \end{equation}
+	 vor der Ampel stehen bleiben kann.\\
+	 Wenn man die Ampel bei gegebener Gelbphase ohne zu Bremsen kreuzen will, muss die Geschwindigkeit $v_0$ dafür groß genug sein, also
+	 \begin{equation}\label{velcond}
+	 	v_0 \geq  \frac{s_0}{t_g}
+	 \end{equation}
+	Da ein Bremsen aber immer möglich seien soll, können wir beide Bedingungen zusammen in einer Ungleichung schreiben
+	\begin{equation}\label{stvcond}
+		\sqrt{2s_0g\mu}\geq v_0 \geq \frac{s_0}{t}.
+	\end{equation}
+	Nach Aufgabenstellung soll die Zeit der Gelbphase $t_g$ so gewählt werden, dass die Bedingung \eqref{stvcond} unabhängig von der Geschwindigkeit ist. Das ist der Fall, wenn
+	\begin{equation}\label{energytcond}
+	\boxed{
+	\sqrt{2s_0g\mu} \leq \frac{s_0}{t_g} \Rightarrow t_g \geq  \sqrt{\frac{s_0}{2g\mu}}}
+	\end{equation}
+	gilt.\\
+	Man kann die Aufgabe auch ohne die Energieerhaltung lösen. Dazu betrachten wir wieder beide möglichen Fälle. Wenn das Auto bremsend vor der Ampel zum stehen kommen soll, benötigt es dafür die Bremszeit
+	\begin{equation}\label{traf:tb}
+		t_b = \frac{v_0}{g\mu}.
+	\end{equation}
+	Die Bremszeit $t_b$ darf natürlich nur so lang sein wie die Zeit der Gelbphase, also $t_b\leq t_g$.\\
+	Gleichzeitig darf der in der Zeit $t_b$ zurückgelegte Bremsweg $s_b$ höchsten so lang sein wie der Anfangsabstand zur Ampel $s_0$. Der Bremsweg beträgt
+	\begin{equation}\label{traf:sb}
+		s_0 \geq s_b = -\frac{g\mu}{2}t_b^2 + v_0 t_b \overset{\eqref{traf:tb}}{=} \frac{v_0^2}{2a}\Rightarrow v_0 \leq \sqrt{2s_0g\mu}.
+	\end{equation}
+	Das ist genau die gleiche Aussage wie \eqref{vfriccond}!\\
+	Die Argumentation für das Durchfahren bleibt hier die gleiche, \eqref{velcond} gilt also. Wir haben also diesmal drei Bedigungen,
+	\begin{subequations}\label{traf:voc}
+		\begin{equation}\label{traf:vosb}
+			v_0 \leq \sqrt{2s_0 g \mu}
+		\end{equation}
+		\begin{equation}\label{traf:votb}
+			v_0 \leq t_g g \mu 
+		\end{equation}
+		\begin{equation}\label{traf:vos}
+			v_0 \geq \frac{s_0}{t_g}.
+		\end{equation}
+	\end{subequations}
+	Das scheint eine Bedinung mehr zu sein, als wir bei dem Energieansatz gebraucht haben.\\
+	Stellen wir \eqref{traf:vos} aber $s_0$ um, so kommen wir auf $s_0 \leq v_0 t_g$. Weil das einen untere Abschätzung für $s_0$
+\end{Answer}

@@ -1,0 +1,48 @@
+\begin{Exercise}[label=sus, origin ={3. Runde IPhO 2014, Kurzaufgabe},difficulty = 2, title = {Schwimmen und Sinken}]
+	In einer Flüssigkeit schwimmt ein Körper so, dass nur $3\%$ seines Volumen über dem Flüssigkeitsspiegel sind. 
+	Der Volumenausdehnungskoeffizient der Flüssigkeit beträgt $\gamma = 5.2\cdot 10^{-4}~\mathrm{K}^{-1}$, der Län"-gen"-aus"-dehn"-ungs"-ko"-eff"-i"-zient des Körpers beträgt $\alpha = 3.9\cdot 10^{-6}~\mathrm{K}^{-1}$.\\
+	Wie groß muss die Temperaturänderung $\Delta T$ sein, damit der Körper untergeht?
+\end{Exercise}
+\begin{Answer}[ref=sus]
+		Damit der Körper schwimmt, muss die Auftriebskraft $F_a$ durch das verdrängte Wasser gleich der Gewichtskraft $F_g$ des Körpers sein,
+		\begin{equation}\label{sus:cond1}
+		F_a = F_g.
+		\end{equation}
+		Die Gewichtskraft des Körpers ist gegeben durch $F_g = mg$, wobei $m$ die Masse des Körpers ist und $g$ die Gravitationsbeschleunigung.\\
+		\noindent
+		Die Auftriebskraft durch das  Wasser ist gegeben durch $F_a = \rho_{F}V_{K,w}g$, wobei $\rho_{F}$ die Dichte der Flüssigkeit, $V_{K,w}$ das Volumen des Körpers in der Flüssigkeit und $g$ wieder die Gravitationsbeschleunigung ist.\\
+		Wenn $3\%$ des Körpers über der Wasseroberfläche sind, müssen $100\%-3\%  = 97\%~ \hat{=}~ 0.97 := \eta $ des Volumens des Wassers sein. Damit ist das Volumen des Körpers in der Flüssigkeit $V_{K,w}$ gegeben durch
+		\begin{equation}\label{sus:oldvol}
+		V_{K,w} = \eta V,
+		\end{equation}
+		wobei $V$ das Gesamtvolumen des Körper ist. Wenn wir dieses Volumen und die Gleichungen für die Gewichtskraft, die Auftriebskraft alles in \eqref{sus:cond1} einsetzen, erhlaten wir
+		\begin{equation}\label{sus:cond2}
+		mg = \rho_{F}\eta V g.
+		\end{equation}
+		Wenn sich die Temperatur des Körpers um $\Delta T$ ändert, ändert sich das Volumen um $\Delta V = 3V\alpha \Delta T $, wobei $\alpha$ der Längenausdehnungkoeffizient ist. Das neue Volumen des Körpers $\tilde{V}$ des Körpers beträgt also
+		\begin{equation}\label{sus:newvol}
+		\tilde{V} = V + \Delta V = V + 3V\alpha \Delta T  = V \left(1+3\alpha \Delta T\right).
+		\end{equation}
+		Wenn sich die Temperatur der Flüssigkeit um $\Delta T$ ändert, ändert sich ein bestimmtes Volumen der Flüssigkeit um $\Delta V_F = \gamma V \Delta T  $. Damit beträgt das neue Volumen $\tilde{V}_F  = V_F \left(1+\gamma \Delta T\right)$. \\
+		Die Dichte des Körpers vor dem Erwärmen war $\rho_F = \frac{m}{V_F}$. Die neue Dichte beträgt jetzt 
+		\begin{equation}\label{sus:newdens}
+		\tilde{\rho}_F = \frac{m}{\tilde{V}_F} = \frac{m}{V_F\left(1+\gamma \Delta T\right)} = \frac{\rho_F}{1+\gamma \Delta T}.
+		\end{equation}
+		Wenn der Körper gerade untergeht, gilt \eqref{sus:cond1} immernoch. Da jetzt aber der ganze Körper unter Wasser ist, beträgt $\tilde{V}_{K,w} = \tilde{V}$. Damit ist die neue Auftriebskraft gegeben durch
+		\begin{equation}
+		\tilde{F}_a = \tilde{\rho} \tilde{V}_{K,w}g = \frac{\rho}{1+\gamma \Delta T} V\left(1+3\alpha\Delta T\right)g.
+		\end{equation}
+		Da immernoch $\tilde{F}_a = F_g$ gilt, folgt aus \eqref{sus:cond2}
+		\begin{equation}
+		\frac{\rho_F}{1+\gamma \Delta T} V\left(1+3\alpha\Delta T\right) g= \rho_{F}\eta V g.
+		\end{equation}	
+		Kürzen von $V$, $\rho_F$ und $g$ führt auf
+		\begin{equation*}
+		\frac{1+3\alpha \Delta T}{1+\gamma \Delta T} = \eta.
+		\end{equation*}	
+		Multiplizieren mit $1+\gamma \Delta T$ und anschließendes ausklammern führt auf
+		\begin{equation*}
+		1 + 3\alpha \Delta T = \eta\left(1+\gamma \Delta T\right) \Rightarrow 1+3\alpha = \eta \left(1+\gamma \Delta T\right) \Rightarrow 1-\eta = \Delta T \left(\eta \gamma - 3\alpha\right) \Rightarrow \Delta T = \frac{1-\eta}{\eta \gamma - 3\alpha }.
+		\end{equation*}
+		Einsetzen der gegebenen Werte führt auf $\Delta T \approx 61~\mathrm{K}$.
+\end{Answer}

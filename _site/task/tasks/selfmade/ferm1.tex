@@ -1,0 +1,66 @@
+\begin{minipage}[b]{0.8\textwidth}
+\begin{Exercise}[label=ferm1,title = Linsenform, difficulty = 3, origin = Aaron Wild]
+	Wir betrachten Licht, welches aus dem unendlichen im Vakuum auf ein gekrümmtes Material mit Brechungsindex, welches das Licht im Punkt $F$ fokussiert. Bestimme, welche Form die Oberfläche haben muss (also die Funktion $y\left(x\right)$), und ab welcher Höhe $y_{max}$ es nicht mehr möglich ist, dass das Licht fokussiert wird.
+\end{Exercise}
+\end{minipage}
+\begin{minipage}[b]{0.2\textwidth}
+	\centering
+\begin{tikzpicture}
+	\draw[->,dotted](0,0) -- (0,1.7);
+	\draw[->,dotted](0,0) -- (1.75,0);
+	\draw[scale=1,domain=0:1,smooth,variable=\x,blue] plot ({\x},{1.5*\x^(0.5)});
+	\begin{scope}[ thick,decoration={
+		markings,
+		mark=at position 0.5 with {\arrow{>}}}
+	] 
+	\draw[thick] (-0.5,0) -- (-0.1,0);
+	\draw[thick] (-0.5,0.75) --(0.25,0.75);
+	\draw[thick](-0.5,1) -- (0.444444,1);
+	\draw[thick] (-0.5,0.5) -- (0.111111,0.5);
+	\draw[thick] (-0.5,1.25) -- (0.694444,1.25);
+	\draw[postaction={decorate}] (0.25,0.75) -- (1.5,0);
+	\draw[postaction={decorate}] (0.4444,1) -- (1.5,0);
+	\draw[postaction={decorate}] (0.111111,0.5)--(1.5,0);
+	\draw[postaction={decorate}](0.694444,1.25)--(1.5,0);
+	\end{scope}
+	\node at (-0.2,1.78) {\small $y$};
+	\node at (1.95,0){\small$x$};
+	\node at (1.7,0.2){\small $F$};
+	\filldraw[black] (1.5,0)circle(1.5pt);
+	\draw[<->] (0,-0.5) --  (1.5,-0.5)  node[midway, fill = white]{$f$};
+	\node at (1.2,1.2) {$n$};
+	
+\end{tikzpicture}
+\end{minipage}
+\begin{Answer}[ref = ferm1]
+	Nach dem Fermatschen Prinzip müssen alle Lichtwege, die zum Brennpunkt führen, die gleiche Zeit benötigen. Dafür reicht es zu wissen, dass die Ausbreitungsgeschwindigkeit in einem Medium mit der Brechzahl $n$ gleich $v = \nicefrac{c}{n}$ ist, wobei $n$ die Lichtgeschwindigkeit im Vakuum ist. Die Zeit, die der Lichtstrahl für eine Strecke $s$ braucht, ist dann einfach $\frac{s}{v}= \frac{ns}{c}$. Weil unabhängig von der Brechzahl jeder Term für die Strecke also den Faktor $\frac{1}{c}$ hat, brauchen wir den nicht mitnehmen, und können stattdesen Strecken untersuchen, die einfach mit der entsprechenden Brechzahl $n$ multipliziert werden. Man spricht dann von der \textit{optischen Weglänge}. Es müssen also die optischen Weglängen aller Strahlen gleich sein.\\
+	Um die vergleichen zu können, reicht es aus, ab der $y$-Achse zu messen, weil bis dahin alle Strahlen den gleichen Weg zurückgelegt haben (weil sie parallel sind).\\
+	Am einfachsten lässt sich die optische Weglänge für den Strahl ausrechnen, der entlang der $x$-Achse verläuft. Sie ist einfach 
+	\begin{equation}\label{ferm1:triv}
+		s_1 = n f,
+	\end{equation}
+	weil der senkrecht einfallende Strahl nicht gebrochen wird.\\
+	Anders sieht es mit dem Strahl aus, der im Punkt $\left(x,y\right)$ auf die Oberfläche trifft, (siehe Skizze). Hier gilt für die Brechung das Brechungsgesetz
+	\begin{equation*}
+		\sin \alpha = n \sin \beta,
+	\end{equation*}
+	wobei $\alpha$ der Einfallswinkel (relativ zum Lot) ist und $\beta$ der Ausfallswinkel.\\
+	Wie man in der Skizze sieht, setzt sich der Lichtweg dieses Strahls aus zwei Teilen zusammen. Der eine in Luft beträgt einfach $s_{2,1} = x$. Der andere ist die Hypothenuse im Dreieck, welches mit dem Brennpunkt $F$ gebildet werden kann. Dort ist der Lichtweg
+	\begin{equation}
+		s_{2,2} = n \sqrt{y^2+\left(f-x\right)^2}.
+	\end{equation}
+	Der gesamte Lichtweg dieses Strahls ist also 
+	\begin{equation}\label{ferm1:stot}
+		s_{2} = s_{2,1} + s_{2,2} = x + n\sqrt{y^2+\left(f-x\right)^2}.
+	\end{equation}
+	Gleichsetzten von \eqref{ferm1:triv} und \eqref{ferm1:stot} führt auf
+	\begin{equation}
+		n f = x + n \sqrt{y^2+\left(f-x\right)^2} \Rightarrow \frac{n f- x}{n} =  \sqrt{y^2+\left(f-x\right)^2} \Rightarrow y = \sqrt{ \left( \frac{n f- x}{n} \right)^2 - \left(f-x\right)^2}
+	\end{equation}
+
+
+	
+
+\end{Answer}
+
+	
