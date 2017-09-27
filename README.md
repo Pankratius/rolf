@@ -25,6 +25,10 @@ Eure Lösungen gebt ihr bitte an euren Ansprechpartner oder per Mail an [physikr
 Klar doch! Wenn ihr beim Rolf-Aufgabenwettbewerb mitmachen möchtet, downloaded euch am Besten die aktuelle Aufgabenserie (s.O.). Die Lösungen schickt ihr einfach per Mail. Schreibt einfach euren _Namen_, eure _Klasse_, eure _Schule_ und alles, was ihr uns sonst noch erzählen möchtet. Wir melden uns dann bei euch mit einem [Bewertungsbogen](/website/bewertung.md), Lösungen und neuen Aufgaben.
 Wenn ihr an eurer Schule bereits Mitglieder des ROLF-Netzwerks habt, könnt ihr denen auch einfach eure Ausarbeitungen geben.
 
+## Jugend forscht
+
+[Hier findet ihr Sachen zu Jugend forscht](/website/jufo.md)
+
 ### Skripte und andere Sachen
 Zusätzlich gibt es vom ROLF-Netzwerk auch Skripte zu ausgewählten Themen.
 
