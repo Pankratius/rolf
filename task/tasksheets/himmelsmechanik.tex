@@ -1,10 +1,10 @@
 \documentclass[a4paper]{article}
-\usepackage{exercise}
+%\usepackage{exercise}
 %um nur aufgaben zu zeigen
 \renewcommand{\title}{Aufgabenseminar\\ Himmelsmechanik}
 \newcommand{\titleh}{Aufgabenseminar Himmelsmechanik}
 
-%\usepackage[noanswer]{exercise} 
+\usepackage[noanswer]{exercise} 
 \usepackage{../images/preamble}
 \usepackage{rotating}
 \usetikzlibrary{decorations.pathmorphing}
@@ -40,10 +40,12 @@
 	\scriptsize
 	
 	Gravitationskraft $\mathbf{F} = \frac{mMG}{r^2}\hat{\mathbf{r}}$; Gravitationspotential $U\left(r\right) = -\frac{mMG}{r}$; Gesamtenergie auf einer elliptischen Flugbahn $E = \frac{mMG}{2a}$; Fläche einer Ellipse $A = \pi a b$; für Punkt auf Ellipse bleibt Summe der Abstände zu den Brennpunkten konstant,  Runge-Lenz-Vektor $\mathbf{\varepsilon} = \frac{\mathbf{L}\times \mathbf{v}}{GmM} + \hat{\mathbf{r}} = \mathrm{const.}$\\
-	Kepler I: Bewegung von HK auf Kegelschnitten, Brennpunkt im Schwerpunkt; Kepler II: Radiusvektor überschreitet gleiche Flächen in gleichen Zeiten; Kepler III: für zwei Bahnen gilt $\nicefrac{T^2}{T^2} = \nicefrac{a_1^2}{a_2^3}$\\
+	Kepler I: Bewegung von HK auf Kegelschnitten ($r\left(\varphi\right) = \frac{p}{1+\varepsilon \cos \varphi}$, mit $p = \ell^2/\Gamma m^2$ und $\varepsilon^2 = 1 + 2E^2\ell^2/\Gamma^2 m^3 $), Brennpunkt im Schwerpunkt; Kepler II: Radiusvektor überschreitet gleiche Flächen in gleichen Zeiten; Kepler III: für zwei Bahnen gilt $\nicefrac{T^2}{T^2} = \nicefrac{a_1^2}{a_2^3}$\\
 	 \noindent\rule{1\textwidth}{0.4pt}
 	wichtige Größen: Abstand von Schwerpunkt ($r$), Gravitationskraft($\mathbf{F}$), Gravitationspotential ($U\left(r\right)$), Energie ($E\left(r\right)$), Drehimpuls ($\mathbf{L}$), Betrag des Drehimpulses ($\ell$), Umlaufzeit ($T$), große Halbachse ($a$), kleine Halbachse ($b$), Masse eines Körpers im gegebenen Gravitationsfeld ($m$), Masse des Gravitationsfeld erzeugenden Körpers ($M$), Gravitationskonstante ($G$)\\
-	Wo es sinnvoll ist, ersetzen wir $GM$ durch eine neue Konstante, $\Gamma$
+	Wo es sinnvoll ist, ersetzen wir $GM$ durch eine neue Konstante, $\Gamma$\\
+	 \noindent\rule{1\textwidth}{0.4pt}
+	Taylor-Näherung: $f\left(x\right) \approx f\left(x_0\right) + \frac{df}{dx}|_{x=x_0} \left(x-x_0\right)$ für $x\approx x_0$.
 	
 	
 \end{framed}
@@ -54,8 +56,8 @@
 \input{../tasks/kalda/cmellipse}
 \input{../tasks/ipho/cmrot}
 \input{../tasks/germanipho/cmcomet}
-\input{../tasks/selfmade/bertrand}
 \input{../tasks/germanipho/gravgrad}
 \input{../tasks/selfmade/phshift}
+\input{../tasks/selfmade/lso}
 
 \end{document}
