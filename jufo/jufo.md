@@ -4,8 +4,7 @@ redirect_from: "/jufo/"
 
 # Jugend forscht
 
-Ihr wollt bei Jugend forscht gut sein?
+Hier findet ihr eine Sammlung an irgendwie verfügbaren Jugend forscht Arbeiten, die auf dem Bundeswettbewerb waren:
 
-Hier ist eine Sammlung von Arbeiten, die schonmal was auf Bundesebene gewonnen haben:
 
 [Fabian Schneider: Zahlentheoretische Untersuchung und Analyse der neu eingefu ̈hrten Zahlenklasse der polyabundanten Zahlen; 3. Preis Mathematik 2016](http://docs.fschneider.info/F_Schneider_5te_Prüfung.pdf)
