@@ -27,7 +27,7 @@ Wenn ihr an eurer Schule bereits Mitglieder des ROLF-Netzwerks habt, könnt ihr 
 
 ## Jugend forscht
 
-[Hier findet ihr Sachen zu Jugend forscht](/website/jufo.md)
+[Hier findet ihr Sachen zu Jugend forscht](/jufo/jufo.md)
 
 ### Skripte und andere Sachen
 Zusätzlich gibt es vom ROLF-Netzwerk auch Skripte zu ausgewählten Themen.
