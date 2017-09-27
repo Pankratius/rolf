@@ -3,5 +3,6 @@ description:
 show_downloads: false
 google_analytics: false
 theme: jekyll-theme-minimal
+baseurl: /rolf
 plugins:
   - jekyll-redirect-from
