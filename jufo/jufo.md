@@ -1,3 +1,7 @@
+---
+redirect_from: "/jufo/"
+---
+
 # Jugend forscht
 
 Ihr wollt bei Jugend forscht gut sein?
