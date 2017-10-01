@@ -57,7 +57,7 @@ Hier gibt es Aufgaben zur [Analysis](/website/anat.md)
 [Netzwerk Teilchenwelt](http://www.teilchenwelt.de)
 
 ###	Weitere praktische Lernressourcen
-Hier kann gerade Mathe für Physikaufgaben sehr schön lernen:
+Hier kann man gerade Mathe für Physikaufgaben sehr schön lernen:
 
 [KhanAcademy](https://www.khanacademy.org)
 
