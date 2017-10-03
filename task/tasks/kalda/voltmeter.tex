@@ -1,0 +1,35 @@
+\begin{Exercise}[label = voltmeter, difficulty = 3, origin = EstPhO 2003, title = Viele Voltmeter]
+	In der abgebildeten Schaltung sind 15 identische Voltmeter und 15 unterschiedliche Ampermeter verbaut, und an eine Batterie angeschlossen. \\
+	Das erste Voltmeter zeigt eine Spannung von $U_1 = 9~\mathrm{V}$ an, das erste Ampermeter einen Strom von $I_1 = 2.9~\mathrm{mA}$ und das zweite einen Strom von $I_2 = 2.6~\mathrm{mA}$. Wie groß ist die Summe der Spannungen, die die anderen Voltmeter anzeigen?
+\end{Exercise}
+\begin{figure}[h]
+	\centering
+	\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+	\begin{tikzpicture}
+		\draw (0,1) to[battery1] (0,-1);
+		\draw (0,1) to node[component]{$I_1$} (2,1);
+		\draw (2,1) to node[component]{$U_1$}(2,-1);
+		\draw (2,-1) -- (0,-1);
+		\draw (2,1) to node[component]{$I_2$} (4,1);
+		\draw (4,1) to node[component]{$V_2$} (4,-1);
+		\draw (4,-1) -- (2,-1);
+		\draw (4,1) -- (5,1);
+		\draw (4,-1) -- (5,-1);
+		\node at (5.5,1) {...};
+		\node at (5.5,-1) {...};
+		
+		\draw (6,1) to node[component]{$I_{14}$} (8,1);
+		\draw (8,1) to node[component]{$U_{14}$} (8,-1);
+		\draw (8,-1) -- (6,-1);
+		\draw (8,1) to node[component]{$I_{15}$} (10,1);
+		\draw (10,1) to node[component]{$U_{15}$} (10,-1);
+		\draw (10,-1) -- (8,-1);
+		
+		\foreach \n in {2,4,8}{
+			\filldraw (\n,1) circle (2pt);
+			\filldraw (\n,-1) circle (2pt);
+			}
+		
+		
+	\end{tikzpicture}
+\end{figure}
