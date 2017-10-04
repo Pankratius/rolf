@@ -2,7 +2,7 @@
 \usepackage{exercise}
 %um nur aufgaben zu zeigen
 %\usepackage[noanswer]{exercise} 
-\usepackage{../images/preamble}
+\usepackage{../images/orpheuspreamble}
 \usepackage{rotating}
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{decorations.markings}
@@ -26,8 +26,6 @@
 %ypos=4cm
 %]{\usebox\mybox}
 \pagestyle{fancy}
-\fancyhead[L]{\includegraphics[width=2cm]{../images/logo_scaled.pdf}}
-\fancyhead[R]{\textsc{Lösung Aufgabenserie 4}}
 
 
 \begin{document}
@@ -41,12 +39,13 @@
 \thispagestyle{empty}
 
 \noindent
-
 \input{../tasks/selfmade/looping}
+\input{../tasks/germanipho/bonbon}
+\input{../tasks/selfmade/brunnen}
 \input{../tasks/selfmade/motorradkugel}
 \input{../tasks/ipho/kugelschuss}
 \input{../tasks/germanipho/brettaufrollen}
 \input{../tasks/ipho/zylindermitquader}
 \input{../tasks/germanipho/flummis}
-
+\input{../tasks/germanipho/traegheit}
 \end{document}
