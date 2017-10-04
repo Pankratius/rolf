@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+\usepackage{exercise}
+%um nur aufgaben zu zeigen
+%\usepackage[noanswer]{exercise} 
+\usepackage{../images/preamble}
+\usepackage{rotating}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
+\usepackage{xcolor}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\textsc{Draft 2}}
+%\SetWatermarkScale{3}
+%\SetWatermarkColor{red!30}
+
+\usepackage[printwatermark]{xwatermark}
+%\newsavebox\mybox
+%\savebox\mybox{\tikz[color=red,opacity=0.3]\node{\textsc{Entwurf}};}
+%\newwatermark*[
+%allpages,
+%angle=45,
+%scale=10,
+%xpos=-4cm,
+%ypos=4cm
+%]{\usebox\mybox}
+\pagestyle{fancy}
+\fancyhead[L]{\includegraphics[width=2cm]{../images/logo_scaled.pdf}}
+\fancyhead[R]{\textsc{Lösung Aufgabenserie 4}}
+
+
+\begin{document}
+	\vspace*{-1cm}
+	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/logo_scaled.pdf}}
+	\parbox{12.5cm}{\setstretch{2.0} \centering{ \huge \textsf{Aufgabenseminar\\klassische Mechanik 
+			}}\\
+			\url{pankratius.github.io/rolf} \\ \vspace*{-.5cm} }
+		\vspace{0.5cm}
+
+\thispagestyle{empty}
+
+\noindent
+
+\input{../tasks/selfmade/looping}
+\input{../tasks/selfmade/motorradkugel}
+\input{../tasks/ipho/kugelschuss}
+\input{../tasks/germanipho/brettaufrollen}
+\input{../tasks/ipho/zylindermitquader}
+\input{../tasks/germanipho/flummis}
+
+\end{document}

@@ -1,0 +1,41 @@
+\begin{Exercise}[label = lso, difficulty = 3, origin = Aaron Wild, title = Schwarzschildmetrik]
+	Die Bewegung eines Teilchens in der Schwarzschildmetrik\footnote[3]{Allgemein-relativistische Beschreibung der Gravitationswirkung eines ruhenden, sphärisch-symmetrischen Körpers.} kann durch ein effektives Potential der Form
+	\begin{equation}\label{lso:ep}
+		\tilde{U}\left(r\right) = \frac{mc^2}{2} \left(-\frac{r_s}{r} + \frac{a^2}{r^2} - \frac{r_sa^2}{r^3}\right).
+	\end{equation}
+	beschrieben werden. Dabei ist $r_s := \frac{2\Gamma}{c^2}$ der sog. \textit{Schwarzschildradius} und $ a := \frac{\ell}{mc}$ eine Referenzlänge.\\
+	Die Gesamtenergie ist dann einfach
+	\begin{equation}\label{lso:ene}
+		E = \frac{m}{2}\dot{r}^2 + \tilde{U}\left(r\right).
+	\end{equation}
+	Finde die Radii, bei denen kreisförmige Orbits um den Zentralkörper möglich sind, sowie den Abstand $r_{isco}$ vom Zentralkörper, an dem der letzte stabile kreisförmige Orbit möglich ist. Dabei kann genutzt werden, dass für gewöhnlich $\frac{r_s}{a} \ll 1$ gilt.
+\end{Exercise}
+\begin{Answer}[ref = lso]
+	Die notwendige Bedingung für stabile kreisförmige Orbits ist, dass die wirkende Gesamtkraft null ist. Die kriegen wir über die Ableitung von $\tilde{U}\left(r\right)$:
+	\begin{equation}\label{lso:force}
+		F = - \frac{d\tilde{U}}{dr} = - \frac{mc^2}{2r^4}\left(r_sr^2-2a^2r + 3r_sa^2\right) \overset{!}{=} 0.
+	\end{equation}
+	Wir können uns kurz überlegen, was die einzlnen Terme in \eqref{lso:force} bedeuten. Die ersten beiden kennen wir schon aus der klassischen Mechanik. Sie stehen respektive für das newtonsche Gravitationspotential, und den Beitrag durch die Drehimpulserhaltung zum effektiven Potential. Der dritte ist jetzt einfach der Beitrag durch relativistische Effekte, der, weil er proportional zu $c^{-2}$ ist, so klein ist, dass er bei normaler newtonscher Gravitation keinen sonderlich großen Einfluss hat.\\
+	Wir können jetzt die quadratische Gleichung im geklammerten Term nach $r$ auflösen, um den größten und kleinsten Radius zu finden, an dem kreisförmige Orbits möglich sind:
+	\begin{equation}\label{lso:quad}
+		\frac{r^2}{r_s} - 2\frac{a^2}{r_s} + 3a^2 \overset{!}{=} 0 \Rightarrow r = \frac{a^2}{r_s}\left(1\pm \sqrt{1-\frac{3r_s^2}{a^2}}\right).
+	\end{equation} 
+	Wir können jetzt die zweite Ableitung von $\tilde{U}$ ausrechnen, um zu prüfen, welcher der Radii aus \eqref{lso:quad} stabil sind:
+	\begin{equation}
+		-\frac{d^2\tilde{U}}{dr^2} = \frac{2mc^2}{r^5} \left(r_sr^2 - 3a^2r+2r_sa^2\right).
+	\end{equation}
+	Wenn wir schön ist, dass wir in \eqref{lso:force} schon ein Teil des neuen Ausdrucks wieder finden, sodass wir leichter schreiben können
+	\begin{equation}\label{lso:sd}
+		-\frac{d\tilde{U}^2}{dr^2} =  \frac{2mc^2}{r^5} \left(r_sr^2 - 2a^2r + 3r_sa^2 -a^2r -a^2r_s\right) = \frac{-2mc^2a^2}{r^5}\left(r+r_s\right).
+	\end{equation}
+	Damit der Orbit stabil ist, muss jetzt $\frac{d\tilde{U}}{dr} >0$ gelten. Das ist in \eqref{lso:sd} nur für den äußeren Orbit $r_o$ der Fall, also der, der der Wahl des plus entspricht.\\
+	Den letzten stabilen kreisförmigen Orbit haben wir, wenn $r_i = r_o$ gilt, damit also die Diskriminante in \eqref{lso:quad} gleich null ist. Dann gilt 
+	\begin{equation}\label{lso:risco}\boxed{
+		r_{isco} = \frac{a^2}{r_s} ~\mathrm{und}~a^2 = \frac{3}r_s^2 \Rightarrow r_{isco} = 3r_s,}
+	\end{equation}
+	was sogar unabhängig vom Schwarzschildradius ist.
+\end{Answer}
+
+
+
+

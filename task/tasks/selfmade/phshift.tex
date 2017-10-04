@@ -1,0 +1,63 @@
+\begin{Exercise}[label = phshift, title = Periheldrehung, difficulty = 5, origin = Aaron Wild]
+	Wir betrachten ein Gravitationsfeld, was vom normalen Keplerschen um eine sehr kleine Pertubation $\delta U\left(r\right)$ abweicht:
+	\begin{equation}\label{phshift:pot}
+		U^\dagger\left(r\right) = U\left(r\right) + \delta U\left(r\right) = U\left(r\right)+\frac{\beta}{r^2}
+	\end{equation}
+	Das führt dazu, dass die elliptische Bahn, auf der ein Körper sich bewegt, nicht mehr geschlossen ist, sondern sich die Periapsis bei jeder Umdrehung um einen kleinen Winkel $\delta \varphi$ verschiebt. \\
+	Bestimme $\delta \varphi$ in Abhängigkeit von den ursprünglichen Bahnparametern und $\beta$. \\
+	Dabei kann ohne Beweis genutzt werden, dass bei einer solchen Änderung des Potentials der Drehimpulsvektor weiterhin konstant ist\footnote[2]{Das kann man bspw. schön über den Hamiltonformalismus zeigen.}.
+	
+\end{Exercise}
+\begin{Answer}[ref = phshift]
+	Wir können die Änderung des Drehwinkels $\varphi$ über den Drehimpuls ausrechnen
+	\begin{equation}\label{phshift:anmom}
+		\ell = mr^2\frac{d\varphi}{dt} \Rightarrow d\varphi = \frac{\ell}{mr^2}\cdot dt.
+	\end{equation}
+	In der Energieerhaltung können wir jetzt für $\dot{\varphi}$ \eqref{phshift:anmom} einsetzen, und erhalten damit gleichzeitig einen Ausdruck für $dt$
+	\begin{equation}\label{phshift:energy}
+	E= \frac{m}{2}\left(\dot{r}^2 + r^2 \frac{\ell^2}{m^2r^4}\right) + U^{\dagger}\left(r\right) \Rightarrow dt = \frac{dr}{\sqrt{\frac{2}{m}\left[E-U^{\dagger}\left(r\right)\right] - \frac{\ell^2}{m^2r^2}}}.
+	\end{equation}
+	Das können wir jetzt in \eqref{phshift:anmom} einsetzen, um die Winkeländerung während eines Umlaufs auszurechnen
+	\begin{equation}\label{phshift:anchange}
+	\Delta \varphi = \int_{r_{min}}^{r_{max}} \frac{M}{r^2\sqrt{2m \left[E-U\left(r\right)\right] - \nicefrac{\ell^2}{r^2}}} ~dr.
+	\end{equation}
+	Es macht die Lösung jetzt einfacher, wenn man \eqref{phshift:anchange} in die Form
+	\begin{equation}\label{phshift:anmom2}
+		\Delta \varphi = -2\frac{\partial}{\partial \ell} \int_{r_{max}}^{r_{min}} \underbrace{\sqrt{2m\{E-\left[U\left(r\right) + \delta U\left(r\right)\right]\} - \frac{\ell^2}{r^2}}}_{:=I}~dr.
+	\end{equation}
+	zu bringen, wobei wir für $U^{\dagger}$ bereits \eqref{phshift:pot} eingesetzt haben.\\
+	Wir können uns jetzt zu nutze machen, dass $\delta U\left(r\right)$ nur eine \textit{kleine} Störung der Bahn sein soll, um den Integranten aus \eqref{phshift:anmom2} durch eine Taylorerweiterung in der ersten Ordnung auszudrücken
+	\begin{equation*}
+		I \approx \sqrt{2m\left[E-U\left(r\right)\right] - \frac{\ell^2}{r^2}} + \frac{\partial}{\partial \delta U}\left(\sqrt{2m\{E-\left[U\left(r\right) + \delta U\left(r\right)\right]\} - \frac{\ell^2}{r^2}}\right) \cdot \delta U\left(r\right)
+	\end{equation*}
+	\begin{equation}\label{phshift:itay}
+		\Rightarrow I \approx \sqrt{2m\left[E-U\left(r\right)\right] - \frac{\ell^2}{r^2}} - \frac{2m\delta U\left(r\right)}{\sqrt{2m\left[E-U\left(r\right) \right] - \frac{\ell^2}{r^2}}}
+	\end{equation}
+	Hier ist der erste Term jetzt genau der, den wir erwarten würden, wenn die Bahn nicht den kleinen zusätzlichen Potentialterm hätte. Und weil das Integral in \eqref{phshift:anmom2} über $I$ ja nach Summen getrennt durchgeführt werden kann, entspricht die Integration des ersten Terms aus \eqref{phshift:itay} genau der Bewegung auf der ungestörten Bahn, also $2\pi$. Denn wollen wir also gar nicht mehr betrachten ($\Delta \varphi = 2\pi + \delta \varphi$).\\
+	Die gesuchte zusätzliche Winkeländerung $\delta\varphi$ ergibt sich also zu
+	\begin{equation}\label{phshift:diffchange}
+		\delta \varphi =\frac{\partial}{\partial \ell} \int_{r_{min}}^{r_{max}} \frac{2m\delta U\left(r\right)}{\sqrt{2m\left[E-U\left(r\right) \right] - \frac{\ell^2}{r^2}}}~dr.
+	\end{equation}
+	Weil wir schon den Effekt des Störpotentials in erster Ordnung durch die Taylorentwicklung einbezogen haben, ist es jetzt auch kein Problem mehr, wenn wir für $r\left(\varphi\right)$ einfach wieder die Lösung der ungestörten Bahngleichung annehmen. Damit ist haben wir jetzt auch eine Möglichkeit, $dr$ durch $d\varphi$ auszudrücken, und damit das Integral \eqref{phshift:diffchange} ordentlich auszuwerten.\\
+	Dann können wir nämlich schreiben
+	\begin{equation*}
+		2m\left[E-U\left(r\right) \right] - \frac{\ell^2}{r^2} = 2m \left[\frac{1}{2}\left(m\dot{r}^2 + \frac{\ell^2}{mr^2}\right) + U\left(r\right) - U\left(r\right)\right] - \frac{\ell^2}{r^2}
+	=	m^2\dot{r}^2.
+	\end{equation*}
+	Damit schreiben wir \eqref{phshift:diffchange} als
+	\begin{equation}
+		\delta \varphi = 2m\cdot \frac{\partial}{\partial \ell} \int_{r_{min}}^{r_{max}} \frac{ \delta U}{m\dot{r}}~dr =  2m\cdot \frac{\partial}{\partial \ell} \int_{r_{min}}^{r_{max}} \frac{\delta U}{m}dt.
+	\end{equation}
+	Jetzt können wir uns aber an \eqref{phshift:anmom} erinnern und den ganzen Spaß als
+	\begin{equation}\label{phshift:subs}
+		\delta \varphi = 2m\cdot \frac{\partial}{\partial \ell} \int_{0}^{\pi} \frac{\delta U}{m} \cdot \frac{mr^2}{\ell} ~d\varphi = \delta \varphi = 2m\cdot \frac{\partial}{\partial \ell}\left( \frac{1}{\ell} \int_{0}^{\pi} r^2\delta U d\varphi\right)
+	\end{equation}
+	schreiben.\\
+	Weil nach \eqref{phshift:pot} das Störpotential dankenswerter Weise gerade $\delta U = \frac{\beta}{r^2}$ ist, kürzt sich $r^2$ und wir haben nur noch
+	\begin{equation}
+		\boxed{\delta \varphi = 2m\cdot \frac{\partial}{\partial \ell}\left( \frac{1}{\ell} \int_{0}^{\pi} \beta ~d\varphi\right) = -\frac{2\pi m\beta}{\ell^2}. 
+			}
+	\end{equation}
+	
+	
+\end{Answer}
