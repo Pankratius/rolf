@@ -1,0 +1,20 @@
+\begin{Exercise}[label = avalance, origin = {4. Runde IPhO, 2008}, title = {Lawine}, difficulty = 4]
+	Auf einem Hang mit Neigungswinkel $\alpha$ liegen in konstantem Abstand $d$ identische Schneeflocken der Masse $m$. Die obere Flocke wird leicht angeschoben,
+sodass eine Lawine entsteht. Der Aufschlag der Lawine auf die ruhenden Flocken ist immer völlig
+inelastisch, die Gleitreibung kann vernachlässigt werden. Welche Beschleunigung hat die Lawine
+nachdem diese viele Flocken angesammelt hat?
+\end{Exercise}
+\begin{Answer}
+	Der Trick bei der Lösung dieser Aufgabe besteht darin, dass man von den einzelnen, also diskreten Schneeflocken, zu einer kontinuirlichen übergeht.\\
+	Wenn man das ganz brachial macht, dann geht das so:
+	Wir bezeichnen mit $y\left(t\right)$ die Position der Lawine nach einer bestimmten Zeit, und stellen die Bewegungsgleichung auf. Dabei beachten wir, dass die zeitliche Änderung des Impuls gerade der wirkenden Kraft entspricht, und die Dichte $\lambda$ der Lawine konstant sein sollte. Jetzt können wir mit $p = mv = y \lambda v = y \lambda \dot{v}$ einfach schreiben
+	\begin{equation}\label{avalanche:force}
+		\frac{dp}{dt} = F \Rightarrow y \ddot{y} + \dot{y}^2 = yg \sin \alpha.
+	\end{equation}
+	Das ist eine Differentialgleichung, die wir in $y\left(t\right)$ lösen könnten. Dabei müssen wir uns über die Anfangsbedingungen wirklich gar keine Sorgen machen, weil uns nur der Grenzfall $\ddot{y}\left(t\right)$ für $t\rightarrow \infty$ interessiert. \\
+	Schneller gehts, wenn wir uns zu nutze machen, dass die Aufgabenstellung schon suggeriert, dass die Lawine am Ende eine gleichmäßige Beschleunigung hat. Deswegen könnenw wir einfach mal $y\left(t\right) = \frac{1}{2}at^2$ einsetzen, und schauen, was passiert. Wir erhalten dann nämlich einfach
+	\begin{equation}\label{avalance:acc}
+	\boxed{
+		\frac{1}{2} a^2 t^2 + a^2 t^2 = \frac{1}{2}at^2g\sin \alpha \Rightarrow a = \frac{1}{3}\sin \alpha.}
+	\end{equation}
+\end{Answer}
