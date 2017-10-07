@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+
+%um nur aufgaben zu zeigen
+
+\renewcommand{\title}{Aufgabenseminar\\ Klassische Mechanik}
+\newcommand{\titleh}{Aufgabenseminar Klassische Mechanik}
+
+\usepackage[noanswer]{exercise} 
+\usepackage{../images/preamble}
+\usepackage{rotating}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\usepackage{mathrsfs}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
+\usepackage{xcolor}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\textsc{Entwurf}}
+%\SetWatermarkScale{6}
+%\SetWatermarkColor{red!30}
+
+\pagestyle{fancy}
+\fancyhead[L]{\includegraphics[width=2cm]{../images/logo_scaled.pdf}}
+\fancyhead[R]{\textsc{\titleh}}
+
+
+
+\begin{document}
+	\vspace*{-1cm}
+	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/logo_scaled.pdf}}
+	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{\title
+			}}\\\url{pankratius.github.io/rolf}
+			 }
+		\vspace{0.5cm}
+	
+	
+
+\thispagestyle{empty}
+
+
+\noindent
+
+\input{../tasks/selfmade/adi}
+\input{../tasks/selfmade/grassh}
+\input{../tasks/kalda/fox}
+\input{../tasks/kalda/wedge1}
+\begin{Exercise}[title = Wassertropfen]
+	Eine Wolke besteht aus einer Ansammlung von sehr kleinen Wassertröpfchen, die homogen im Raum verteilt
+sind und sich in Ruhe benden. Nun fällt ein großer Wassertropfen durch die Wolke, wobei der Tropfen das Wasser jedes Tröpfchens mit dem er zusammenstößt, in sich aufnimmt. Nach einer langen Zeit wird sich der Tropfen mit einer konstanten Beschleunigung durch die Wolke bewegen. Man finde diese Beschleunigung.
+\end{Exercise}
+\end{document}
