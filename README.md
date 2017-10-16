@@ -42,9 +42,11 @@ Zusätzlich gibt es vom ROLF-Netzwerk auch Skripte zu ausgewählten Themen.
 
 [Kuchenrezept](/website/oldsol.md)
 
-[Orpheus-Aufgabenseminar Mechanik 2017](/task/tasksheets/klassische mechanik (orpheus).pdf)
+[Orpheus-Aufgabenseminar Mechanik 2017](/task/tasksheets/aufgabenseminar_klassische_mechanik_orpheus_17.pdf)
 
-[Orpheus-Aufgabenseminar Thermodynamik 2017](/task/tasksheets/thermodynamik (orpheus).pdf)
+[Orpheus-Aufgabenseminar Himmelsmechanik 2017](/task/tasksheets/aufgabenseminar_himmelsmechanik_orpheus_17.pdf)
+
+[Orpheus-Aufgabenseminar Thermodynamik 2017](/task/tasksheets/aufgabenseminar_thermodynamik_orpheus_17.pdf)
 
 Hier gibt es Aufgaben zur [Analysis](/website/anat.md)
 
