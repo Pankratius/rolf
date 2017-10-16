@@ -4,18 +4,21 @@ Hier findet ihr die aktuelle Aufgabenserie (oder manchmal sogar Tipps dazu), alt
 
 ### Aktuelle Aufgabenserie
 
-Aufgabenserie 4 ist da!
+Aufgabenserie 5 ist _morgen_ da!
 
-[Serie 4](/website/koziarchiv/4.pdf)
+Serie 5
 
-Die Lösungen sendet ihr bitte bis zum _05. Oktober_ an die gewohnte Adresse.
+Die Lösungen sendet ihr bitte bis zum _30. November_ an die gewohnte Adresse.
 
-Die Lösungen für Serie 3 sind noch nicht ganz fertig. Deswegen hier nur die Aufgaben.
-[Serie 3, mit Tipps](/website/koziarchiv/3t.pdf)
+
 
 Eure Lösungen gebt ihr bitte an euren Ansprechpartner oder per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) ab. Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
 
 ### Lösungen der vergangenen Serien
+
+[Serie 4](/website/koziarchiv/4.pdf)
+
+[Serie 3, mit Tipps](/website/koziarchiv/3t.pdf)
 
 [Serie 2](/website/koziarchiv/2.pdf)
 
