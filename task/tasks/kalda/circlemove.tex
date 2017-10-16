@@ -1,0 +1,22 @@
+\begin{minipage}[b]{0.6\textwidth}
+\begin{Exercise}[label = circlemove, origin = J. Kaalda, title = Kreisbewegung, difficulty = 3]
+	Wir betrachten zwei Kreisringe mit Radius $r$. Einer der beiden ist in Ruhe, und der andere bewegt sich mit einer Geschwindigkeit $v$ so, dass die Mittelpunkte beider Kreise immer auf der gleichen Gerade liegen.\\
+	Bestimme, wie die Geschwindigkeit des oberen Schnittpunkts der beiden Kreise, $P$, vom Abstand der Mittelpunkte, $d$, abhängt.
+\end{Exercise}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\textwidth}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale =.75 ]
+	\clip(-3.8185369414384267,-2.0485094372990885) rectangle (6.541366916798444,3.2167021331932286);
+	\draw[thick](0.,0.) circle (2.cm);
+	\draw[thick](3.,0.) circle (2.cm);
+	\begin{scriptsize}
+	\draw [fill=black] (0.,0.) circle (2pt);
+	\draw [fill=black] (3.,0.) circle (2pt);
+	\draw [fill=black] (1.5,1.3228756555322954) circle (2.5pt);
+	\end{scriptsize}
+	\node at (1.5,1.7) {$P$};
+	\draw[->] (-2cm,0) to node[midway,above]{$v$} (-.5cm,0) ;
+	\draw[<->](0,0) to node[midway,above]{$d$} (3,0);
+	\end{tikzpicture}
+\end{minipage}
