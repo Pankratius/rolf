@@ -6,7 +6,7 @@ Hier findet ihr die aktuelle Aufgabenserie (oder manchmal sogar Tipps dazu), alt
 
 Aufgabenserie 5 ist _morgen_ da!
 
-Serie 5
+[Serie 5](/website/koziarchiv/5.pdf)
 
 Die Lösungen sendet ihr bitte bis zum _30. November_ an die gewohnte Adresse.
 
