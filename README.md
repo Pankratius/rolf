@@ -4,15 +4,12 @@ Hier findet ihr die aktuelle Aufgabenserie (oder manchmal sogar Tipps dazu), alt
 
 ### Aktuelle Aufgabenserie
 
-Aufgabenserie 5 ist _morgen_ da!
+Aufgabenserie 5 ist da!
 
 [Serie 5](/website/koziarchiv/5.pdf)
 
-Die Lösungen sendet ihr bitte bis zum _30. November_ an die gewohnte Adresse.
-
-
-
-Eure Lösungen gebt ihr bitte an euren Ansprechpartner oder per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) ab. Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
+Eure Lösungen gebt ihr bitte an euren Ansprechpartner oder per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) bis zum _30. November_ ab.
+Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
 
 ### Lösungen der vergangenen Serien
 
