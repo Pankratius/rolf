@@ -5,3 +5,30 @@
 			$\frac{pV}{T}$
 	die ganze Zeit konstant bleibt. Dabei ist $p$ der Druck der Luft in dem Gefäß, $V$ das Volumen der eingeschlossenen Luft und $T$ die Temperatur. Gleichzeitig kann angenommen werden, dass sich die Lufttemperatur während des Umdrehens nicht ändert. 
 \end{Exercise}
+\begin{Answer}
+	Die Wasserschale soll, wenn man sie wie beschrieben mit der Öffnung nach oben ins Wasser stellt, schwimmen.\\
+	Also müssen Gewichtskraft $F_g$ und Auftriebskraft $F_a$ gleich sein,
+	\begin{equation}\label{glas:auftrieb1}
+		m g = \frac{1}{2}Vg\rho,
+	\end{equation}
+	wobei $m$ die Masse der Schale ist und $V$ das Gesamtvolumen.\\
+	Dreht man die Schale jetzt um, dringt Wasser ein. Es muss aber wieder das Gleichgewicht von Gewichtskraft und Auftriebskraft gelten. Dafür ist erneut das verdrängte Volumen relevant. Um das Auszurechnen, brauchen wir die Eindringtiefe der Schale in das Wasser $h$ und die Wasserhöhe im Glas $x$. Dann gilt
+	\begin{equation}\label{glas:auftrieb2}
+		mg = \frac{V}{H}\left(h-x\right) g \rho.
+	\end{equation}
+	Gleichsetzen von \eqref{glas:auftrieb1} und \eqref{glas:auftrieb2} führt auf
+	\begin{equation}\label{glas:mechheight}
+		\frac{1}{2}Vg\rho = \frac{V}{H}\left(h-x\right) g \rho \Rightarrow h-x = \frac{H}{2}
+	\end{equation}
+	Wir können jetzt die ideale Gasgleichung verwenden, um den weitere Informationen über die Höhe des Wasserstandes im Glas, der durch den Druck im Glas bestimmt wird, zu erhalten.\\
+	Dazu können wir annehmen, dass sich die Temperatur beim Umdrehen nicht ändert, weil die Aufgabenstellung sagt, dass alles ideal wärmeleitend ist.\\
+	Vor dem Umdrehen betrug das Volumen der  Luft im Glas genau $V$, und der Druck entsprach dem äußeren Luftdruck $p_0$.\\
+	Nach dem Umdrehen beträgt das Volumen der Luft im Glas genau $V \cdot \frac{H-h}{H}$, da das der Teil ist, der nicht mit Wasser gefüllt ist. Der Druck entspricht der Summe des äußeren Luftdrucks $p_0$ und des Schweredrucks durch die Wassersäule der Höhe $h-x$, also $p_0 + \rho g \left(h-x\right)$. Setzt man alles in die ideale Gasgleichung ein, dann kommt man auf
+	\begin{equation}
+		\frac{p_0 V}{T} = \frac{\left(p_0 + \rho g \left(h-x\right) \right) V \cdot \frac{H-h}{H}}{T}.
+	\end{equation}
+	Wir können jetzt das Ergebnis aus \eqref{glas:mechheight} für $h-x$ einsetzen, und die entstehende Gleichung dann nach der neuen Eintauchtiefe $h$ lösen
+	\begin{equation}\boxed{
+		p_0= \left(p_0 + \frac{\rho g H}{2}\right) \frac{H-h}{H} \Rightarrow h = H \left(\frac{3}{2} - \frac{2p_0}{2p_0 + \rho g H}\right) \approx 7.6~\mathrm{cm}.}
+	\end{equation}
+\end{Answer}
