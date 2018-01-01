@@ -1,0 +1,48 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{exercise}
+%um nur aufgaben zu zeigen
+%\usepackage[noanswer]{exercise} 
+\usepackage{../images/preamble}
+\usepackage{rotating}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
+\usepackage{xcolor}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\textsc{Draft 2}}
+%\SetWatermarkScale{3}
+%\SetWatermarkColor{red!30}
+
+
+\usepackage[printwatermark]{xwatermark}
+%\newsavebox\mybox
+%\savebox\mybox{\tikz[color=red,opacity=0.3]\node{\textsc{Entwurf}};}
+%\newwatermark*[
+%allpages,
+%angle=45,
+%scale=10,
+%xpos=-4cm,
+%ypos=4cm
+%]{\usebox\mybox}
+
+
+\begin{document}
+	\vspace*{-2cm}
+	\pagestyle{empty}
+\begin{framed}
+	\noindent
+	\scriptsize
+	Diese Aufgabe dient als Vorbereitungsaufgabe für das Landesseminar Physik Sachsen/Thüringen 2018.\\
+	Die Lösung kann entweder per Mai an 
+	 \href{mailto:aaronwild@uni-bonn.de}{aaron.wild@uni-bonn.de} oder bei der Anreise zum Landesseminar (19.01.2018) abgebeben werden, und dort korrigiert und besprochen.
+\end{framed}
+
+\noindent
+
+\input{../tasks/kalda/rollingshutter}
+
+
+
+\end{document}

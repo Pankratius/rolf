@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+\usepackage{exercise}
+%um nur aufgaben zu zeigen
+%\usepackage[noanswer]{exercise} 
+\usepackage{../images/preamble}
+\usepackage{rotating}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
+\usepackage{xcolor}
+
+\usepackage{mathtools}
+
+
+\newcommand{\re}{/tikz/circuitikz/bipoles/length=20pt, R}
+
+%\usepackage[]{xwatermark}
+%\newsavebox\mybox
+%\savebox\mybox{\tikz[color=red,opacity=0.3]\node{\textsc{Entwurf}};}
+%\newwatermark*[
+%allpages,
+%angle=45,
+%scale=10,
+%xpos=-4cm,
+%ypos=4cm
+%]{\usebox\mybox}
+\pagestyle{fancy}
+\fancyhead[L]{Aaron Wild}
+\fancyhead[R]{\textit{Rekursives Widerstandsnetz}}
+
+
+\begin{document}
+%	\vspace*{-1cm}
+%	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/logo_scaled.pdf}}
+%	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Neue Aufgaben?
+%			}}\\ ~\\ \vspace*{-.5cm} }
+%		\vspace{0.5cm}
+
+
+
+
+\noindent
+
+\input{../tasks/selfmade/initeloop}
+
+
+
+\end{document}

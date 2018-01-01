@@ -1,6 +1,6 @@
 \begin{Exercise}[label = voltmeter, difficulty = 3, origin = EstPhO 2003, title = Viele Voltmeter]
 	In der abgebildeten Schaltung sind 15 identische Voltmeter und 15 unterschiedliche Ampermeter verbaut, und an eine Batterie angeschlossen. \\
-	Das erste Voltmeter zeigt eine Spannung von $U_1 = 9~\mathrm{V}$ an, das erste Ampermeter einen Strom von $I_1 = 2.9~\mathrm{mA}$ und das zweite einen Strom von $I_2 = 2.6~\mathrm{mA}$. Wie groß ist die Summe der Spannungen, die die anderen Voltmeter anzeigen?
+	Das erste Voltmeter zeigt eine Spannung von $U_1 = 9~\mathrm{V}$ an, das erste Ampermeter einen Strom von $I_1 = 2.9~\mathrm{mA}$ und das zweite einen Strom von $I_2 = 2.6~\mathrm{mA}$. Wie groß ist die Summe der Spannungen $U_{\Sigma}$, die die anderen Voltmeter anzeigen?
 \end{Exercise}
 \begin{figure}[h]
 	\centering
@@ -11,7 +11,7 @@
 		\draw (2,1) to node[component]{$U_1$}(2,-1);
 		\draw (2,-1) -- (0,-1);
 		\draw (2,1) to node[component]{$I_2$} (4,1);
-		\draw (4,1) to node[component]{$V_2$} (4,-1);
+		\draw (4,1) to node[component]{$U_2$} (4,-1);
 		\draw (4,-1) -- (2,-1);
 		\draw (4,1) -- (5,1);
 		\draw (4,-1) -- (5,-1);
@@ -33,3 +33,16 @@
 		
 	\end{tikzpicture}
 \end{figure}
+\begin{Answer}[ref = voltmeter]
+	Offensichtlich sind die Bauteile nicht ideal, sonst würden die Ampermeter alle das gleiche anzeigen.\\
+	Wir können also zuerst den Innenwiderstand $R_{innen}$ der Voltmeter aussrechnen. Dazu betrachten wir das erste Voltmeter, mit $U_1 = 9~\mathrm{V}$. Der Strom durch dieses ist nach dem Knotensatz genau $i_1 = I_1 - I_2 = 0.3~\mathrm{mA}$ (Der Strom, der nicht durch das zweite Ampermeter fließt, muss durch den Widerstand fließen). Also beträgt der Innenwiderstand $R_{innen} = \frac{U_1}{i_1} = \frac{9~\mathrm{V}}{0.3~\mathrm{mA}} = 30~\mathrm{k}\Omega$.\\
+	Weil die Voltmeter alle identisch sind, können wir für alle Voltmeter mit diesem Wert rechnen.\\
+	Das gleiche Verfahren kann man jetzt für die verbleibenden 14 Voltmeter anwenden. Die Spannung, die das $j-$te Voltmeter anzeigt, ist gerade $U_j = R_{innen}\cdot i_j$, wobei $i_j$ der Strom durch dieses Voltmeter ist. Der gesuchte Wert beträgt also $U_{\Sigma} = \sum_{j=2}^{15}R_{innnen} i_j = R_{innen} \sum_{j=2}^{15} i_j$.\\
+	Nach dem Knotensatz muss der Strom, der aus der Spannungsquelle fließt, auch wieder in die Spannungsquelle rein fließen. Der Strom, der in Spannungsquelle reinfließt, ist aber genau die Summe der Ströme, die durch die Voltmeter fließt. Gleichzeitig ist es aber genau der Strom, der durch das Ampermeter $I_1$ fließt. Also gilt $I_1 = \sum_{j=1}^{15}i_j \Leftrightarrow I_1 - i_1 = \sum_{j=2}^{15} i_j$.\\
+	$I_1-i_1$ ist aber genau der Strom, der im Ampermeter $I_2$ angezeigt wird. Also ist 
+	\begin{equation*}
+	\boxed{
+	U_{\Sigma} = R_{innen}\cdot I_2 = \frac{I_1-I_2}{I_1}\cdot U_1 = 78~\mathrm{V}.
+	}
+	\end{equation*}
+	\end{Answer}
