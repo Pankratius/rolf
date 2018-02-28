@@ -1,0 +1,45 @@
+\documentclass[a4paper]{article}
+%\usepackage{exercise}
+
+\renewcommand{\title}{Aufgabenseminar\\ Magnetismus}
+\newcommand{\titleh}{Aufgabenseminar Magnetismus}
+
+\usepackage{exercise} 
+\usepackage{../images/preamble}
+\usepackage{rotating}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\usepackage{mathrsfs}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
+\usepackage{xcolor}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\textsc{Entwurf}}
+%\SetWatermarkScale{6}
+%\SetWatermarkColor{red!30}
+
+ 
+\fancyhead[L]{\includegraphics[width=2cm]{../images/logo_scaled.pdf}}
+\fancyhead[R]{\textsc{\titleh}}
+
+
+
+\begin{document}
+	\vspace*{-1cm}
+	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/logo_scaled.pdf}}
+	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{\title
+			}}\\\url{pankratius.github.io/rolf}
+			 }
+		\vspace{0.5cm}
+	
+	
+
+
+\noindent
+
+
+\input{../tasks/kalda/hangingmagnet}
+\input{../tasks/germanipho/magneticpendulum}
+
+\end{document}
