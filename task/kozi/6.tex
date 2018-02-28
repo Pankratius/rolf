@@ -1,0 +1,56 @@
+\documentclass[a4paper]{article}
+\usepackage{exercise}
+%um nur aufgaben zu zeigen
+%\usepackage[noanswer]{exercise} 
+\usepackage{../images/preamble}
+\usepackage{rotating}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.02,0);}
+\usepackage{xcolor}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\textsc{Draft 2}}
+%\SetWatermarkScale{3}
+%\SetWatermarkColor{red!30}
+
+
+\usepackage[printwatermark]{xwatermark}
+%\newsavebox\mybox
+%\savebox\mybox{\tikz[color=red,opacity=0.3]\node{\textsc{Entwurf}};}
+%\newwatermark*[
+%allpages,
+%angle=45,
+%scale=10,
+%xpos=-4cm,
+%ypos=4cm
+%]{\usebox\mybox}
+\pagestyle{fancy}
+\fancyhead[L]{\includegraphics[width=2cm]{../images/logo_scaled.pdf}}
+\fancyhead[R]{\textsc{Aufgabenserie 6}}
+
+
+\begin{document}
+	\vspace*{-1cm}
+	\parbox{4cm}{\vspace{-0.2cm}\includegraphics[width=5cm]{../images/logo_scaled.pdf}}
+	\parbox{10.6cm}{\setstretch{2.0} \centering{ \huge \textsf{Aufgabenserie 6 
+			}}\\
+			Abgabe: 8. April 2018 \\ \vspace*{-.5cm} }
+		\vspace{0.5cm}
+
+\thispagestyle{empty}
+\begin{framed}
+	\noindent
+	\scriptsize
+	Die Aufgaben sollten bis zum \textbf{8. April} bearbeitet werden. Die Lösungen schickt ihr an \href{mailto:physikrolf@gmail.com}{physikrolf@gmail.com}.\\ Die aktuellen Aufgaben sowie alle alten Aufgabenserien mit Lösungen findet ihr auch auf \url{pankratius.github.io/rolf}.
+\end{framed}
+
+\noindent
+
+\input{../tasks/morin/pucks}
+\input{../tasks/germanipho/band}
+\input{../tasks/kalda/train}
+
+
+\end{document}
