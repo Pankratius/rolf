@@ -2,9 +2,10 @@ title: ROLF-Aufgabenwettbewerb
 description:
 show_downloads: false
 google_analytics: false
-mathjax: true
+use_math: true
 theme: jekyll-theme-minimal
 baseurl: /rolf
 markdown: kramdown
 plugins:
   - jekyll-redirect-from
+  -mathjax
