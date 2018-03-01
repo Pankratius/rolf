@@ -4,5 +4,6 @@ show_downloads: false
 google_analytics: false
 theme: jekyll-theme-minimal
 baseurl: /rolf
+markdown: kramdown
 plugins:
   - jekyll-redirect-from
