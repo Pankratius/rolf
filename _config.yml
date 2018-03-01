@@ -2,6 +2,7 @@ title: ROLF-Aufgabenwettbewerb
 description:
 show_downloads: false
 google_analytics: false
+mathjax: true
 theme: jekyll-theme-minimal
 baseurl: /rolf
 markdown: kramdown
