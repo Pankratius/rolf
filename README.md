@@ -1,3 +1,5 @@
+mathjax: true
+
 # Herzlich Willkommen auf der Website des ROLF-Netzwerks!
 
 Hier findet ihr die aktuelle Aufgabenserie (oder manchmal sogar Tipps dazu), alte Aufgabenserien samt Lösungen sowie Skripte und Handouts des ROLF-Netzwerks.
