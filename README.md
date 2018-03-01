@@ -4,22 +4,25 @@ Hier findet ihr die aktuelle Aufgabenserie (oder manchmal sogar Tipps dazu), alt
 
 ### Aktuelle Aufgabenserie
 
-Aufgabenserie 5 ist da!
+Aufgabenserie 6 ist da!
+
+[Serie 6](/website/koziarchiv/6.pdf)
+
+Eure Lösungen könnt ihr per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) schicken.
+Es wird vermutlich Anfang April wieder neue Aufgaben geben.
+Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
+
+### Vergangenen Serien
 
 [Serie 5](/website/koziarchiv/5.pdf)
 
-Eure Lösungen gebt ihr bitte an euren Ansprechpartner oder per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) bis zum _30. November_ ab.
-Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
-
-### Lösungen der vergangenen Serien
-
-[Serie 4](/website/koziarchiv/4.pdf)
+[Serie 4, mit Lösungen](/website/koziarchiv/4.pdf)
 
 [Serie 3, mit Tipps](/website/koziarchiv/3t.pdf)
 
-[Serie 2](/website/koziarchiv/2.pdf)
+[Serie 2, mit Lösungen](/website/koziarchiv/2.pdf)
 
-[Serie 1](/website/koziarchiv/1.pdf)
+[Serie 1, mit Lösungen](/website/koziarchiv/1.pdf)
 
 ## Mitmachen?
 Klar doch! Wenn ihr beim Rolf-Aufgabenwettbewerb mitmachen möchtet, downloaded euch am Besten die aktuelle Aufgabenserie (s.O.). Die Lösungen schickt ihr einfach per Mail. Schreibt einfach euren _Namen_, eure _Klasse_, eure _Schule_ und alles, was ihr uns sonst noch erzählen möchtet. Wir melden uns dann bei euch mit einem [Bewertungsbogen](/website/bewertung.md), Lösungen und neuen Aufgaben.
