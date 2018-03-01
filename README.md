@@ -11,6 +11,7 @@ Aufgabenserie 6 ist da!
 Eure Lösungen könnt ihr per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) schicken.
 Es wird vermutlich Anfang April wieder neue Aufgaben geben.
 Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
+Weiterführend veranstalltet zur Zeit der estnische IPhO-Koordinator den "Physics Cup" mit sehr schweren, aber auch sehr interessanten Aufgaben. Die und weitere Infos dazu findet ihr [hier.](https://www.ioc.ee/~kalda/ipho/PhysicsCup2018/)
 
 ### Vergangenen Serien
 
