@@ -8,10 +8,13 @@ Aufgabenserie 6 ist da!
 
 [Serie 6](/website/koziarchiv/6.pdf)
 
+_Hinweis:_ In einer früheren Variante von Aufgabe 3 haben wir fälschlich ein großes $N$ für die Stoffmenge verwendet und kein kleines $n$. Gemeint ist aber die Stoffmenge in Mol, für die überlicherweise ein kleines $n$ verwendet wird.
+
 Eure Lösungen könnt ihr per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) schicken.
 Es wird vermutlich Anfang April wieder neue Aufgaben geben.
 Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
-Weiterführend veranstalltet zur Zeit der estnische IPhO-Koordinator den "Physics Cup" mit sehr schweren, aber auch sehr interessanten Aufgaben. Die und weitere Infos dazu findet ihr [hier.](https://www.ioc.ee/~kalda/ipho/PhysicsCup2018/)
+
+Außerdem veranstalltet zur Zeit der estnische IPhO-Koordinator den "Physics Cup" mit sehr schweren, aber auch sehr interessanten Aufgaben. Die und weitere Infos dazu findet ihr [hier.](https://www.ioc.ee/~kalda/ipho/PhysicsCup2018/)
 
 ### Vergangenen Serien
 
