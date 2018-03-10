@@ -7,8 +7,6 @@ redirect_from: "/jufo/"
 Hier findet ihr eine Sammlung an irgendwie verfügbaren Jugend forscht Arbeiten, die auf dem Bundeswettbewerb waren:
 
 
-[Patricia Asemann, Robin Heinmann: Bahndaten Extrasolarer Systeme; 1. Preis Geo- und Raumwissenschaften 2015](/papers/Aseman15.pdf)
-
 [Fabian Schneider: Zahlentheoretische Untersuchung und Analyse der neu eingeführten Zahlenklasse der polyabundanten Zahlen; 3. Preis Mathematik 2016](http://fschneider.info/science/science/PAN.pdf)
 
 [Raphael Errani: Die Entstehung des 14kpc-Rings aus Dunkler Materie in der Milchstraßenebene; Preis des Bundespräsidenten für eine außergewöhnliche Arbeit - Bundessieg
