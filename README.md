@@ -28,10 +28,9 @@ Außerdem veranstalltet zur Zeit der estnische IPhO-Koordinator den "Physics Cup
 [Serie 1, mit Lösungen](/website/koziarchiv/1.pdf)
 
 ## Mitmachen?
-Klar doch! Wenn ihr beim Rolf-Aufgabenwettbewerb mitmachen möchtet, downloaded euch am Besten die aktuelle Aufgabenserie (s.O.). Die Lösungen schickt ihr einfach per Mail. Schreibt einfach euren _Namen_, eure _Klasse_, eure _Schule_ und alles, was ihr uns sonst noch erzählen möchtet. Wir melden uns dann bei euch mit einem [Bewertungsbogen](/website/bewertung.md), Lösungen und neuen Aufgaben.
-Wenn ihr an eurer Schule bereits Mitglieder des ROLF-Netzwerks habt, könnt ihr denen auch einfach eure Ausarbeitungen geben.
+Klar doch! Wenn ihr beim Rolf-Aufgabenwettbewerb mitmachen möchtet, downloaded euch am Besten die aktuelle Aufgabenserie (s.O.). Die Lösungen schickt ihr uns einfach per [Mail.](mailto:physikrolf@gmail.com) Schreibt einfach euren _Namen_, eure _Klasse_, eure _Schule_ und alles, was ihr uns sonst noch erzählen möchtet. Wir korrigieren eure Abgabe dann, und schicken sie euch zusammen mit weiteren Hinweisen.
 
-## Jugend forscht
+### Jugend forscht
 
 [Hier findet ihr Sachen zu Jugend forscht](/jufo/jufo.md)
 
