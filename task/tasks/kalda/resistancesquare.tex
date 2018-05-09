@@ -1,0 +1,22 @@
+\begin{minipage}[b]{0.5\textwidth}
+\begin{Exercise}[label = resistancesquare, origin = EstPho 2012, title  =Widestandsquadrat, difficulty = 3]
+In dem abgebildeten Stromkreis seien die Diagonalverbindungen nicht miteinander verbunden und es gelte $R_1 = R_2 = R_3 = R_4 =: R$ und $U_1 = U_2 =: U$.\\
+Wie groß sind die Ströme $I_1, I_2, I_3, I_4$ durch die jeweiligen Widerstände?
+\end{Exercise}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.5\textwidth}
+	\centering
+	\begin{tikzpicture}
+		\draw (0,0) to [/tikz/circuitikz/bipoles/length=20pt, R] (2,0) to [/tikz/circuitikz/bipoles/length=20pt, R](2,2) to [/tikz/circuitikz/bipoles/length=20pt, R] (0,2) to [/tikz/circuitikz/bipoles/length=20pt, R] (0,0);
+		\draw (0,0) to [/tikz/circuitikz/bipoles/length=20pt, battery1] (1,1) to (2,2);
+		\draw (2,0) to[/tikz/circuitikz/bipoles/length=20pt, battery1] (1,1) to (0,2);
+		\node at (-.3,1) {$R_1$};
+		\node at (2.3,1) {$R_3$};
+		\node at (1,2.3) {$R_2$};
+		\node at (1,-.3) {$R_4$};
+		\node at (.4,.8) {$U_1$};
+		\node at (1.6,.8) {$U_2$};
+	\end{tikzpicture}
+
+\end{minipage}
