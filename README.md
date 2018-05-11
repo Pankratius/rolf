@@ -11,11 +11,10 @@ Eure Lösungen könnt ihr per Mail an [physikrolf@gmail.com](mailto:physikrolf@g
 Es wird vermutlich Anfang April wieder neue Aufgaben geben.
 Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
 
-Außerdem veranstalltet zur Zeit der estnische IPhO-Koordinator den "Physics Cup" mit sehr schweren, aber auch sehr interessanten Aufgaben. Die und weitere Infos dazu findet ihr [hier.](https://www.ioc.ee/~kalda/ipho/PhysicsCup2018/)
 
 ### Vergangenen Serien
 
-[Serie 6](/website/koziarchiv/6.pdf)
+[Serie 6, mit Lösung Aufgabe 1](/website/koziarchiv/6.pdf)
 
 [Serie 5](/website/koziarchiv/5.pdf)
 
