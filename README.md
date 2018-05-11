@@ -8,7 +8,7 @@ Aufgabenserie 7 ist da!
 [Serie 7](/website/koziarchiv/7.pdf)
 
 Eure Lösungen könnt ihr per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) schicken.
-Es wird vermutlich Anfang April wieder neue Aufgaben geben.
+Es wird vermutlich Ende Mai wieder neue Aufgaben geben.
 Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  
 
 
