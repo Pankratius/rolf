@@ -1,13 +1,51 @@
 \begin{Exercise}[title = Seilkraft, origin = {Morin - Classical Mechanics}, difficulty = 3, label = pucks]
-Gegeben sei ein Pendel der Länge $\ell$ mit maximalem Auslenkungswinkel $A$, wobei $A \ll 1$. Für den Auslenkungswinkel $\theta(t)$ und die Winkelgeschwindigkeit $\omega(t)$ gilt 
+Gegeben sei ein Pendel der Länge $\ell$ mit maximalem Auslenkungswinkel $A$, wobei $A \ll 1$. Für den Auslenkungswinkel $\theta(t)$ und die Winkelgeschwindigkeit $\omega(t)$ gilt
 \begin{subequations}\label{averagetension:simpleharmonic}
 	\begin{equation}\label{averagetension:angle}
 		\theta(t) = A\cos\left(\omega_0t\right)
 	\end{equation}
 	\begin{equation}\label{averagtension:angularvel}
-		\omega(t) = A\omega_0\sin\left(\omega_0t\right),
+		\omega(t) = -A\omega_0\sin\left(\omega_0t\right),
 	\end{equation}
 \end{subequations}
 wobei $\omega_0 = \sqrt{g/\ell}$ die Kreisfrequenz der Schwingung ist.\\
-Bestimme näherungsweise (besser als $mg$!) die Spannkraft in der Pendelschnur.
+Bestimme näherungsweise (besser als $mg$!) die durchschnittliche Spannung im Faden während eines Umlaufs.
 \end{Exercise}
+
+\begin{Answer}
+%	\begin{figure}[h]
+%		\centering 
+%		\begin{tikzpicture}
+%		\draw[very thick](-.5,0) -- (.5,0);
+%		\draw(0,0) -- (295:1.5);
+%		\draw[dashed](0,0) -- (0,-1.5);
+%		\node at (282:.6) {$\theta$};
+%		\filldraw[black] (295:1.5) circle (1pt);
+%		\draw[->] (295:1.5) -- (295:2);
+%		\draw[->] (295:1.5) -- 
+%		\end{tikzpicture}
+%	\end{figure}
+	Sei $F_s$ die Spannkraft im Seil. Dann ergibt Gleichung für das radiale Kräftegleichgewicht
+	\begin{align}\label{averagetension:averagetension}
+		F_s(t) &= m\omega(t)^2\ell + mg\cos \theta(t)\nonumber \\
+		\implies 
+		F_s(t) &= m \left(-A\omega_0 \sin(\omega_0 t)\right)^2 \ell + mg \cos \left(A \cos (\omega_0 t)\right).
+	\end{align}
+	Da wir nur kleine Auslenkungen betrachten, können wir die Taylor-Näherung des Cosinus für kleine Winkel betrachten, $\cos \alpha \approx 1 - \alpha^2/2$. Damit können wir $\cos\left(A \cos (\omega_0t)\right)$ nähern zu
+	\[
+	\cos\left(A\cdot \cos(\omega_0t)\right) \approx 1 -\frac{1}{2} A^2 \cos^2(\omega_0 t).
+	\]
+	Damit können \eqref{averagetension:averagetension} umformen zu
+	\[
+	F_s(t) \approx mA^2\omega_0^2\sin^2(\omega_0t) + mg\left(1- \frac{1}{2}A^2 \cos^2(\omega_0t)\right)
+	\]
+	Gleichzeitig können wir jetzt den Ausdruck für $\omega_0$ aus der Aufgabenstellung einsetzen, und erhalten schlussendlich
+	\[
+	\boxed{F_s(t) \approx mg + mgA^2 \left( \sin^2(\omega_0 t) - \frac{1}{2}\cos^2(\omega_0 t)\right).}
+	\]
+	Wir sehen nun, dass wir $F_s(t)$ besser als $mg$ abschätzen können, es gibt ja noch den zweiten Term in der Summe. Den Durchschnitt können wir jetzt über ein Integral ausrrechnen, wobei wir die Substitution $x:= \omega_0t$ nehmen können
+	\begin{align*}
+	\overline{F_s} &= mg + mgA^2\cdot\frac{1}{2\pi} \int_{0}^{2\pi} \sin^2(x) - \frac{1}{2}\cos^2(x)~dx\\
+	&\boxed{= mg + \frac{mgA^2}{4}.}
+	\end{align*}
+\end{Answer}

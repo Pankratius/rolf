@@ -7,6 +7,9 @@ Aufgabenserie 7 ist da!
 
 [Serie 7](/website/koziarchiv/7.pdf)
 
+Die übliche Lösung der Aufgabe 3 ist anscheind bei näherer Betrachtung falsch. Eine nähere Betrachtung findet man hier: [De Palma, Sormani: Counterintuitive effect of gravity on the heat capacity of a metal sphere: re-examination of a well-known problem (2015)](https://https://arxiv.org/pdf/1502.01337.pdf)
+
+
 Eure Lösungen könnt ihr per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) schicken.
 Es wird vermutlich Ende Mai wieder neue Aufgaben geben.
 Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.  

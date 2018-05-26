@@ -45,8 +45,8 @@
 %			Aufgabe \ExerciseHeaderNB} (\ExerciseHeaderTitle)
 %	}\smallskip\newline}
 %	%\ExerciseHeaderDifficulty
-%	\renewcommand{\AnswerHeader}{\flushright \textbf{\textsf{LÃ¶sung
-%				\ExerciseHeaderNB} }\ExerciseHeaderOrigin\smallskip\newline}
+	\renewcommand{\AnswerHeader}{\flushright \textbf{\textsf{Lösung
+				\ExerciseHeaderNB} }\smallskip\newline}
 %	
 %	\renewcommand{\ExerciseHeaderTitle}{\ExerciseTitle}
 %	\setlength{\ExerciseSkipBefore}{0\baselineskip}
@@ -100,7 +100,7 @@
 
 \noindent
 
-\begin{Exercise}[title = Rekursives Widerstandsnetz, origin = Kurzaufgabe?, label = recres]
+\begin{Exercise}[title = Rekursives Widerstandsnetz, label = recres]
 	Gegeben sei das unten abgebildete Widerstandsnetz, welches jeweils genau $n$ parallele Seiten in den äußeren Umrandungen hat. Jeder Kantenwiderstand beträgt $r$.
 	\begin{figure}[h]
 		\centering
@@ -224,7 +224,7 @@
 	Die negative Lösung kann ausgeschlossen werden, weil Widerstände nicht negativ sind.\\
 	\noindent\rule{\textwidth}{.75pt}
 	\textit{Bemerkung:} \\
-	Es scheint, als ließe sich die Konvergenz der Folge $\left(R_n\right)_{n\in \mathbb{N}}$ am Besten durch ein explizietes Lösen der Rekursionsgleichung zeigen.
+	Man kann die Folgeglieder der Folge $(R_n)_{n\in \mathbb{N}}$ auch direkt ausrechnen.
 	Definiere dazu $S_n := 2r + R_n \Leftrightarrow S_n - 2r = R_n$. Einsetzen in \eqref{recres:receq} führt auf 
 	\begin{equation}\label{recres:intermediate}
 	S_{n+1} - 2r = r\frac{S_n}{S_n+r} = \frac{S_n}{1+\nicefrac{S_n}{r}}.
@@ -235,7 +235,7 @@
 	\Leftrightarrow T_{n+1}-3 &= \frac{T_n-1}{T_n} = 1 -\frac{1}{T_n}\notag\\
 	\Leftrightarrow T_{n+1} &= 4 - \frac{1}{T_n}.
 	\end{align}
-	Wir versuchen nun, \eqref{recres:teq} auf eine Form zu bringen, die wir Lösen können. Betrachte dazu eine Folge\footnote[2]{Brand, Louis: \glqq A sequence defined by a difference equation", American Mathematical Monthly 62, September 1955, S.489-492} $\left(x_n\right)_{n\in \mathbb{N}}$ mit $T_n = \frac{x_{n+1}}{x_n}$. Einsetzen in \eqref{recres:teq} führt auf 
+	Wir versuchen nun, \eqref{recres:teq} auf eine Form zu bringen, die wir Lösen können. Betrachte dazu eine Folge $\left(x_n\right)_{n\in \mathbb{N}}$ mit $T_n = \frac{x_{n+1}}{x_n}$. Einsetzen in \eqref{recres:teq} führt auf 
 	\begin{equation}
 	\frac{x_{n+2}}{x_{n+1}} = 4 - \frac{x_n}{x_{n+1}} \Rightarrow x_{n+2} - 4x_{n+1} + x_{n} = 0.
 	\end{equation}
