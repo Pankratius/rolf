@@ -3,14 +3,9 @@ Hier findet ihr die aktuelle Aufgabenserie (oder manchmal sogar Tipps dazu), alt
 
 ### Aktuelle Aufgabenserie
 
-Aufgabenserie 7 ist da!
+Aufgabenserie 8 ist da!
 
-[Serie 7](/website/koziarchiv/7.pdf)
-
-Die übliche Lösung der Aufgabe 3 ist anscheind nicht wirklich richtig. Eine nähere Betrachtung findet man hier:
-
-[De Palma, Sormani: Counterintuitive effect of gravity on the heat capacity of a metal sphere: re-examination of a well-known problem (2015)](https://arxiv.org/pdf/1502.01337.pdf)
-
+[Serie 8](/website/koziarchiv/8.pdf)
 
 Eure Lösungen könnt ihr per Mail an [physikrolf@gmail.com](mailto:physikrolf@gmail.com) schicken.
 Es wird vermutlich Ende Mai wieder neue Aufgaben geben.
@@ -18,6 +13,12 @@ Solltet ihr Fragen haben, dürft ihr uns auch gerne eine E-Mail schreiben.
 
 
 ### Vergangenen Serien
+
+[Serie 7, mit Lösung Aufgabe 1](/website/koziarchiv/7.pdf)
+
+Die übliche Lösung der Aufgabe 3 ist anscheind nicht wirklich richtig. Eine nähere Betrachtung findet man hier:
+
+[De Palma, Sormani: Counterintuitive effect of gravity on the heat capacity of a metal sphere: re-examination of a well-known problem (2015)](https://arxiv.org/pdf/1502.01337.pdf)
 
 [Serie 6, mit Lösung Aufgabe 1](/website/koziarchiv/6.pdf)
 
