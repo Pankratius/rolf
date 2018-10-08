@@ -1,0 +1,21 @@
+\section{Bestimmung der Bahnformen aus dem Lenz-Runge-Vektor}
+Wir stellen jetzt fest, dass
+\begin{align*}
+\langle \vec{A},\vec{L}\rangle &= -mk\langle \dot{\vec{x}} \times \vec{L}, \vec{L}\rangle\\
+                              &= -mk \langle \vec{L},\dot{\vec{x}}\times \vec{L}\rangle\\
+                              &= -mk \langle \dot{\vec{x}},\vec{L}\times \vec{L} \rangle = 0,
+\end{align*}
+wobei im vorletzten Schritt die Identität $\langle \vec{a},\vec{b}\times \vec{c} \rangle = \langle \vec{b},\vec{c}\times \vec{a}\rangle$ für beliebige $\vec{a},\vec{b},\vec{c}\in \mathbb{R}^3$ genutzt wurde.\\
+Also steht $\vec{A}$ senkrecht zu $\vec{L}$, liegt also insbesondere in der $x_1$-$x_2$-Ebene. Weil $A$ konstant ist, gilt
+\[
+\langle \vec{A},\vec{x}\rangle = |\vec{A}|\cdot r \cdot \cos \theta
+\]
+Wenn wir also $\langle \vec{A},\vec{x}\rangle$ noch anders ausdrücken können, haben wir eine explizite Bahngleichung der Form $r=r(\theta)$ erreicht. Aber das ist nicht schwer:
+\[
+\langle \vec{x},\dot{\vec{x}}\times \vec{L}\rangle = \langle L, \vec{x}\times \dot{\vec{x}}\rangle = L^2
+\]
+Also gilt
+\begin{equation}\label{rsol}
+\boxed{ r = \frac{L^2/k}{1+A/k \cdot \cos \theta}}
+\end{equation}
+Wie die Bahn jetzt aussieht ist daraus immer noch nicht wirklich ersichtlich, wir machen das aber im Anhang.

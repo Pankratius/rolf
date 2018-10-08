@@ -1,0 +1,58 @@
+\section{Äquivalente Formen der Bahngleichung}
+Wir betrachten die Gleichung
+\[
+r = \frac{p}{1+\varepsilon \cos \theta},
+\]
+wobei $\varepsilon,p\in \mathbb{R}^{\geq 0}$ gelte. Wir formen um und quadrieren
+\begin{align*}
+& r\left(1+\varepsilon \cos \theta\right) = p \\
+\implies& r = p - r \varepsilon \cos \theta \\
+\implies& r^2 = p^2 - 2pr\varepsilon\cos \theta + r^2 \varepsilon^2 \cos^2\theta
+\end{align*}
+Setzen wir jetzt wieder $x=r\cos \theta$ und $y=r\sin \theta$, dann erhalten wir
+\begin{equation}\label{app:conic1}
+ x^2(1-e^2)+2epx+y^2=p^2
+\end{equation}
+Wir betrachten unterschiedliche Fälle
+\paragraph*{Fall 1: $\varepsilon = 0$}
+Wir erhalten
+\[
+x^2+y^2=p^2.
+\]
+Es handelt sich bei der Bahn also um eine Kreisbahn.
+\paragraph*{Fall 2: $0<\varepsilon<1$}
+Wir definieren $\overline{x}$ durch Translation von $x$
+\[
+\overline{x}:= x+ \frac{\varepsilon p}{1-\varepsilon^2},
+\]
+sodass \eqref{app:conic1}
+die Form
+\begin{equation}\label{app:conicel}
+\frac{\overline{x}^2}{a^2}+\frac{y^2}{b^2}=1
+\end{equation}
+mit
+\[
+a^2 := \frac{p^2}{(1-\varepsilon^2)^2},~b^2:= \frac{p^2}{1-\varepsilon^2}
+\]
+hat. Dabei handelt es sich um eine Ellipse. Also ist die ursprünglich Bahn ebenfalls Ellipse, die lediglich auf der $x$-Achse verschoben war.
+\paragraph*{Fall 3: $\varepsilon>1$}
+Wir betrachten die gleiche Translation wie oben, setzen aber diesmal
+\[
+b^2:= \frac{p^2}{e^2-1},
+\]
+und erhalten bringen damit \eqref{app:conic1} auf die Form
+\begin{equation}\label{app:conichyp}
+  \frac{\overline{x}^2}{a^2}-\frac{y^2}{b^2}=1
+\end{equation}
+Also ist die Bahn hier durch eine auf der $x$-Achse verschobene Hyperbel gegeben:
+\paragraph*{Fall 4: $\varepsilon=1$}
+In diesem Fall können wir die Translation
+\[
+\overline{x}:= x-\frac{p}{2}
+\]
+betrachten.
+Dann erhalten wir aus \eqref{app:conic1}
+\begin{equation}\label{app:conicpar}
+  y^2+2p\overline{x} = 0
+\end{equation}
+Gleichung \eqref{app:conic1} beschreibt also hier eine auf der $x$-Achse verschobene Parabel.

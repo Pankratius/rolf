@@ -1,0 +1,45 @@
+\section{Bewegung im Zentralkraftfeld}
+Mit genügend vielen Einschränkungen versteht man das klassische Zweikörperproblem, wenn man die Lösung des Anfangswertproblems
+\begin{equation}\label{eom0}
+\ddot{\vec{x}} = - \frac{k}{m} \frac{\vec{x}}{|\vec{x}|^3},~\vec{x}(t_0) = \vec{x}_0,~\dot{\vec{x}} (t_0) = \vec{v}_0
+\end{equation}
+mit $m\in \mathbb{R}^{>0}$ und $k\in \mathbb{R}\setminus\{0\}$ versteht.
+\subsection{Potential der Bewegungsgleichung}
+  Wenn man die Gleichung \eqref{eom0} sehr lange anschaut, dann stellt man fest, dass man die rechte Seite als Gradient schreiben kann. Betrachtet man nämlich die Funktion
+  \[
+  \phi:\rr^n\oo \to \rr, \vec{x} \mapsto - \cmc \cdot \frac{1}{|\vec{x}|},
+  \]
+  dann stellt man fest, dass gilt
+  \[
+  \nabla \phi = -\cmc \nabla \left(\frac{1}{|\vec{x}|}\right) = \cmc \frac{\vec{x}}{|\vec{x}|}.
+  \]
+  Wir können also \eqref{eom0} schreiben als
+  \begin{equation}\label{eompot}
+    \ddot{\vec{x}} = -\nabla \phi
+  \end{equation}
+  Wir nennen $\phi$ das \emph{Potential} der Gleichung \eqref{eom0}.
+\subsection{Energie und Impulserhaltung}
+  Für jede Lösung $\vec{x}:\mathbb{R}\to \mathbb{R}^3$ von \eqref{eom0} betrachten wir die Funktion
+  \[
+  E:\mathbb{R} \to \mathbb{R},~t\mapsto \frac{1}{2}m\langle\dot{x}(t),\dot{x}(t)\rangle + m \phi(\vec{x}(t)).
+  \]
+  Wir nennen $E$ die \emph{Energie} der Bewegung. Wir rechnen jetzt nach, dass $E$ zeitlich konstant ist. Dazu nutzten wir, dass wir die Bewegungsgleichung auch in der Form \label{eompot} schreiben können.
+  \begin{align*}
+    \frac{dE}{dt} &= \frac{d}{dt}\left(\frac{1}{2}m\langle\dot{x}(t),\dot{x}(t)\rangle \right) + \frac{d}{dt}\left(m\phi(\vec{x}(t))\right)\\
+     &= m \langle \dot{\vec{x}},\ddot{\vec{x}}\rangle + m \langle \nabla \phi , \dot{\vec{x}}\rangle\\
+    &= m \langle \dot{\vec{x}}, \ddot{\vec{x}} + \nabla \phi\rangle\\
+    &\overset{\eqref{eompot}}{=} m \langle \dot{\vec{x}}, -\nabla \phi + \nabla \phi \rangle \\
+    &= m \langle \dot{\vec{x}},0 \rangle = 0
+  \end{align*}
+  Weiterhin betrachten wir die Funktion
+  \[
+  \vec{L}:\mathbb{R}^3\to \mathbb{R}^3, \vec{x}\mapsto m\left(\vec{x}\times \dot{\vec{x}}\right).
+  \]
+  Wir nennen $\vec{L}$ den \emph{Drehimpuls} der Bewegung. Auch $\vec{L}$ ist zetilich konstant. Dazu nutzen wir aus, dass für beliebige $\lambda \in \mathbb{R}$ und $\vec{a}\in \mathbb{R}$ die Beziehung $\lambda\vec{a}\times \vec{a}=0$ gilt.
+  \begin{align*}
+  \frac{\partial \vec{L}}{\partial t}&= m \frac{\partial}{\partial t}\left(\vec{x}\times \dot{\vec{x}}\right)\\
+  &= m \left(\frac{\partial \vec{x}}{\partial t}\times \dot{\vec{x}} + \vec{x}\times \frac{\partial \dot{\vec{x}}}{\partial t} \right)\\
+  &= m \left(\dot{\vec{x}}\times \dot{\vec{x}} + \vec{x}\times \ddot{\vec{x}} \right)\\
+  &\overset{\eqref{eom0}}= m \left(0 + \vec{x}\times \frac{-k}{m|\vec{x}|^3}\vec{x}\right)\\
+  &= 0
+  \end{align*}
