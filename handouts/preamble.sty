@@ -1,0 +1,100 @@
+\ProvidesPackage{preamble}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+%Ams-Stuff
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{tkz-euclide}
+%Page-Layout
+\usepackage[left=2cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
+%German Names
+\renewcommand{\tocname}{Inhaltsverzeichnis}
+\renewcommand{\lofname}{}
+%in-line-fractions
+\usepackage{nicefrac}
+%\usepackage{hyperref}
+
+%for footnotes
+\usepackage[symbol*,perpage]{footmisc}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}%theoremcolors
+\usepackage{thmtools}
+\usepackage{xcolor}
+
+%colored definitions
+\declaretheoremstyle[
+  headfont=\color{black}\normalfont\sfseries,
+  bodyfont=\color{blue}\normalfont\itshape,
+]{colored}
+
+\numberwithin{equation}{section}
+
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetkzobj{all}
+\usetikzlibrary{decorations.pathmorphing}
+
+
+\newtheorem*{zf}{\textit{Zusammenfassung}}
+\theoremstyle{definition}
+
+\newtheorem{definition}{\textit{Definition}}
+\theoremstyle{definition}
+\newtheorem{tm}{\textit{Satz}}
+\theoremstyle{theorem}
+\newtheorem{prop}{\textit{Behauptung}}
+\theoremstyle{theorem}
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\oo}{\setminus\{0\}}
+
+\newtheoremstyle{coloreddef}%
+{3pt}% Space above
+{3pt}% Space below 
+{\sffamily\bfseries\color{blue}}% Body font
+{}% Indent amount
+{\itshape\color{blue}}% Theorem head font
+{.}% Punctuation after theorem head
+{.5em}% Space after theorem head
+{}% Theorem head spec (can be left empty, meaning ?normal?)
+
+\newtheorem*{defi}{Definition}
+\theoremstyle{coloreddef}
+
+\usepackage{exercise}
+\renewcommand{\AnswerName}{L\"osung}
+
+\renewcommand{\ExerciseHeader}{\par\noindent\textit{\textbf{\ExerciseName~\ExerciseHeaderNB}}\smallskip\newline}
+\renewcommand{\AtBeginExercise}{\hspace{-0.66em}}
+
+\renewcommand{\AnswerHeader}{\par \noindent \ExerciseHeaderNB.)\smallskip}
+
+
+
+
+\usepackage{enumitem}
+
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=sections,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+%no subsections in toc
+
+\usepackage{xpatch}
+
+\makeatletter
+\patchcmd{\@ssect@ltx}
+    {\addcontentsline{toc}{#1}{\protect\numberline{}#8}}
+    {}
+    {}
+    {}
+\makeatother
